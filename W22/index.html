@@ -87,6 +87,13 @@
   .read-more:hover { text-decoration: underline; }
   .read-more::after { content: " →"; }
 
+  .back-link {
+    display: inline-block; font-size: 15px; color: var(--brand-dark);
+    text-decoration: none; margin-bottom: 20px;
+  }
+  .back-link:hover { text-decoration: underline; }
+  .back-link::before { content: "← "; }
+
   footer {
     margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
     color: var(--muted); font-size: 14px;
@@ -109,6 +116,8 @@
 </head>
 <body>
 <div class="wrap">
+
+  <a class="back-link" href="../">週報總覽</a>
 
   <header>
     <div class="head-row">
