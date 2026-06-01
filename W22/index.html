@@ -87,6 +87,18 @@
   .read-more:hover { text-decoration: underline; }
   .read-more::after { content: " →"; }
 
+  /* 圖片放大檢視（lightbox） */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 1000;
+    background: rgba(0,0,0,.85); align-items: center; justify-content: center;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 6px; }
+  .lightbox .lb-close {
+    position: absolute; top: 18px; right: 24px; color: #fff;
+    font-size: 38px; line-height: 1; cursor: pointer; user-select: none;
+  }
+
   .back-link {
     display: inline-block; font-size: 15px; color: var(--brand-dark);
     text-decoration: none; margin-bottom: 20px;
@@ -203,5 +215,29 @@
   </footer>
 
 </div>
+
+<div class="lightbox" id="lightbox">
+  <span class="lb-close" id="lbClose">&times;</span>
+  <img id="lbImg" src="" alt="放大檢視">
+</div>
+
+<script>
+  (function () {
+    var box = document.getElementById('lightbox');
+    var img = document.getElementById('lbImg');
+    function open(src, alt) { img.src = src; img.alt = alt || '放大檢視'; box.classList.add('open'); }
+    function close() { box.classList.remove('open'); img.src = ''; }
+    document.querySelectorAll('.news .thumb').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var full = a.getAttribute('href') || a.querySelector('img').src;
+        open(full, a.querySelector('img').alt);
+      });
+    });
+    document.getElementById('lbClose').addEventListener('click', close);
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+</script>
 </body>
 </html>
