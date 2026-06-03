@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲速報｜2026/06/02</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="遊戲速報｜2026/06/02">
+<meta property="og:description" content="今日新增遊戲：Charge Bison、Joker's Revenge">
+<style>
+  /* ===== 品牌色（傳奇亞太科技 ALPHABET）===== */
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* ===== 頁首 ===== */
+  header {
+    border-bottom: 3px solid var(--brand);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+  .head-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .head-row img { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 {
+    font-size: 26px;
+    line-height: 1.4;
+    margin: 0;
+    color: var(--brand-dark);
+  }
+  .head-text .date {
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: 4px;
+  }
+
+  /* ===== 今日摘要 ===== */
+  .summary-bar {
+    background: #eef7f9;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .summary-bar .count {
+    font-size: 15px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .summary-bar .count strong {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--brand-dark);
+    margin-right: 4px;
+  }
+  .summary-divider {
+    width: 1px; height: 36px;
+    background: var(--line);
+    flex-shrink: 0;
+  }
+  .summary-games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .summary-chip {
+    background: #fff;
+    border: 1px solid var(--brand);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 14px;
+    color: var(--brand-dark);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .15s;
+  }
+  .summary-chip:hover {
+    background: var(--brand);
+    color: #fff;
+  }
+
+  /* ===== 頁內導航 ===== */
+  .toc {
+    margin-bottom: 36px;
+    padding: 16px 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--card-bg);
+  }
+  .toc-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .toc-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .toc-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand);
+    min-width: 20px;
+  }
+  .toc-list a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .toc-list a:hover { color: var(--brand-dark); text-decoration: underline; }
+  .toc-vendor {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ===== 遊戲卡片 ===== */
+  .game-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  }
+
+  /* 卡片頂部色帶 */
+  .card-header {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%);
+    padding: 20px 24px 16px;
+    color: #fff;
+    position: relative;
+  }
+  .card-index {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    opacity: .7;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+  }
+  .card-vendor-badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  /* 圖片佔位 */
+  .card-image {
+    width: 100%;
+    background: #dce8ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: .5px;
+    min-height: 60px;
+  }
+  .card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* 卡片主體 */
+  .card-body {
+    padding: 24px;
+    background: #fff;
+  }
+
+  /* ===== 標籤區 ===== */
+  .tags-section {
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .tag-label {
+    font-size: 11px;
+    font-weight: 700;
+    opacity: .65;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  /* 標籤顏色類型 */
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+
+  /* ===== 玩法區 ===== */
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--brand);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .gameplay-list {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 0;
+    counter-reset: step;
+  }
+  .gameplay-list li {
+    counter-increment: step;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .gameplay-list li::before {
+    content: counter(step);
+    min-width: 26px;
+    height: 26px;
+    background: var(--brand);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 3px;
+    transition: background .2s;
+  }
+  .gameplay-list li.step-active::before {
+    background: #0c3547;
+  }
+
+  /* ===== 核心設計 ===== */
+  .core-block {
+    background: var(--card-bg);
+    border-left: 4px solid var(--brand);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.75;
+  }
+
+  /* ===== 圖片畫廊 ===== */
+  .gallery {
+    margin: 20px 0 24px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+  /* 區塊1：大圖 */
+  .gallery-main {
+    width: 100%;
+    background: #dce8ec;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid var(--line);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity .2s ease;
+  }
+  .gallery-main .placeholder {
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+    padding: 24px;
+  }
+  /* 區塊2：縮圖列 */
+  .gallery-thumbs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .gallery-thumbs .thumb {
+    width: 120px;
+    height: 80px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: #dce8ec;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .15s;
+  }
+  .gallery-thumbs .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .gallery-thumbs .thumb.active {
+    border-color: var(--brand);
+  }
+  .gallery-thumbs .thumb:hover {
+    border-color: var(--brand);
+    opacity: .85;
+  }
+  .thumb-placeholder {
+    font-size: 10px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.3;
+    padding: 4px;
+  }
+
+  /* ===== 試玩連結 ===== */
+  .trial-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--brand);
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background .15s;
+  }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .no-link {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ===== 頁尾 ===== */
+  .back-to-top {
+    display: block;
+    text-align: center;
+    margin: 32px 0 24px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--brand-dark);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background .15s;
+  }
+  .back-to-top:hover {
+    background: var(--card-bg);
+  }
+
+  footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ===== 響應式 ===== */
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .summary-bar { gap: 12px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+    .card-image { height: 160px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+
+  <header>
+    <div class="head-row">
+      <img src="logo.png" alt="傳奇亞太科技 ALPHABET">
+      <div class="head-text">
+        <h1>iGaming 遊戲速報</h1>
+        <div class="date">2026/06/02｜今日新增</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 今日摘要 -->
+  <div class="summary-bar">
+    <div class="count"><strong>2</strong> 款今日更新</div>
+    <div class="summary-divider"></div>
+    <div class="summary-games">
+      <a class="summary-chip" href="#game-1">Charge Bison</a>
+      <a class="summary-chip" href="#game-2">Joker's Revenge</a>
+    </div>
+  </div>
+
+  <!-- ===== 遊戲 1：Charge Bison ===== -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">01 / 02</div>
+      <h2 class="card-title">Charge Bison</h2>
+      <span class="card-vendor-badge">JILI</span>
+    </div>
+
+    <div class="card-image">
+      <img src="charge-bison.jpg" alt="Charge Bison" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+
+    <div class="card-body">
+
+      <!-- 標籤區 -->
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme">
+            <span class="tag-label">主題</span>
+            北美野牛 / 大草原
+          </span>
+          <span class="tag tag-maxwin">
+            <span class="tag-label">Max Win</span>
+            5,000×
+          </span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule">
+            <span class="tag-label">計線</span>
+            WAY
+          </span>
+          <span class="tag tag-rule">
+            <span class="tag-label">Ways</span>
+            4096
+          </span>
+          <span class="tag tag-rule">
+            <span class="tag-label">盤面</span>
+            6×4
+          </span>
+          <span class="tag tag-trigger">
+            <span class="tag-label">觸發</span>
+            Scatter 觸發（3顆以上，R1-R6）
+          </span>
+        </div>
+      </div>
+
+      <!-- 規格簡述 -->
+      <div class="section-label">規格簡述</div>
+      <div class="core-block">
+        6×4 / 4096 Ways / 北美野牛主題 / WILD Free Game 加成倍率。Scatter 3-6 顆觸發 FS（8-100轉），WILD 獲 2x/3x/5x 隨機倍率且同 payway 相加；Retrigger 無上限；Buy Bonus 36.6x；Max Win 5,000×bet。
+      </div>
+
+      <!-- 玩法 -->
+      <div class="section-label">遊戲玩法</div>
+      <ol class="gameplay-list">
+        <li>6×4 / 4096 Ways；WILD（R2-R6）替代所有符號（除 Scatter）；Free Game 中 WILD 獲隨機倍率（2x/3x/5x），僅作用於途經的 payway；同 payway 多個 WILD 倍率相加非相乘（e.g. 3x+2x=5x）。</li>
+        <li>Scatter（R1-R6）3–6 顆觸發 Free Game：3顆=8轉 / 4顆=15轉 / 5顆=25轉 / 6顆=100轉；Free Game 期間 Retrigger 無上限。</li>
+        <li>Free Game Retrigger 追加轉數：2顆=+5 / 3顆=+8 / 4顆=+15 / 5顆=+25 / 6顆=+100。</li>
+        <li>Buy Bonus：36.6× selected bet 購入一次 Free Game；最多一次購買 99 次；支援 Auto Spin 連續執行。</li>
+      </ol>
+
+      <!-- 圖片畫廊（對應玩法步驟）-->
+      <div class="gallery">
+        <!-- 區塊1：大圖 -->
+        <div class="gallery-main" id="gallery-main-1">
+          <img src="charge-bison-1.jpg" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1 截圖（待提供）</div>'">
+        </div>
+        <!-- 區塊2：縮圖列（4張對應4個步驟）-->
+        <div class="gallery-thumbs" id="gallery-thumbs-1">
+          <div class="thumb active" data-gallery="1" data-src="charge-bison-1.jpg" data-step="1">
+            <img src="charge-bison-1.jpg" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="thumb" data-gallery="1" data-src="charge-bison-2.jpg" data-step="2">
+            <img src="charge-bison-2.jpg" alt="步驟 2" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 2</div>'">
+          </div>
+          <div class="thumb" data-gallery="1" data-src="charge-bison-3.jpg" data-step="3">
+            <img src="charge-bison-3.jpg" alt="步驟 3" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 3</div>'">
+          </div>
+          <div class="thumb" data-gallery="1" data-src="charge-bison-4.jpg" data-step="4">
+            <img src="charge-bison-4.jpg" alt="步驟 4" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 4</div>'">
+          </div>
+        </div>
+      </div>
+
+      <!-- 核心設計 -->
+      <div class="section-label">核心設計</div>
+      <div class="core-block">
+        Free Game 中每個 WILD 帶隨機倍率（2x/3x/5x），當同一 payway 出現複數 WILD 時倍率直接相加（3x+2x=5x），玩家的核心期待就是多個高倍 WILD 同時落在同一條 payway 的連線爆炸瞬間。Retrigger 無上限進一步放大爆發潛力，讓每次 Free Game 都有機會滾成長局連炸。
+      </div>
+
+      <!-- 試玩連結 -->
+      <a class="trial-link" href="https://jiligames.com/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>
+        立即試玩
+      </a>
+      <a class="back-to-top" href="#top">↑ 回到最上方</a>
+
+    </div>
+  </article>
+
+  <!-- ===== 遊戲 2：Joker's Revenge ===== -->
+  <article class="game-card" id="game-2">
+    <div class="card-header">
+      <div class="card-index">02 / 02</div>
+      <h2 class="card-title">Joker's Revenge</h2>
+      <span class="card-vendor-badge">Pragmatic Play</span>
+    </div>
+
+    <div class="card-image">
+      <img src="jokers-revenge.jpg" alt="Joker's Revenge" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+
+    <div class="card-body">
+
+      <!-- 標籤區 -->
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme">
+            <span class="tag-label">主題</span>
+            馬戲團 / 小丑
+          </span>
+          <span class="tag tag-maxwin">
+            <span class="tag-label">Max Win</span>
+            10,000×
+          </span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule">
+            <span class="tag-label">計線</span>
+            LINE
+          </span>
+          <span class="tag tag-rule">
+            <span class="tag-label">線數</span>
+            5
+          </span>
+          <span class="tag tag-rule">
+            <span class="tag-label">盤面</span>
+            3×5
+          </span>
+          <span class="tag tag-trigger">
+            <span class="tag-label">觸發</span>
+            固定觸發
+          </span>
+        </div>
+      </div>
+
+      <!-- 規格簡述 -->
+      <div class="section-label">規格簡述</div>
+      <div class="core-block">
+        5×3 / 5 Paylines / Low 波動率 / BONUS 符任意位置付酬 + FS BONUS PAY 遞增梯。3 BONUS（R2-R4）觸發 FS（5轉），每轉倍率自動升級（2x→10,000x），2+ BONUS/WILD 觸發當轉 BONUS PAY；3+ 組合 Retrigger +1 轉（無上限），Buy Feature 三檔（×40/×180/×1,000）；Max Win 10,000×bet，RTP 96.51%。
+      </div>
+
+      <!-- 玩法 -->
+      <div class="section-label">遊戲玩法</div>
+      <ol class="gameplay-list">
+        <li>5×3 / 5 Paylines / Low 波動率；BONUS 符（R2-R4）任意位置付酬，2顆=4× / 3顆=10×（total bet）；WILD（R2-R4）替代所有符號除 BONUS 外。</li>
+        <li>3 BONUS（R2/R3/R4）觸發免費遊戲（5 基礎轉）；FS 期間 WILD 同時替代 BONUS，大幅提高 2+/3+ 組合機率。</li>
+        <li>BONUS PAY 遞增梯：FS 每轉自動升一格倍率（2x → 5x → 10x → … → 10,000x，第 12 轉後維持）；當轉有 2+ BONUS/WILD 即觸發 BONUS PAY（= 當前倍率 × total bet）。</li>
+        <li>Retrigger：3+ BONUS/WILD 任意組合 → +1 額外轉數；可多次觸發讓倍率梯持續爬升。</li>
+        <li>Buy Feature 三檔：×40=FS(5轉) / ×180=SUPER FS 1(7轉) / ×1,000=SUPER FS 2(9轉)。</li>
+      </ol>
+
+      <!-- 圖片畫廊（對應玩法步驟）-->
+      <div class="gallery">
+        <!-- 區塊1：大圖 -->
+        <div class="gallery-main" id="gallery-main-2">
+          <img src="jokers-revenge-1.jpg" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1 截圖（待提供）</div>'">
+        </div>
+        <!-- 區塊2：縮圖列（5張對應5個步驟）-->
+        <div class="gallery-thumbs" id="gallery-thumbs-2">
+          <div class="thumb active" data-gallery="2" data-src="jokers-revenge-1.jpg" data-step="1">
+            <img src="jokers-revenge-1.jpg" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="thumb" data-gallery="2" data-src="jokers-revenge-2.jpg" data-step="2">
+            <img src="jokers-revenge-2.jpg" alt="步驟 2" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 2</div>'">
+          </div>
+          <div class="thumb" data-gallery="2" data-src="jokers-revenge-3.jpg" data-step="3">
+            <img src="jokers-revenge-3.jpg" alt="步驟 3" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 3</div>'">
+          </div>
+          <div class="thumb" data-gallery="2" data-src="jokers-revenge-4.jpg" data-step="4">
+            <img src="jokers-revenge-4.jpg" alt="步驟 4" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 4</div>'">
+          </div>
+          <div class="thumb" data-gallery="2" data-src="jokers-revenge-5.jpg" data-step="5">
+            <img src="jokers-revenge-5.jpg" alt="步驟 5" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 5</div>'">
+          </div>
+        </div>
+      </div>
+
+      <!-- 核心設計 -->
+      <div class="section-label">核心設計</div>
+      <div class="core-block">
+        FS 中 BONUS PAY 遞增梯每轉自動升一格倍率，玩家的核心期待在於倍率爬升過程中反覆觸發 BONUS PAY 的連鎖感。WILD 兼代 BONUS 的設計讓 Retrigger 機率大增，讓「倍率越高，加轉越容易」的正向飛輪成為這款遊戲的最大期待點。
+      </div>
+
+      <!-- 試玩連結 -->
+      <a class="trial-link" href="https://www.playcasino.com/game/jokers-revenge" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>
+        立即試玩
+      </a>
+      <a class="back-to-top" href="#top">↑ 回到最上方</a>
+
+    </div>
+  </article>
+
+  <a class="back-to-top" href="#top">↑ 回到最上方</a>
+
+  <footer>
+    © 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲速報
+  </footer>
+
+</div>
+<script>
+  // 初始化：每張卡片的第一個步驟預設深藍
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+
+      // 切換 active 縮圖
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) {
+        t.classList.remove('active');
+      });
+      thumb.classList.add('active');
+
+      // 高亮對應玩法步驟（僅換編號顏色）
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) {
+          li.classList.remove('step-active');
+        });
+        var targetLi = card.querySelectorAll('.gameplay-list li')[parseInt(step) - 1];
+        if (targetLi) {
+          targetLi.classList.add('step-active');
+        }
+      }
+
+      // 更新大圖
+      if (src) {
+        mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + ' 截圖">';
+      } else {
+        mainEl.innerHTML = '<div class="placeholder">步驟 ' + step + ' 截圖（待提供）</div>';
+      }
+    });
+  });
+</script>
+</body>
+</html>

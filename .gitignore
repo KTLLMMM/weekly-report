@@ -1,0 +1,6 @@
+# 公開 repo 只放網站(docs/，GitHub Pages 來源)與 README
+# 其餘（skills、模板、md、流程/規格文件、簡報）留本機，不公開
+/*
+!/.gitignore
+!/README.md
+!/docs/
