@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LANDBASE 競品動態｜週報總覽</title>
+<title>競品動態週報總覽｜ALPHABET</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="LANDBASE 競品動態｜週報總覽">
-<meta property="og:description" content="SLOT 產業競品每週動態彙整">
+<meta property="og:title" content="競品動態週報總覽｜ALPHABET">
+<meta property="og:description" content="LANDBASE 與 iGaming 產業競品每週動態彙整">
 <meta property="og:image" content="https://ktllmmm.github.io/weekly-report/logo.png">
 <meta property="og:url" content="https://ktllmmm.github.io/weekly-report/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --brand: #24b4cc;
-    --brand-dark: #167d91;
+    --landbase: #24b4cc;
+    --landbase-dark: #167d91;
+    --igaming: #8b5cf6;
+    --igaming-dark: #6d28d9;
     --text: #1a1a1a;
     --muted: #5a6470;
     --line: #e3e8ee;
@@ -27,50 +29,57 @@
     font-family: "Noto Sans TC", system-ui, "Microsoft JhengHei", sans-serif;
     font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 56px 24px 80px; }
 
-  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
-  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-  .head-row img { height: 72px; width: auto; flex-shrink: 0; }
-  .head-text { min-width: 0; text-align: right; }
-  h1 { font-size: 28px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
-  .sub { color: var(--muted); font-size: 16px; margin-top: 6px; }
+  header { text-align: center; margin-bottom: 16px; }
+  header img { height: 76px; width: auto; }
+  h1 { font-size: 30px; line-height: 1.4; margin: 22px 0 6px; color: var(--text); }
+  .sub { color: var(--muted); font-size: 17px; margin: 0; }
 
-  .intro { color: var(--muted); margin: 0 0 28px; }
+  .intro { color: var(--muted); text-align: center; margin: 8px 0 40px; }
 
-  /* 週報卡片列表 */
-  a.report {
+  /* 兩個專區入口卡片 */
+  .portals { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  a.portal {
     display: block; text-decoration: none; color: inherit;
-    border: 1px solid var(--line); border-radius: 10px;
-    padding: 20px 22px; margin: 0 0 16px;
+    border: 1px solid var(--line); border-radius: 14px;
+    padding: 32px 28px; position: relative; overflow: hidden;
     transition: border-color .15s, box-shadow .15s, transform .15s;
   }
-  a.report:hover {
-    border-color: var(--brand);
-    box-shadow: 0 4px 14px rgba(36,180,204,.15);
-    transform: translateY(-1px);
+  a.portal::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
   }
-  .report .meta {
-    font-size: 14px; font-weight: 700; letter-spacing: .5px;
-    color: var(--brand); margin-bottom: 6px;
+  a.portal.landbase::before { background: var(--landbase); }
+  a.portal.igaming::before { background: var(--igaming); }
+  a.portal:hover { transform: translateY(-2px); }
+  a.portal.landbase:hover { border-color: var(--landbase); box-shadow: 0 6px 18px rgba(36,180,204,.18); }
+  a.portal.igaming:hover { border-color: var(--igaming); box-shadow: 0 6px 18px rgba(139,92,246,.18); }
+
+  .portal .tag {
+    display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;
   }
-  .report .lead { font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.5; }
-  .report .go { font-size: 14px; color: var(--muted); margin-top: 8px; }
-  .report .go::after { content: " →"; }
+  .portal.landbase .tag { color: var(--landbase-dark); background: #e7f6f9; }
+  .portal.igaming .tag { color: var(--igaming-dark); background: #f1ebff; }
+  .portal .name { font-size: 24px; font-weight: 700; line-height: 1.4; }
+  .portal.landbase .name { color: var(--landbase-dark); }
+  .portal.igaming .name { color: var(--igaming-dark); }
+  .portal .desc { color: var(--muted); font-size: 15px; margin-top: 8px; }
+  .portal .go { font-size: 14px; font-weight: 700; margin-top: 18px; }
+  .portal.landbase .go { color: var(--landbase); }
+  .portal.igaming .go { color: var(--igaming); }
+  .portal .go::after { content: " →"; }
 
   footer {
-    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
-    color: var(--muted); font-size: 14px;
+    margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px; text-align: center;
   }
 
   @media (max-width: 600px) {
     body { font-size: 17px; }
-    .wrap { padding: 32px 18px 60px; }
-    .head-row { flex-direction: column; align-items: flex-start; gap: 14px; }
-    .head-row img { height: 56px; }
-    .head-text { text-align: left; }
-    h1 { font-size: 24px; }
-    .report .lead { font-size: 17px; }
+    .wrap { padding: 36px 18px 60px; }
+    h1 { font-size: 25px; }
+    .portals { grid-template-columns: 1fr; gap: 16px; }
   }
 </style>
 </head>
@@ -78,26 +87,31 @@
 <div class="wrap">
 
   <header>
-    <div class="head-row">
-      <img src="logo.png" alt="傳奇亞太科技 ALPHABET">
-      <div class="head-text">
-        <h1>LANDBASE 競品動態</h1>
-        <div class="sub">週報總覽</div>
-      </div>
-    </div>
+    <img src="logo.png" alt="傳奇亞太科技 ALPHABET">
+    <h1>競品動態週報總覽</h1>
+    <p class="sub">ALPHABET 傳奇亞太科技</p>
   </header>
 
-  <p class="intro">SLOT 產業競品每週動態彙整。點擊任一週進入完整週報。</p>
+  <p class="intro">選擇要瀏覽的專區，進入完整的每週競品動態彙整。</p>
 
-  <!-- 週報列表：最新的放最上面；每新增一週，複製一個 a.report 區塊即可 -->
-  <a class="report" href="weeks/W22/">
-    <div class="meta">第 22 週 ｜ 2026/05/25 – 05/31</div>
-    <div class="lead">Aristocrat 新機首發奪冠 Eilers &amp; Krejcik、Light &amp; Wonder 11 款遊戲攻占排行榜、IGT 重整後取得 UAE 執照布局中東</div>
-    <div class="go">閱讀本週週報</div>
-  </a>
+  <div class="portals">
+    <a class="portal landbase" href="landbase/">
+      <span class="tag">LANDBASE</span>
+      <div class="name">LANDBASE 競品動態</div>
+      <div class="desc">實體機台 SLOT 產業三大主廠與其他廠商每週動態。</div>
+      <div class="go">進入 LANDBASE 週報</div>
+    </a>
+
+    <a class="portal igaming" href="igaming/">
+      <span class="tag">iGAMING</span>
+      <div class="name">iGaming 競品動態</div>
+      <div class="desc">線上博弈 iGaming 產業競品每週重點彙整。</div>
+      <div class="go">進入 iGaming 週報</div>
+    </a>
+  </div>
 
   <footer>
-    © 2026 傳奇亞太科技有限公司 ALPHABET ｜ LANDBASE 競品動態
+    © 2026 傳奇亞太科技有限公司 ALPHABET ｜ 競品動態週報
   </footer>
 
 </div>

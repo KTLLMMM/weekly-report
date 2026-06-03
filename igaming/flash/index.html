@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iGaming 遊戲速報</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="iGaming 遊戲速報">
+<meta property="og:description" content="最新遊戲上市與榜單動態">
+<meta property="og:image" content="https://ktllmmm.github.io/weekly-report/logo.png">
+<meta property="og:url" content="https://ktllmmm.github.io/weekly-report/igaming/flash/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #8b5cf6;
+    --brand-dark: #6d28d9;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Noto Sans TC", system-ui, "Microsoft JhengHei", sans-serif;
+    font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .back-link {
+    display: inline-block; color: var(--muted); text-decoration: none;
+    font-size: 15px; margin-bottom: 20px;
+  }
+  .back-link:hover { text-decoration: underline; }
+  .back-link::before { content: "← "; }
+
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img { height: 72px; width: auto; flex-shrink: 0; }
+  .head-text { min-width: 0; text-align: right; }
+  h1 { font-size: 28px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .sub { color: var(--muted); font-size: 16px; margin-top: 6px; }
+
+  .empty {
+    border: 1px dashed var(--line); border-radius: 12px;
+    padding: 56px 24px; text-align: center; color: var(--muted); margin-top: 8px;
+  }
+  .empty .big { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+
+  footer {
+    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .wrap { padding: 32px 18px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .head-row img { height: 56px; }
+    .head-text { text-align: left; }
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back-link" href="../">iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img src="../../logo.png" alt="傳奇亞太科技 ALPHABET">
+      <div class="head-text">
+        <h1>iGaming 遊戲速報</h1>
+        <div class="sub">最新遊戲動態</div>
+      </div>
+    </div>
+  </header>
+
+  <!--
+    這是「遊戲速報」頁，永遠只放最新一期。
+    每次同事提供新的速報 HTML 時，直接覆蓋本檔（igaming/flash/index.html）與其圖片，不保留舊版。
+  -->
+  <div class="empty">
+    <div class="big">遊戲速報即將上線</div>
+    <div>第一份速報提供後，最新內容會顯示在這裡。</div>
+  </div>
+
+  <footer>
+    © 2026 傳奇亞太科技有限公司 ALPHABET ｜ iGaming 遊戲速報
+  </footer>
+
+</div>
+</body>
+</html>
