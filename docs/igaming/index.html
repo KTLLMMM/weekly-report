@@ -87,6 +87,11 @@
   .report .go { font-size: 14px; color: var(--muted); margin-top: 8px; }
   .report .go::after { content: " →"; }
 
+  /* 「每週週報」這一區保留原本的紫色（遊戲速報維持青色） */
+  .weekly .section-title { color: #6d28d9; border-left-color: #8b5cf6; }
+  .weekly a.report:hover { border-color: #8b5cf6; box-shadow: 0 4px 14px rgba(139,92,246,.15); }
+  .weekly .report .meta { color: #8b5cf6; }
+
   footer {
     margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     color: var(--muted); font-size: 14px;
@@ -131,7 +136,7 @@
   </div>
 
   <!-- ===== 每週週報：保留歷史，最新的放最上面，每週新增一張 a.report ===== -->
-  <div class="section">
+  <div class="section weekly">
     <p class="section-title">每週週報</p>
 
     <a class="report" href="weeks/W23/">
