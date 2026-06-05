@@ -61,6 +61,18 @@
     font-size: 14px; font-weight: 700; letter-spacing: .5px;
     color: var(--brand); margin-bottom: 6px;
   }
+  /* 最新一週醒目標示 */
+  a.report.latest {
+    border-color: var(--brand); border-width: 2px;
+    background: #f3fbfc;
+    box-shadow: 0 4px 16px rgba(36,180,204,.18);
+  }
+  .report .badge {
+    display: inline-block; background: var(--brand); color: #fff;
+    font-size: 12px; font-weight: 700; letter-spacing: .5px;
+    padding: 2px 10px; border-radius: 999px; margin-left: 8px;
+    vertical-align: middle;
+  }
   .report .lead { font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.5; }
   .report .go { font-size: 14px; color: var(--muted); margin-top: 8px; }
   .report .go::after { content: " →"; }
@@ -99,8 +111,8 @@
   <p class="intro">SLOT 產業競品每週動態彙整。點擊任一週進入完整週報。</p>
 
   <!-- 週報列表：最新的放最上面；每新增一週，複製一個 a.report 區塊即可 -->
-  <a class="report" href="weeks/W23/">
-    <div class="meta">第 23 週 ｜ 2026/06/01 – 06/05</div>
+  <a class="report latest" href="weeks/W23/">
+    <div class="meta">第 23 週 ｜ 2026/06/01 – 06/05<span class="badge">最新</span></div>
     <div class="lead">Light &amp; Wonder 以創新「玩家選擇」機制的 Willy Wonka 新機領跑實體市場，Aristocrat 憑 Dragon Link 在亞太奪雙獎，關稅成本壓力持續籠罩機台製造商。</div>
     <div class="go">閱讀本週週報</div>
   </a>
