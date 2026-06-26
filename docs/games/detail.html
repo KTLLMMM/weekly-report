@@ -216,7 +216,7 @@
       if (!src) return '<div class="placeholder">' + esc(label) + '（待補）</div>';
       if (isVid(src)) {
         return thumb
-          ? '<video src="' + esc(src) + '" muted loop preload="metadata"></video>'
+          ? '<video src="' + esc(src) + '#t=0.5" muted preload="metadata"></video>'
           : '<video src="' + esc(src) + '" autoplay loop muted playsinline></video>';
       }
       return '<img src="' + esc(src) + '" alt="' + esc(label) + '"' + (thumb ? ' loading="lazy"' : '') + '>';

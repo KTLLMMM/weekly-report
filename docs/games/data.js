@@ -32,10 +32,10 @@ var GAMES = [
       {
         type: "BASE GAME",
         steps: [
-          { text: "盤面頂端有一條 INSTANT WIN ROW，每一軸上方各有一個 Instant Win Box，內容每次 SPIN 隨機變動。", img: "", yt: "" },
-          { text: "INSTANT WIN 符號落在某軸時，立即贏得該軸上方框內的內容：分數[[10～750 分 × bet multiplier]]，或三大特色之一。", img: "", yt: "" },
-          { text: "三大特色採打擊觸發。", img: "", yt: "" },
-          { text: "三大特色亦有固定觸發：當某特色已在 Instant Win Box 中、其正下方落下 INSTANT WIN，即必定觸發該特色。", img: "", yt: "" }
+          { text: "盤面頂端有一條 INSTANT WIN ROW，每一軸上方各有一個 Instant Win Box，內容每次 SPIN 隨機變動。", img: "shen-shu/clips/shen-shu-base-1.webm", yt: "https://www.youtube.com/watch?v=8lG7J4KqPZQ&t=1342s" },
+          { text: "INSTANT WIN 符號落在某軸時，立即贏得該軸上方框內的內容：分數[[10～750 分 × bet multiplier]]，或三大特色之一。", img: "shen-shu/clips/shen-shu-base-2.webm", yt: "https://www.youtube.com/watch?v=TyjveYwToxg&t=349s" },
+          { text: "三大特色採打擊觸發。", img: "shen-shu/clips/shen-shu-base-2.webm", yt: "https://www.youtube.com/watch?v=TyjveYwToxg&t=349s" },
+          { text: "三大特色亦有固定觸發：當某特色已在 Instant Win Box 中、其正下方落下 INSTANT WIN，即必定觸發該特色。", img: "shen-shu/clips/shen-shu-base-4.webm", yt: "https://www.youtube.com/watch?v=8lG7J4KqPZQ&t=1429s" }
         ]
       },
       {
@@ -50,7 +50,7 @@ var GAMES = [
           { text: "EXTRA ROW：免費遊戲中，EXTRA ROW 符號落在任一軸即把盤面往上延展一列；單輪免費遊戲最多延展 3 列。", img: "", yt: "" },
           { text: "免費遊戲結束時，5 個轉軸上方累積的分數全部派發。", img: "", yt: "" },
           { text: "EXTRA FREE GAMES：免費遊戲中可內部觸發尚未啟動的特色 —— 其對應符號落在 5 軸任一軸時立即觸發，並再加 5 次免費遊戲。", img: "", yt: "" },
-          { text: "TRIPLE BONUS METER：當「3 特色齊發」很久未出現時，盤面上方會出現提示表，於 3 特色免費遊戲開始時重置消失。", img: "", yt: "" }
+          { text: "TRIPLE BONUS METER：當「3 特色齊發」很久未出現時，盤面上方會出現提示表，於 3 特色免費遊戲開始時重置消失。", img: "shen-shu/clips/shen-shu-triple-bonus.webm", yt: "https://www.youtube.com/watch?v=TyjveYwToxg&t=333s" }
         ]
       }
     ],
@@ -68,67 +68,5 @@ var GAMES = [
       "shen-shu/HELP/shen-shu-help-11.jpg",
       "shen-shu/HELP/shen-shu-help-12.jpg"
     ]
-  },
-  {
-    id: "money-bags",
-    vendor: "Aristocrat",
-    year: "2026",
-    name: "Mr. & Ms. Money Bags",
-    img: "../landbase/weeks/W25/aristocrat-moneybags.jpg",
-    tags: ["乘倍", "轉盤獎勵", "連線彩金"],
-    desc: "Class II 新機，採用 Marquis 五軸機櫃搭配實體轉軸與數位頂部轉盤，串接 Frenzy Jackpots 連線彩金系統，含四種 Bonus，鎖定部落與區域型 Class II 市場。",
-    source: "https://cdcgaming.com/aristocrat-gaming-releases-class-ii-game-mr-ms-money-bags/",
-    play: [
-      {
-        type: "BASE GAME",
-        steps: [
-          { text: "Marquis 五軸機櫃，實體轉軸搭配數位頂部轉盤。", img: "../landbase/weeks/W25/aristocrat-moneybags.jpg", yt: "https://www.youtube.com/watch?v=-mn--rC2iUQ" },
-          { text: "基本盤觸發 VGT 經典 Red Screen 免費遊戲。", img: "", yt: "https://www.youtube.com/watch?v=aqz-KE-bpKQ" }
-        ]
-      },
-      {
-        type: "FREE GAME",
-        steps: [
-          { text: "Red Screen 免費遊戲：經典 VGT 玩法。", img: "", yt: "https://www.youtube.com/watch?v=-mn--rC2iUQ" },
-          { text: "Super Red Screen：可變型免費遊戲乘數。", img: "", yt: "" }
-        ]
-      },
-      {
-        type: "FEATURE GAME",
-        steps: [
-          { text: "可變型轉盤乘數，與標準轉盤獎勵可單獨或同時觸發。", img: "", yt: "" },
-          { text: "串接 Frenzy Jackpots 連線彩金系統。", img: "", yt: "" }
-        ]
-      }
-    ]
-  },
-  {
-    id: "mini-uth",
-    vendor: "Light & Wonder",
-    year: "2026",
-    name: "Mini Ultimate Texas Hold'em",
-    img: "../landbase/weeks/W25/lw-mini-uth.jpg",
-    tags: ["撲克", "桌遊"],
-    desc: "撲克桌遊新版本，以更精簡的桌台規格延伸熱門 Ultimate Texas Hold'em 系列，鎖定空間與節奏更靈活的賭場部署需求。",
-    source: "https://www.youtube.com/watch?v=-mn--rC2iUQ",
-    play: [
-      {
-        type: "BASE GAME",
-        steps: [
-          { text: "精簡桌台規格，延伸 Ultimate Texas Hold'em 玩法。", img: "../landbase/weeks/W25/lw-mini-uth.jpg" }
-        ]
-      }
-    ]
-  },
-  {
-    id: "zitro-fantasy",
-    vendor: "Zitro",
-    year: "2026",
-    name: "FANTASY 機櫃五款新作",
-    img: "../landbase/weeks/W25/headline.jpg",
-    tags: ["多盤面", "收集"],
-    desc: "FANTASY 機櫃一口氣推出 Brave Dragon、Lion Falls、Gold Space、Fantasy Mine、Rock n' Raccoons 五款獨家新作，主打華麗視覺與沉浸式多媒體，為拓展拉美市場的核心機型。",
-    source: "https://zitrogames.com/record-attendance-exciting-new-releases-and-a-resounding-success-this-was-zitro-experience-peru/",
-    play: []
   }
 ];
