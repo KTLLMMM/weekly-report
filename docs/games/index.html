@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LANDBASE 競品動態｜競品遊戲庫</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="LANDBASE 競品動態｜競品遊戲庫">
+<meta property="og:description" content="以方格瀏覽各廠商 SLOT 競品遊戲">
+<meta property="og:image" content="https://ktllmmm.github.io/weekly-report/logo.png">
+<meta property="og:url" content="https://ktllmmm.github.io/weekly-report/games/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Noto Sans TC", system-ui, "Microsoft JhengHei", sans-serif;
+    font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .back-link {
+    display: inline-block; color: var(--muted); text-decoration: none;
+    font-size: 15px; margin-bottom: 20px;
+  }
+  .back-link:hover { text-decoration: underline; }
+  .back-link::before { content: "← "; }
+
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 28px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img { height: 72px; width: auto; flex-shrink: 0; }
+  .head-text { min-width: 0; text-align: right; }
+  h1 { font-size: 28px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .sub { color: var(--muted); font-size: 16px; margin-top: 6px; }
+
+  /* ===== 篩選方塊 ===== */
+  .filter-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+  .filter-row:last-of-type { margin-bottom: 28px; }
+  .filter-row .f-label {
+    font-size: 13px; font-weight: 700; color: var(--muted);
+    flex-shrink: 0; width: 42px;
+  }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filters .chip {
+    font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer;
+    color: var(--muted); background: #fff;
+    border: 1px solid var(--line); border-radius: 8px;
+    padding: 7px 14px; transition: border-color .15s, background .15s, color .15s;
+  }
+  .filters .chip:hover { border-color: var(--brand); color: var(--brand-dark); }
+  .filters .chip.active {
+    background: var(--brand); border-color: var(--brand); color: #fff;
+  }
+  .filters .chip:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+
+  /* ===== 方格牆 ===== */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  /* 單一遊戲方格 */
+  .tile {
+    text-align: left; cursor: pointer;
+    border: 1px solid var(--line); border-radius: 12px;
+    background: #fff; overflow: hidden; padding: 0;
+    font-family: inherit; color: inherit; text-decoration: none;
+    display: flex; flex-direction: column;
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+  }
+  .tile:hover {
+    border-color: var(--brand);
+    box-shadow: 0 6px 18px rgba(36,180,204,.18);
+    transform: translateY(-2px);
+  }
+  .tile:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+
+  /* 廠商名（圖片上方），右側年份 */
+  .tile .vendor {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: .5px;
+    color: var(--brand); text-transform: uppercase;
+    padding: 12px 16px 8px;
+  }
+  .tile .vendor .year { color: var(--muted); font-weight: 500; flex-shrink: 0; }
+
+  /* 遊戲圖（固定比例，等比裁切） */
+  .tile .thumb {
+    width: 100%; aspect-ratio: 4 / 3; background: #eef2f6;
+    display: block; position: relative;
+  }
+  .tile .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* 無圖時的佔位 */
+  .tile .thumb.empty::after {
+    content: "無圖"; position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: #9aa6b2; font-size: 14px; letter-spacing: 1px;
+  }
+
+  .tile .body { padding: 14px 16px 16px; }
+  .tile .name { font-size: 17px; font-weight: 700; line-height: 1.4; color: var(--text); }
+
+  /* 空狀態 */
+  .empty-state {
+    border: 1px dashed var(--line); border-radius: 12px;
+    padding: 48px 24px; text-align: center; color: var(--muted);
+  }
+
+  footer {
+    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .wrap { padding: 32px 18px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .head-row img { height: 56px; }
+    .head-text { text-align: left; }
+    h1 { font-size: 24px; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+    .tile .name { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back-link" href="../landbase/">週報總覽</a>
+
+  <header>
+    <div class="head-row">
+      <img src="../logo.png" alt="傳奇亞太科技 ALPHABET">
+      <div class="head-text">
+        <h1>LANDBASE 遊戲總覽</h1>
+        <div class="sub">競品遊戲介紹</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-row">
+    <span class="f-label">廠商</span>
+    <div class="filters" id="filtersVendor"></div>
+  </div>
+  <div class="filter-row">
+    <span class="f-label">年份</span>
+    <div class="filters" id="filtersYear"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    © 2026 傳奇亞太科技有限公司 ALPHABET ｜ LANDBASE 競品動態
+  </footer>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+  (function () {
+    var grid = document.getElementById('grid');
+    var filtersVendor = document.getElementById('filtersVendor');
+    var filtersYear = document.getElementById('filtersYear');
+    var ALL = '全部';
+    var currentVendor = ALL;
+    var currentYear = ALL;
+
+    function esc(s) {
+      return String(s).replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    }
+
+    /* 依篩選渲染方格（廠商 + 年份，AND）；點方格連到獨立詳情頁 */
+    function renderGrid() {
+      grid.innerHTML = '';
+      var shown = 0;
+      GAMES.forEach(function (g, i) {
+        if (currentVendor !== ALL && g.vendor !== currentVendor) return;
+        if (currentYear !== ALL && String(g.year) !== currentYear) return;
+        shown++;
+        var tile = document.createElement('a');
+        tile.className = 'tile';
+        tile.href = 'detail.html?id=' + encodeURIComponent(g.id);
+        var thumb = g.img
+          ? '<span class="thumb"><img src="' + esc(g.img) + '" alt="' + esc(g.name) + '" loading="lazy"></span>'
+          : '<span class="thumb empty"></span>';
+        tile.innerHTML =
+          '<span class="vendor"><span class="v-name">' + esc(g.vendor) + '</span>' +
+            (g.year ? '<span class="year">' + esc(g.year) + '</span>' : '') +
+          '</span>' +
+          thumb +
+          '<span class="body">' +
+            '<span class="name">' + esc(g.name) + '</span>' +
+          '</span>';
+        grid.appendChild(tile);
+      });
+      if (!shown) {
+        grid.innerHTML = '<div class="empty-state">沒有符合篩選條件的競品遊戲。</div>';
+      }
+    }
+
+    /* 通用：建立一組篩選方塊（依出現順序去重，全部置頂） */
+    function buildFilters(container, values, getCurrent, setCurrent) {
+      [ALL].concat(values).forEach(function (v) {
+        var chip = document.createElement('button');
+        chip.className = 'chip' + (v === getCurrent() ? ' active' : '');
+        chip.type = 'button';
+        chip.textContent = v;
+        chip.addEventListener('click', function () {
+          setCurrent(v);
+          container.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          renderGrid();
+        });
+        container.appendChild(chip);
+      });
+    }
+
+    function uniqueBy(key) {
+      var out = [];
+      GAMES.forEach(function (g) {
+        var val = g[key];
+        if (val != null && val !== '' && out.indexOf(String(val)) === -1) out.push(String(val));
+      });
+      return out;
+    }
+
+    if (!GAMES.length) {
+      document.querySelectorAll('.filter-row').forEach(function (r) { r.style.display = 'none'; });
+      grid.outerHTML = '<div class="empty-state">尚未有競品遊戲資料。</div>';
+    } else {
+      buildFilters(filtersVendor, uniqueBy('vendor'),
+        function () { return currentVendor; }, function (v) { currentVendor = v; });
+      buildFilters(filtersYear, uniqueBy('year').sort().reverse(),
+        function () { return currentYear; }, function (v) { currentYear = v; });
+      renderGrid();
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LANDBASE 遊戲總覽｜競品遊戲介紹</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="LANDBASE 遊戲總覽｜競品遊戲介紹">
+<meta property="og:image" content="https://ktllmmm.github.io/weekly-report/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Noto Sans TC", system-ui, "Microsoft JhengHei", sans-serif;
+    font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .back-link {
+    display: inline-block; color: var(--muted); text-decoration: none;
+    font-size: 15px; margin-bottom: 20px;
+  }
+  .back-link:hover { text-decoration: underline; }
+  .back-link::before { content: "← "; }
+
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img { height: 72px; width: auto; flex-shrink: 0; }
+  .head-text { min-width: 0; text-align: right; }
+  h1 { font-size: 28px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .sub { color: var(--muted); font-size: 16px; margin-top: 6px; }
+
+  /* ===== 遊戲標頭 ===== */
+  .vendor-line {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 14px; font-weight: 700; letter-spacing: .5px;
+    color: var(--brand); text-transform: uppercase; margin-bottom: 6px;
+  }
+  .vendor-line .year { color: var(--muted); font-weight: 500; }
+  .game-name { font-size: 30px; line-height: 1.35; font-weight: 700; color: var(--brand-dark); margin: 0 0 20px; }
+  .game-img { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; margin: 0 0 22px; }
+
+  /* ===== # 標籤 ===== */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
+  .tags .tag {
+    font-size: 14px; font-weight: 500; color: var(--muted);
+    background: #f4f6f8; border: 1px solid var(--line); border-radius: 20px;
+    padding: 4px 13px;
+  }
+  .tags .tag::before { content: "# "; color: #9aa6b2; font-weight: 700; }
+
+  /* ===== 區塊快速導覽按鈕 ===== */
+  .section-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
+  .nav-btn {
+    font-size: 13px; font-weight: 600; color: var(--brand-dark); text-decoration: none;
+    background: #eef7f9; border: 1px solid #d4eef3; border-radius: 8px; padding: 6px 13px;
+    transition: background .15s, border-color .15s, color .15s;
+  }
+  .nav-btn:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+  /* ===== 數值提示（規則為主，數值滑過才顯示）===== */
+  .val {
+    position: relative; cursor: help; outline: none; margin-left: 5px;
+    display: inline-block; font-size: 12px; font-weight: 500; line-height: 1.4;
+    color: var(--muted); border: 1px solid var(--line); border-radius: 4px;
+    padding: 0 6px; vertical-align: 1px; white-space: nowrap; transition: border-color .15s, color .15s;
+  }
+  .val::before { content: "數值"; }
+  .val:hover, .val:focus { border-color: var(--brand); color: var(--brand-dark); }
+  .val:hover::after, .val:focus::after {
+    content: attr(data-v);
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 7px);
+    background: #1a1a1a; color: #fff; font-weight: 500; font-size: 13px; line-height: 1.5;
+    padding: 6px 11px; border-radius: 6px; z-index: 30;
+    white-space: normal; width: max-content; max-width: min(280px, 80vw); text-align: left;
+    box-shadow: 0 4px 14px rgba(0,0,0,.28); pointer-events: none;
+  }
+
+  /* ===== 區塊標題（玩法分區用，沿用原規格簡述樣式、統一同色）===== */
+  .section-title { font-size: 16px; font-weight: 700; color: var(--text); margin: 0 0 16px; display: flex; align-items: center; gap: 8px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+
+  /* ===== 玩法分區 ===== */
+  .play-section { margin: 0 0 34px; }
+  .section-title .play-name { font-weight: 500; font-size: 14px; color: var(--muted); margin-left: 8px; }
+  /* 標題下方內容：左側淺淺直線分區軌 */
+  .play-body { border-left: 2px solid #d6ebef; padding-left: 18px; }
+
+  .gameplay-list { list-style: none; margin: 18px 0 0; padding: 0; counter-reset: step; }
+  .gameplay-list li {
+    counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px;
+    line-height: 1.7; font-size: 16px; cursor: pointer;
+  }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px;
+    background: var(--brand); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 4px;
+    transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: var(--brand-dark); }
+
+  .gallery { margin: 0; }
+  .gallery-main {
+    width: 100%; background: #eef2f6; border-radius: 8px; overflow: hidden;
+    margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px;
+  }
+  .gallery-main img, .gallery-main video { width: 100%; height: auto; display: block; transition: opacity .2s; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 40px 24px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .gallery-thumbs .thumb {
+    width: 110px; height: 74px; border-radius: 6px; overflow: hidden; cursor: pointer;
+    border: 2px solid transparent; background: #eef2f6; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; transition: border-color .15s;
+    color: var(--muted); font-size: 12px; font-weight: 700;
+  }
+  .gallery-thumbs .thumb img, .gallery-thumbs .thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); }
+
+  /* 對應 YouTube 影片連結（低調文字連結）*/
+  .yt-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 10px; font-size: 13px; font-weight: 500;
+    color: var(--muted); text-decoration: none; transition: color .15s;
+  }
+  .yt-link:hover { color: #c0392b; text-decoration: underline; }
+  .yt-link svg { width: 15px; height: 15px; flex-shrink: 0; opacity: .85; }
+
+  /* ===== HELP / 賠率表圖庫 ===== */
+  .help-wrap { margin: 8px 0 34px; }
+  .help-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .help-grid a {
+    display: block; border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .help-grid a:hover { border-color: var(--brand); box-shadow: 0 4px 12px rgba(36,180,204,.18); }
+  .help-grid img { width: 100%; height: auto; display: block; }
+
+  .not-found { color: var(--muted); padding: 40px 0; }
+
+  footer {
+    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .wrap { padding: 32px 18px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .head-row img { height: 56px; }
+    .head-text { text-align: left; }
+    h1 { font-size: 24px; }
+    .game-name { font-size: 25px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back-link" href="./">競品遊戲介紹</a>
+
+  <header>
+    <div class="head-row">
+      <img src="../logo.png" alt="傳奇亞太科技 ALPHABET">
+      <div class="head-text">
+        <h1>LANDBASE 遊戲總覽</h1>
+        <div class="sub">競品遊戲介紹</div>
+      </div>
+    </div>
+  </header>
+
+  <main id="detail"></main>
+
+  <footer>
+    © 2026 傳奇亞太科技有限公司 ALPHABET ｜ LANDBASE 競品動態
+  </footer>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+  (function () {
+    var box = document.getElementById('detail');
+
+    function esc(s) {
+      return String(s).replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    }
+    /* 玩法文字：句子保持完整，[[數值]] 一律抽到句尾成 ⓘ（滑過才顯示，數值供參考）*/
+    function fmt(s) {
+      var vals = [];
+      var clean = esc(s).replace(/\[\[(.+?)\]\]/g, function (_, v) { vals.push(v); return ''; });
+      var chips = vals.map(function (v) {
+        return '<span class="val" tabindex="0" data-v="' + v + '"></span>';
+      }).join('');
+      return clean + chips;
+    }
+    /* 玩法媒體：影片(.webm/.mp4) → 自動循環靜音 video；圖片 → img；空 → 佔位 */
+    function isVid(src) { return /\.(webm|mp4)(\?|#|$)/i.test(src || ''); }
+    function media(src, label, thumb) {
+      if (!src) return '<div class="placeholder">' + esc(label) + '（待補）</div>';
+      if (isVid(src)) {
+        return thumb
+          ? '<video src="' + esc(src) + '" muted loop preload="metadata"></video>'
+          : '<video src="' + esc(src) + '" autoplay loop muted playsinline></video>';
+      }
+      return '<img src="' + esc(src) + '" alt="' + esc(label) + '"' + (thumb ? ' loading="lazy"' : '') + '>';
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    var g = null;
+    for (var n = 0; n < GAMES.length; n++) {
+      if (GAMES[n].id === id) { g = GAMES[n]; break; }
+    }
+
+    if (!g) {
+      box.innerHTML = '<p class="not-found">找不到這款遊戲，請回到<a href="./">競品遊戲介紹</a>重新選擇。</p>';
+      return;
+    }
+
+    document.title = g.name + '｜競品遊戲介紹';
+
+    var html = '';
+
+    /* 標頭 */
+    html +=
+      '<div class="vendor-line"><span>' + esc(g.vendor) + '</span>' +
+        (g.year ? '<span class="year">' + esc(g.year) + '</span>' : '') +
+      '</div>' +
+      '<h2 class="game-name">' + esc(g.name) + '</h2>' +
+      (g.img ? '<img class="game-img" src="' + esc(g.img) + '" alt="' + esc(g.name) + '">' : '');
+
+    /* # 標籤 */
+    if (g.tags && g.tags.length) {
+      html += '<div class="tags">' +
+        g.tags.map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') +
+        '</div>';
+    }
+
+    /* 玩法分區：每區一組「步驟清單 + GIF 畫廊」；同時收集導覽項目 */
+    var navItems = [];
+    var playHtml = '';
+    if (g.play && g.play.length) {
+      g.play.forEach(function (sec, si) {
+        if (!sec.steps || !sec.steps.length) return;
+        navItems.push({ id: 'sec-' + si, label: sec.type + (sec.name ? ' ' + sec.name : '') });
+
+        var lis = sec.steps.map(function (s) {
+          return '<li><span class="step-text">' + fmt(s.text) + '</span></li>';
+        }).join('');
+
+        var mainInner = media(sec.steps[0].img, '步驟 1', false);
+
+        var thumbs = sec.steps.map(function (s, k) {
+          var label = '步驟 ' + (k + 1);
+          var inner = s.img ? media(s.img, label, true) : esc(label);
+          return '<div class="thumb' + (k === 0 ? ' active' : '') +
+            '" data-sec="' + si + '" data-step="' + (k + 1) +
+            '" data-src="' + esc(s.img || '') +
+            '" data-yt="' + esc(s.yt || '') + '">' + inner + '</div>';
+        }).join('');
+
+        var firstYt = sec.steps[0].yt || '';
+        var ytIcon = '<svg viewBox="0 0 24 24" fill="#c0392b"><path d="M21.6 7.2s-.2-1.4-.8-2c-.7-.8-1.6-.8-2-.9C16 4 12 4 12 4s-4 0-6.8.3c-.4 0-1.3.1-2 .9-.6.6-.8 2-.8 2S2 8.8 2 10.5v1.9c0 1.7.2 3.3.2 3.3s.2 1.4.8 2c.7.8 1.7.8 2.2.9 1.6.2 6.8.3 6.8.3s4 0 6.8-.3c.4 0 1.3-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.9c0-1.7-.2-3.3-.2-3.3zM9.8 14.6V8.9l5.2 2.9-5.2 2.8z"/></svg>';
+        var ytLink =
+          '<a class="yt-link" target="_blank" rel="noopener" href="' + esc(firstYt || '#') + '"' +
+          (firstYt ? '' : ' style="display:none"') + '>' + ytIcon + '在 YouTube 觀看影片</a>';
+
+        playHtml +=
+          '<div class="play-section" id="sec-' + si + '" data-sec="' + si + '">' +
+            '<div class="section-title">' + esc(sec.type) +
+              (sec.name ? '<span class="play-name">' + esc(sec.name) + '</span>' : '') +
+            '</div>' +
+            '<div class="play-body">' +
+              '<div class="gallery">' +
+                '<div class="gallery-main" id="gallery-main-' + si + '">' + mainInner + '</div>' +
+                '<div class="gallery-thumbs">' + thumbs + '</div>' +
+                ytLink +
+              '</div>' +
+              '<ol class="gameplay-list">' + lis + '</ol>' +
+            '</div>' +
+          '</div>';
+      });
+    }
+
+    /* HELP / 賠率表圖庫 */
+    var helpHtml = '';
+    if (g.help && g.help.length) {
+      navItems.push({ id: 'sec-help', label: 'HELP／賠率表' });
+      helpHtml = '<div class="section-title" id="sec-help">HELP／賠率表</div>' +
+        '<div class="help-wrap"><div class="help-grid">' +
+        g.help.map(function (src) {
+          return '<a href="' + esc(src) + '" target="_blank" rel="noopener">' +
+            '<img src="' + esc(src) + '" alt="HELP" loading="lazy"></a>';
+        }).join('') +
+        '</div></div>';
+    }
+
+    /* 區塊快速導覽按鈕（放在 # 標籤下方）*/
+    if (navItems.length) {
+      html += '<div class="section-nav">' +
+        navItems.map(function (n) {
+          return '<a class="nav-btn" href="#' + n.id + '">' + esc(n.label) + '</a>';
+        }).join('') +
+        '</div>';
+    }
+    html += playHtml + helpHtml;
+
+    box.innerHTML = html;
+
+    /* ===== 互動：點步驟 / 點縮圖 → 切換大圖 + 高亮對應步驟 ===== */
+    function setMain(mainEl, src, step) {
+      mainEl.innerHTML = media(src, '步驟 ' + step, false);
+    }
+
+    box.querySelectorAll('.play-section').forEach(function (section) {
+      var si = section.getAttribute('data-sec');
+      var mainEl = document.getElementById('gallery-main-' + si);
+      var ytLink = section.querySelector('.yt-link');
+      var lis = section.querySelectorAll('.gameplay-list li');
+      if (lis[0]) lis[0].classList.add('step-active');
+
+      function activate(step) {
+        var thumb = section.querySelector('.thumb[data-step="' + step + '"]');
+        section.querySelectorAll('.thumb').forEach(function (t) { t.classList.remove('active'); });
+        if (thumb) thumb.classList.add('active');
+        lis.forEach(function (li) { li.classList.remove('step-active'); });
+        if (lis[step - 1]) lis[step - 1].classList.add('step-active');
+        setMain(mainEl, thumb ? thumb.dataset.src : '', step);
+        if (ytLink) {
+          var yt = thumb ? thumb.dataset.yt : '';
+          if (yt) { ytLink.href = yt; ytLink.style.display = 'inline-flex'; }
+          else { ytLink.style.display = 'none'; }
+        }
+      }
+
+      section.querySelectorAll('.thumb').forEach(function (thumb) {
+        if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+        thumb.addEventListener('click', function () { activate(thumb.dataset.step); });
+      });
+      lis.forEach(function (li, k) {
+        li.addEventListener('click', function () { activate(k + 1); });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
