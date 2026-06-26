@@ -43,7 +43,26 @@
   h1 { font-size: 28px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
   .sub { color: var(--muted); font-size: 16px; margin-top: 6px; }
 
-  .intro { color: var(--muted); margin: 0 0 28px; }
+  .intro { color: var(--muted); margin: 0 0 20px; }
+
+  /* 競品遊戲介紹入口按鈕（低調、窄版） */
+  .lib-entry {
+    display: inline-flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--brand-dark);
+    border: 1px solid var(--line); border-radius: 8px;
+    padding: 10px 16px; margin: 0 0 32px;
+    font-size: 15px; font-weight: 500;
+    transition: border-color .15s, background .15s;
+  }
+  .lib-entry:hover { border-color: var(--brand); background: #f3fbfc; }
+  .lib-entry .icon {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 5px;
+    background: var(--brand);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+    padding: 4px;
+  }
+  .lib-entry .icon span { background: #fff; border-radius: 1px; display: block; }
+  .lib-entry .arrow { color: var(--brand); }
 
   /* 週報卡片列表 */
   a.report {
@@ -110,9 +129,21 @@
 
   <p class="intro">SLOT 產業競品每週動態彙整。點擊任一週進入完整週報。</p>
 
+  <!-- 競品遊戲介紹入口 -->
+  <a class="lib-entry" href="../games/">
+    <span class="icon"><span></span><span></span><span></span><span></span></span>
+    競品遊戲介紹
+    <span class="arrow">→</span>
+  </a>
+
   <!-- 週報列表：最新的放最上面；每新增一週，複製一個 a.report 區塊即可 -->
-  <a class="report latest" href="weeks/W25/">
-    <div class="meta">2026/06/15 – 06/21<span class="badge">最新</span></div>
+  <a class="report latest" href="weeks/W26/">
+    <div class="meta">2026/06/22 – 06/28<span class="badge">最新</span></div>
+    <div class="lead">Aristocrat《House of the Dragon》以業界首創五重 metamorphic 玩法登場、Light &amp; Wonder 全新 LightWave Solar 機櫃全球首發並帶來《Hot Trio Fiesta Caliente》，AGS 在 Eilers-Fantini 報告續強、Aruze《Cash Master Blaster》進駐拉斯維加斯。</div>
+    <div class="go">閱讀本週週報</div>
+  </a>
+  <a class="report" href="weeks/W25/">
+    <div class="meta">2026/06/15 – 06/21</div>
     <div class="lead">Zitro FANTASY 機櫃一口氣推五款獨家新作、Aristocrat 推 Class II 新機 Mr. &amp; Ms. Money Bags、Light &amp; Wonder 發表 Mini Ultimate Texas Hold'em，NOVOMATIC、AGS 新機齊發。</div>
     <div class="go">閱讀本週週報</div>
   </a>
