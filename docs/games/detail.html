@@ -140,6 +140,14 @@
   .yt-link:hover { color: #c0392b; text-decoration: underline; }
   .yt-link svg { width: 15px; height: 15px; flex-shrink: 0; opacity: .85; }
 
+  /* ===== 標誌（Symbol）區塊 ===== */
+  .symbol-list { margin: 0 0 34px; }
+  .symbol-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .symbol-item:last-child { border-bottom: none; }
+  .symbol-img { width: 72px; height: 72px; object-fit: contain; flex-shrink: 0; border: 1px solid var(--line); border-radius: 8px; background: #f4f6f8; cursor: zoom-in; }
+  .symbol-name { font-weight: 700; color: var(--brand-dark); margin-bottom: 2px; }
+  .symbol-role { color: var(--text); font-size: 15px; line-height: 1.7; }
+
   /* ===== HELP / 賠率表圖庫 ===== */
   .help-wrap { margin: 8px 0 34px; }
   .help-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
@@ -271,8 +279,27 @@
         '</div>';
     }
 
-    /* 玩法分區：每區一組「步驟清單 + GIF 畫廊」；同時收集導覽項目 */
     var navItems = [];
+
+    /* 標誌（只列有特殊作用的；一般字獎/M獎不列）*/
+    var symbolsHtml = '';
+    if (g.symbols && g.symbols.length) {
+      navItems.push({ id: 'sec-symbols', label: '標誌' });
+      symbolsHtml = '<div class="section-title" id="sec-symbols">標誌</div>' +
+        '<div class="symbol-list">' +
+        g.symbols.map(function (s) {
+          return '<div class="symbol-item">' +
+            (s.img ? '<img class="symbol-img" src="' + esc(s.img) + '" alt="' + esc(s.name) + '">' : '') +
+            '<div class="symbol-text">' +
+              '<div class="symbol-name">' + esc(s.name) + '</div>' +
+              '<div class="symbol-role">' + fmt(s.role || '') + '</div>' +
+            '</div>' +
+          '</div>';
+        }).join('') +
+        '</div>';
+    }
+
+    /* 玩法分區：每區一組「步驟清單 + GIF 畫廊」；同時收集導覽項目 */
     var playHtml = '';
     if (g.play && g.play.length) {
       g.play.forEach(function (sec, si) {
@@ -338,7 +365,7 @@
         }).join('') +
         '</div>';
     }
-    html += playHtml + helpHtml;
+    html += symbolsHtml + playHtml + helpHtml;
 
     box.innerHTML = html;
 
@@ -384,7 +411,9 @@
     function closeLb() { lb.classList.remove('open'); lbImg.removeAttribute('src'); }
     box.addEventListener('click', function (e) {
       var a = e.target.closest('.help-grid a');
-      if (a) { e.preventDefault(); openLb(a.getAttribute('href')); }
+      if (a) { e.preventDefault(); openLb(a.getAttribute('href')); return; }
+      var sym = e.target.closest('.symbol-img');
+      if (sym) { openLb(sym.getAttribute('src')); }
     });
     document.getElementById('lbClose').addEventListener('click', closeLb);
     lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
