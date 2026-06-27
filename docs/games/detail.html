@@ -118,7 +118,7 @@
     width: 100%; background: #eef2f6; border-radius: 8px; overflow: hidden;
     margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px;
   }
-  .gallery-main img, .gallery-main video { width: 100%; height: auto; display: block; transition: opacity .2s; }
+  .gallery-main img, .gallery-main video { max-width: 100%; max-height: 78vh; width: auto; height: auto; display: block; margin: 0 auto; transition: opacity .2s; }
   .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 40px 24px; }
   .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
   .gallery-thumbs .thumb {
@@ -149,6 +149,19 @@
   }
   .help-grid a:hover { border-color: var(--brand); box-shadow: 0 4px 12px rgba(36,180,204,.18); }
   .help-grid img { width: 100%; height: auto; display: block; }
+  .help-grid a { cursor: zoom-in; }
+
+  /* 圖片放大燈箱（可關閉，不開新分頁）*/
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 1000;
+    background: rgba(0,0,0,.85); align-items: center; justify-content: center; padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 6px; box-shadow: 0 8px 40px rgba(0,0,0,.5); }
+  .lightbox .lb-close {
+    position: fixed; top: 14px; right: 22px; color: #fff; font-size: 40px; line-height: 1;
+    cursor: pointer; user-select: none;
+  }
 
   .not-found { color: var(--muted); padding: 40px 0; }
 
@@ -189,6 +202,11 @@
     © 2026 傳奇亞太科技有限公司 ALPHABET ｜ LANDBASE 競品動態
   </footer>
 
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="lb-close" id="lbClose">&times;</span>
+  <img id="lbImg" src="" alt="放大檢視">
 </div>
 
 <script src="data.js"></script>
@@ -306,7 +324,7 @@
       helpHtml = '<div class="section-title" id="sec-help">HELP／賠率表</div>' +
         '<div class="help-wrap"><div class="help-grid">' +
         g.help.map(function (src) {
-          return '<a href="' + esc(src) + '" target="_blank" rel="noopener">' +
+          return '<a href="' + esc(src) + '">' +
             '<img src="' + esc(src) + '" alt="HELP" loading="lazy"></a>';
         }).join('') +
         '</div></div>';
@@ -358,6 +376,19 @@
         li.addEventListener('click', function () { activate(k + 1); });
       });
     });
+
+    /* ===== 圖片燈箱：點 HELP 圖放大、可關閉（不開新分頁）===== */
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lbImg');
+    function openLb(src) { lbImg.src = src; lb.classList.add('open'); }
+    function closeLb() { lb.classList.remove('open'); lbImg.removeAttribute('src'); }
+    box.addEventListener('click', function (e) {
+      var a = e.target.closest('.help-grid a');
+      if (a) { e.preventDefault(); openLb(a.getAttribute('href')); }
+    });
+    document.getElementById('lbClose').addEventListener('click', closeLb);
+    lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
   })();
 </script>
 </body>
