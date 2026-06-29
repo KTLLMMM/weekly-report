@@ -165,7 +165,11 @@
     background: rgba(0,0,0,.85); align-items: center; justify-content: center; padding: 24px;
   }
   .lightbox.open { display: flex; }
-  .lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 6px; box-shadow: 0 8px 40px rgba(0,0,0,.5); }
+  .lightbox img { max-width: 92vw; max-height: 74vh; border-radius: 6px; box-shadow: 0 8px 40px rgba(0,0,0,.5); }
+  .lb-fig { display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: 92vw; margin: 0; }
+  .lb-name { color: #fff; font-size: 22px; font-weight: 700; text-align: center; }
+  .lb-desc { color: #d7dbdf; font-size: 16px; line-height: 1.6; max-width: 560px; text-align: center; }
+  .lb-desc .val { color: #cfd3d7; border-color: rgba(255,255,255,.35); }
   .lightbox .lb-close {
     position: fixed; top: 14px; right: 22px; color: #fff; font-size: 40px; line-height: 1;
     cursor: pointer; user-select: none;
@@ -214,7 +218,11 @@
 
 <div class="lightbox" id="lightbox">
   <span class="lb-close" id="lbClose">&times;</span>
-  <img id="lbImg" src="" alt="放大檢視">
+  <figure class="lb-fig">
+    <div class="lb-name" id="lbName"></div>
+    <img id="lbImg" src="" alt="放大檢視">
+    <div class="lb-desc" id="lbDesc"></div>
+  </figure>
 </div>
 
 <script src="data.js"></script>
@@ -407,13 +415,25 @@
     /* ===== 圖片燈箱：點 HELP 圖放大、可關閉（不開新分頁）===== */
     var lb = document.getElementById('lightbox');
     var lbImg = document.getElementById('lbImg');
-    function openLb(src) { lbImg.src = src; lb.classList.add('open'); }
+    var lbName = document.getElementById('lbName');
+    var lbDesc = document.getElementById('lbDesc');
+    function openLb(src, name, desc) {
+      lbImg.src = src;
+      lbName.innerHTML = name || ''; lbName.style.display = name ? '' : 'none';
+      lbDesc.innerHTML = desc || ''; lbDesc.style.display = desc ? '' : 'none';
+      lb.classList.add('open');
+    }
     function closeLb() { lb.classList.remove('open'); lbImg.removeAttribute('src'); }
     box.addEventListener('click', function (e) {
       var a = e.target.closest('.help-grid a');
       if (a) { e.preventDefault(); openLb(a.getAttribute('href')); return; }
       var sym = e.target.closest('.symbol-img');
-      if (sym) { openLb(sym.getAttribute('src')); }
+      if (sym) {
+        var item = sym.closest('.symbol-item');
+        var nm = item && item.querySelector('.symbol-name');
+        var rl = item && item.querySelector('.symbol-role');
+        openLb(sym.getAttribute('src'), nm ? nm.innerHTML : sym.getAttribute('alt'), rl ? rl.innerHTML : '');
+      }
     });
     document.getElementById('lbClose').addEventListener('click', closeLb);
     lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
