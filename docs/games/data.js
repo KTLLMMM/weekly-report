@@ -99,7 +99,7 @@ var GAMES = [
           { text: "3×5 盤面、30 線。分數幣為帶分數的標誌。[[Denom 1¢／2¢／5¢／10¢／$1／$2；Bet 100～500]]", img: "fortune-fury/screens/feature-overview.jpg", yt: "" },
           { text: "綜合觸發特色遊戲：盤面出現 1～2 顆分數幣時打擊觸發；出現 6 顆以上分數幣則固定觸發。", img: "", yt: "" },
           { text: "集滿 3 個以上 SCATTER 觸發免費遊戲。", img: "", yt: "" },
-          { text: "共 5 支彩金：Grand、Major、MAXI、Minor、Mini。", img: "", yt: "" }
+          { text: "共 5 支彩金：Grand、Major、MAXI（累積彩金），Minor、Mini（固定彩金）。", img: "", yt: "" }
         ]
       },
       {
@@ -108,7 +108,7 @@ var GAMES = [
         steps: [
           { text: "於 8×5 盤面進行、固定 3 場。分數球不足時可隨機打擊觸發補到 6 顆；場上達 6 顆以上分數球則固定觸發。", img: "fortune-fury/screens/feature-overview.jpg", yt: "" },
           { text: "盤面部分轉輪為鎖定狀態，解鎖後可獲得該列乘數。", img: "fortune-fury/screens/blue-tornado.jpg", yt: "" },
-          { text: "JP：轉出或解鎖後隨機給予一顆任意彩金寶石；集滿對應數量即中彩金 —— Grand 5 顆、Major 4 顆、MAXI／Minor／Mini 各 3 顆。", img: "fortune-fury/screens/jp.jpg", yt: "" },
+          { text: "JP：轉出或解鎖後隨機給予一顆任意彩金寶石；集滿對應數量即中彩金 —— 累積彩金 Grand 5 顆、Major 4 顆、MAXI 3 顆；固定彩金 Minor、Mini 各 3 顆。", img: "fortune-fury/screens/jp.jpg", yt: "" },
           { text: "閃電：轉出或解鎖後，所有帶乘數的轉輪乘數 +1，解鎖列上的分數幣皆套用乘數；閃電、JP 等特殊功能標誌不受乘倍影響。", img: "fortune-fury/screens/lightning.jpg", yt: "" },
           { text: "藍龍捲：轉出或解鎖後，解鎖一列鎖定轉輪；全盤解鎖後不再轉出。", img: "fortune-fury/screens/blue-tornado.jpg", yt: "" },
           { text: "紅龍捲：轉出或解鎖後，解鎖所有鎖定轉輪；全盤解鎖後不再轉出。", img: "fortune-fury/screens/red-tornado.jpg", yt: "" }
