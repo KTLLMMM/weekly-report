@@ -100,7 +100,7 @@
     width: 100%; aspect-ratio: 4 / 3; background: #eef2f6;
     display: block; position: relative;
   }
-  .tile .thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .tile .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
   /* 無圖時的佔位 */
   .tile .thumb.empty::after {
     content: "無圖"; position: absolute; inset: 0;
@@ -186,7 +186,8 @@
     function renderGrid() {
       grid.innerHTML = '';
       var shown = 0;
-      GAMES.forEach(function (g, i) {
+      /* 反向顯示：data.js 新遊戲一律往後 append，總覽最新的排最前面 */
+      GAMES.slice().reverse().forEach(function (g, i) {
         if (currentVendor !== ALL && g.vendor !== currentVendor) return;
         if (currentYear !== ALL && String(g.year) !== currentYear) return;
         shown++;
