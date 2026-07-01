@@ -75,5 +75,64 @@ var GAMES = [
       "shen-shu/HELP/shen-shu-help-11.jpg",
       "shen-shu/HELP/shen-shu-help-12.jpg"
     ]
+  },
+  {
+    id: "fortune-fury",
+    vendor: "IGT",
+    year: "2026",
+    name: "Fortune Fury",
+    img: "fortune-fury/screens/feature-overview.jpg",
+    tags: ["Hold & Spin", "Cash on Reel", "打擊觸發", "固定觸發", "5支彩金", "乘倍", "鎖定轉輪", "升級 M 獎"],
+    symbols: [
+      { name: "SCATTER", role: "集滿 3 個以上觸發免費遊戲。", img: "fortune-fury/symbols/sc.png" },
+      { name: "WILD", role: "百搭；以三格堆疊出現。", img: "fortune-fury/symbols/wild.png" },
+      { name: "分數幣", role: "帶分數的標誌，綜合觸發特色遊戲（1～2 顆打擊觸發、6 顆以上固定觸發）。", img: "fortune-fury/symbols/score-coin.jpg" },
+      { name: "JP", role: "特色遊戲中隨機給予一顆任意彩金寶石；集滿對應數量即中該彩金。", img: "fortune-fury/symbols/jp.png" },
+      { name: "閃電", role: "提升乘數。", img: "fortune-fury/symbols/lightning.png" },
+      { name: "藍龍捲", role: "解鎖一列鎖定轉輪。", img: "fortune-fury/symbols/blue-tornado.png" },
+      { name: "紅龍捲", role: "解鎖全部鎖定轉輪。", img: "fortune-fury/symbols/red-tornado.png" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "3×5 盤面、30 線。分數幣為帶分數的標誌。[[Denom 1¢／2¢／5¢／10¢／$1／$2；Bet 100～500]]", img: "fortune-fury/screens/feature-overview.jpg", yt: "" },
+          { text: "綜合觸發特色遊戲：盤面出現 1～2 顆分數幣時打擊觸發；出現 6 顆以上分數幣則固定觸發。", img: "", yt: "" },
+          { text: "集滿 3 個以上 SCATTER 觸發免費遊戲。", img: "", yt: "" },
+          { text: "共 5 支彩金：Grand、Major、MAXI、Minor、Mini。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "分數幣特色",
+        steps: [
+          { text: "於 8×5 盤面進行、固定 3 場。分數球不足時可隨機打擊觸發補到 6 顆；場上達 6 顆以上分數球則固定觸發。", img: "fortune-fury/screens/feature-overview.jpg", yt: "" },
+          { text: "盤面部分轉輪為鎖定狀態，解鎖後可獲得該列乘數。", img: "fortune-fury/screens/blue-tornado.jpg", yt: "" },
+          { text: "JP：轉出或解鎖後隨機給予一顆任意彩金寶石；集滿對應數量即中彩金 —— Grand 5 顆、Major 4 顆、MAXI／Minor／Mini 各 3 顆。", img: "fortune-fury/screens/jp.jpg", yt: "" },
+          { text: "閃電：轉出或解鎖後，所有帶乘數的轉輪乘數 +1，解鎖列上的分數幣皆套用乘數；閃電、JP 等特殊功能標誌不受乘倍影響。", img: "fortune-fury/screens/lightning.jpg", yt: "" },
+          { text: "藍龍捲：轉出或解鎖後，解鎖一列鎖定轉輪；全盤解鎖後不再轉出。", img: "fortune-fury/screens/blue-tornado.jpg", yt: "" },
+          { text: "紅龍捲：轉出或解鎖後，解鎖所有鎖定轉輪；全盤解鎖後不再轉出。", img: "fortune-fury/screens/red-tornado.jpg", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        name: "鎖定 WILD",
+        steps: [
+          { text: "由 3 個以上 SCATTER 觸發，3×5 盤面、共 3 場。", img: "fortune-fury/screens/fg-lockwild.jpg", yt: "" },
+          { text: "WILD 會鎖定並延展。", img: "", yt: "" },
+          { text: "轉出 EXTRA GAME 可 +1 SPIN。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        name: "升級 M 獎",
+        steps: [
+          { text: "由 3 個以上 SCATTER 觸發，3×5 盤面、共 15 場。", img: "fortune-fury/screens/fg-upgrade-m.jpg", yt: "" },
+          { text: "收集後升級 M 獎，升級的 M 獎獲得 WILD 功能。", img: "", yt: "" },
+          { text: "轉出 EXTRA GAME 可 +1 SPIN。", img: "", yt: "" }
+        ]
+      }
+    ],
+    help: []
   }
 ];
