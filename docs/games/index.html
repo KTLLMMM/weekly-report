@@ -100,7 +100,7 @@
     width: 100%; aspect-ratio: 4 / 3; background: #eef2f6;
     display: block; position: relative;
   }
-  .tile .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tile .thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
   /* 無圖時的佔位 */
   .tile .thumb.empty::after {
     content: "無圖"; position: absolute; inset: 0;
