@@ -201,7 +201,7 @@
         shown++;
         var tile = document.createElement('a');
         tile.className = 'tile';
-        tile.href = 'detail.html?id=' + encodeURIComponent(g.id);
+        tile.href = encodeURIComponent(g.id) + '.html';
         var thumb = g.img
           ? '<span class="thumb"><img src="' + esc(g.img) + '" alt="' + esc(g.name) + '" loading="lazy"></span>'
           : '<span class="thumb empty"></span>';
