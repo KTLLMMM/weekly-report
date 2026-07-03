@@ -148,8 +148,8 @@ var GAMES = [
       { name: "HOT（SCATTER）", role: "集 3 個以上觸發 HOT FEATURE，轉動 Hot Train。", img: "" },
       { name: "Feature 幣（🟢YUMMY／🟠HONEY／🟣SPICY）", role: "三特色的觸發標誌，帶分數或 MAJOR／MINOR／MINI；散落觸發對應的 ORDER UP 特色。", img: "" },
       { name: "包子幣（Coin）", role: "ORDER UP 特色內的收集幣，帶分數或 MAJOR／MINOR／MINI，保留在盤面直到結算派發。", img: "" },
-      { name: "辣椒（SPICY 專屬）", role: "將自身分值加到盤面所有幣（全加分），該次 SPIN 結束後轉為幣。", img: "" },
-      { name: "蜂蜜罐（HONEY 專屬）", role: "收走盤面所有幣的分值（全收分）後轉為幣。", img: "" }
+      { name: "辣椒（SPICY 專屬）", role: "將自身分值加到盤面所有包子幣（全加分），該次 SPIN 結束後轉為包子幣。", img: "" },
+      { name: "蜂蜜罐（HONEY 專屬）", role: "收走盤面所有包子幣的分值（全收分）後轉為包子幣。", img: "" }
     ],
     play: [
       {
@@ -157,9 +157,9 @@ var GAMES = [
         steps: [
           { text: "Reel Ways 玩法，相鄰軸各取一個符號、由最左軸起算連線。[[總注 88 credits × bet multiplier]]", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
           { text: "MYSTERY STACKED REELS：每次 SPIN 前，盤面部分位置先被替換成隨機一般標誌；WILD（廚師，僅出現於第 2–4 軸）若部分出現且參與連線，會 nudge 填滿整軸。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
-          { text: "Feature 幣（🟢YUMMY／🟠HONEY／🟣SPICY）散落觸發三特色：1～3 個可能觸發、恰 3 個同色必觸發、4 個以上必觸發。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "Feature 幣（🟢YUMMY／🟠HONEY／🟣SPICY）散落觸發三特色：1～3 個屬打擊觸發、恰 3 個同色必觸發、4 個以上必觸發；打擊觸發成功時，盤面上同類 Feature 幣皆會啟動對應特色。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
           { text: "各特色給獎 SPIN：含 YUMMY 的組合 4 場，其餘（HONEY／SPICY 及其組合）3 場。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
-          { text: "集 3 個以上 HOT 觸發 HOT FEATURE；若同一次 SPIN 同時觸發 ORDER UP 與 HOT，先玩 HOT。", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" },
+          { text: "集 3 個以上 HOT 觸發 HOT FEATURE（實機觀察 HOT 有機會補位到 3 個以觸發；HELP 註明 HOT 的出現方式僅為表現效果）；若同一次 SPIN 同時觸發 ORDER UP 與 HOT，先玩 HOT。", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" },
           { text: "共 4 支彩金：GRAND／MAJOR（累積彩金）、MINOR／MINI（固定彩金）。[[MINOR 1880、MINI 880 credits × bet multiplier；GRAND／MAJOR 為 meter 累積]]", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" }
         ]
       },
@@ -167,13 +167,13 @@ var GAMES = [
         type: "FEATURE GAME",
         name: "ORDER UP（收集）",
         steps: [
-          { text: "特色開始時，所有 Feature 幣轉為幣並保留分值，另隨機補幣使場上幣數達 5～10。[[每幣 15–500x bet multiplier，或 MAJOR／MINOR／MINI]]", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
-          { text: "觸發幣鎖定保留；YUMMY 啟用時前 4 場、YUMMY 未啟用而 SPICY／HONEY 啟用時前 3 場，若無新幣落下則補對應場數；每有新幣落下即重置剩餘 SPIN。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
-          { text: "SPICY：辣椒將自身分值加到盤面所有幣（全加分），SPIN 結束後轉為幣。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
-          { text: "HONEY：蜂蜜收走盤面所有幣的分值（全收分）後轉為金包子（保留收集總值，金包子僅由此轉變產生）；盤面無幣時，首個蜜罐自帶分值（15–500x／MINOR／MINI）轉為幣。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "特色開始時，所有 Feature 幣轉為包子幣並保留分值，另隨機補包子幣使場上達 5～10 顆。[[每個包子幣 15–500x bet multiplier，或 MAJOR／MINOR／MINI]]", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "觸發的包子幣鎖定保留；YUMMY 啟用時前 4 場、YUMMY 未啟用而 SPICY／HONEY 啟用時前 3 場，若無新標誌落下則補對應場數；每有新的包子幣、辣椒或蜜罐落下即重置剩餘 SPIN。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "SPICY：辣椒將自身分值加到盤面所有包子幣（全加分），SPIN 結束後轉為包子幣。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "HONEY：蜂蜜收走盤面所有包子幣的分值（全收分）後轉為包子幣（保留收集總值，僅由此轉變產生）；盤面無包子幣時，首個蜜罐自帶分值（15–500x／MINOR／MINI）轉為包子幣。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
           { text: "同一場辣椒與蜜罐同落時，先辣椒全加分、再蜜罐收分。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
-          { text: "每場開始前檢查：若整欄位置全鎖定，該欄各幣派彩並移除，欄頂紅椒標記啟動；所有欄的紅椒標記皆啟動即中 GRAND（每次特色限一次）。", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" },
-          { text: "特色結束時，盤面各幣的分值全部派發。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" }
+          { text: "每場開始前檢查：若整欄位置全鎖定，該欄各包子幣派彩並移除，欄頂紅椒標記啟動；所有欄的紅椒標記皆啟動即中 GRAND（每次特色限一次）。", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" },
+          { text: "特色結束時，盤面各包子幣的分值全部派發。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" }
         ]
       },
       {
@@ -181,7 +181,7 @@ var GAMES = [
         name: "HOT／HOT HOT（Hot Train 轉輪）",
         steps: [
           { text: "3 個以上 HOT 觸發，轉 1 次 Hot Train，停在 UPGRADE／Hot Order Up 特色／GRAND／MAJOR。", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" },
-          { text: "停 Hot Order Up 特色：以該特色進行 ORDER UP（場上 5～10 幣、對應 SPIN 數）。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "停 Hot Order Up 特色：以該特色進行 ORDER UP（場上 5～10 包子幣、對應 SPIN 數）。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
           { text: "停 UPGRADE：進入 HOT HOT FEATURE，轉 Hot Hot Train，停 Hot Hot Order Up 特色／GRAND／MAJOR（不再升級）。", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" },
           { text: "收分乘倍：HOT 階整欄鎖定收分乘倍[[×2]]；HOT HOT 階整欄鎖定收分乘倍[[×3]]（一般 ORDER UP 不乘倍）。", img: "", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=487s" },
           { text: "Hot Train 停 GRAND／MAJOR 時，直接派發對應 meter 顯示值。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" }
