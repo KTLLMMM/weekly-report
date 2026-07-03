@@ -13,7 +13,7 @@
 - 柳橙＋香菜（綠）：5→20 / 4→6 / 3→5
 - A K Q J 9 8：5→8 / 4→5 / 3→2
 
-**MYSTERY STACKED REELS™**：Before the base game reel spin initiates, a number of positions are replaced with 干貝/壽司/蝦/柳橙/香菜/A,K,Q,J,9, or 8. The distribution of replaced symbols changes with bet option. During the base game, when part of [包子] appears on a reel and is part of a winning combination, [包子] will nudge to cover all the positions on that reel. Only highest winner paid per winning combination. Reel Ways pays are multiplied by the bet multiplier. Reel Ways must occur on adjacent reels, beginning with the leftmost reel. All pays in credits.
+**MYSTERY STACKED REELS™**：Before the base game reel spin initiates, a number of positions are replaced with 干貝/壽司/蝦/柳橙/香菜/A,K,Q,J,9, or 8. The distribution of replaced symbols changes with bet option. During the base game, when part of [WILD 廚師] appears on a reel and is part of a winning combination, [WILD] will nudge to cover all the positions on that reel.（會 nudge 填滿整軸的是 WILD，非包子；包子只存在於 Order Up 特色） Only highest winner paid per winning combination. Reel Ways pays are multiplied by the bet multiplier. Reel Ways must occur on adjacent reels, beginning with the leftmost reel. All pays in credits.
 
 ## P2 — ORDER UP FEATURE（觸發對照表，help-02）
 
