@@ -134,5 +134,46 @@ var GAMES = [
       }
     ],
     help: []
+  },
+  {
+    id: "hot-hot-flaming-pots",
+    vendor: "Light & Wonder",
+    year: "2026",
+    name: "Hot Hot Flaming Pots",
+    img: "",
+    tags: ["Hold & Spin", "Cash on Reel", "三特色", "收集", "全收分", "全加分", "乘倍", "轉輪", "升級", "4支彩金"],
+    desc: "Big Hot Flaming Pots／Mr. Lee & Mrs. Wong 系列新版：拿掉 Super Lantern，UPSIZE 改為 HONEY 全收分，並新增 HOT／HOT HOT 大轉輪與收分乘倍。",
+    source: "https://youtu.be/BDoZqEu9D3c",
+    symbols: [
+      { name: "HOT（分數幣）", role: "帶分數的錢幣標誌，命中即得分數；同色集齊 3 個以上，觸發 HOT 大轉輪特色。", img: "" },
+      { name: "YUMMY（餃子）", role: "觸發 YUMMY 特色：給予額外 SPIN（延長收集回合）。舊版此特色為放大符號，本版改為加 SPIN。", img: "" },
+      { name: "HONEY（蜂蜜罐）", role: "觸發 HONEY 特色：蜂蜜罐化為金餃並全收分，收走盤面全部分值；本版取代舊版 UPSIZE。", img: "" },
+      { name: "SPICY（辣椒）", role: "觸發 SPICY 特色：辣椒合體為單一辣椒後，將其分值灌到盤面所有辣椒餃（全加分）。", img: "" },
+      { name: "POP", role: "特色符號的觸發／升階動作，分 single pop／double pop／upgrade pop；upgrade pop 會提升該特色等級。", img: "" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "盤面標誌帶分數（Cash on Reel），命中分數幣即得分數。[[實測 Denom 1¢／2¢／5¢／10¢／$1；每 SPIN 約 $5～$60]]", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "三大特色 YUMMY／HONEY／SPICY，由對應特色符號觸發。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "POP 機制：特色符號可帶 single pop／double pop／upgrade pop，upgrade pop 提升該特色等級。", img: "", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q" },
+          { text: "同色分數幣集齊 3 個以上 HOT，進入 HOT 大轉輪特色。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "共 4 支彩金：GRAND／MAJOR（累積彩金）、MINOR／MINI（固定彩金）。", img: "", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "HOT 大轉輪",
+        steps: [
+          { text: "由 3 個以上 HOT 觸發，轉動大轉輪決定本次獎勵。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "轉輪獎項：單特色／複合特色／彩金／UPGRADE。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "UPGRADE 可將 HOT 升階為 HOT HOT，拉高收分乘倍。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "收分乘倍：一般特色符號觸發收分不乘倍；HOT 階收分乘倍[[×2]]；HOT HOT 階收分乘倍[[×3]]。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "HONEY 全收分、SPICY 全加分於特色內同樣生效，收得的分值再套用該階乘倍。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" }
+        ]
+      }
+    ],
+    help: []
   }
 ];
