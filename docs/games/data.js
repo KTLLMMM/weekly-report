@@ -197,5 +197,76 @@ var GAMES = [
       "hot-hot-flaming-pots/HELP/hot-hot-flaming-pots-help-06.png",
       "hot-hot-flaming-pots/HELP/hot-hot-flaming-pots-help-07.png"
     ]
+  },
+  {
+    id: "golden-guardian",
+    vendor: "IGT",
+    year: "2026",
+    name: "Golden Guardian",
+    img: "",
+    tags: ["Cash on Reel", "狀態遊戲", "鎖定", "收集", "分數球", "雙免費遊戲"],
+    desc: "初版（實機觀察，待機台 HELP 補完）：BG 為狀態玩法，分數球落在特定軸會鎖定數個 SPIN；兩種免費遊戲分別擴大鎖定軸與每 SPIN 增球。",
+    symbols: [
+      { name: "分數球", role: "帶分數的球型標誌，落在指定軸時鎖定並保留數個 SPIN。", img: "" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "狀態玩法：分數球落在 R3 時鎖定並保留 3 個 SPIN。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        name: "鎖定擴軸",
+        steps: [
+          { text: "同一鎖定玩法改在 R2 與 R4 進行：分數球落在 R2／R4 時鎖定並保留 3 個 SPIN。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        name: "每 SPIN 增球",
+        steps: [
+          { text: "每次 SPIN 額外增加 1 顆球。", img: "", yt: "" }
+        ]
+      }
+    ],
+    help: []
+  },
+  {
+    id: "elemental-spirit",
+    vendor: "Light & Wonder",
+    year: "2026",
+    name: "Elemental Spirit",
+    img: "elemental-spirit/screens/cover.jpg",
+    tags: ["Hold & Spin", "Cash on Reel", "狀態框", "收集", "乘倍", "4支彩金"],
+    symbols: [
+      { name: "WILD", role: "百搭。", img: "" },
+      { name: "SCATTER", role: "進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "" },
+      { name: "BALL", role: "帶分數／彩金的球，是 Hold & Spin 的收集標的；集滿 15 顆 BALL 得 GRAND。", img: "" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "3×5 LINE GAME。", img: "elemental-spirit/clips/es-pot.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=103" },
+          { text: "進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "", yt: "" },
+          { text: "符號：字獎 ×4、M獎 ×5、WILD、SCATTER ×3、BALL。", img: "", yt: "" },
+          { text: "共 4 支彩金：GRAND、MAJOR（累積彩金），MINOR、MINI（固定彩金）；GRAND 由集滿 15 顆 BALL 取得，MINOR／MINI 於 Hold & Spin 中取得。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "狀態框特色（Hold & Spin）",
+        steps: [
+          { text: "各狀態框特色皆為 Hold & Spin、倒數 3 場；隨機灑入 3 個同色狀態框，BALL 停在框中即觸發該框作用。", img: "", yt: "" },
+          { text: "藍框 Absorbing：BALL 停在藍框中，收集所有藍框外的 BALL；藍框在其他藍框作用完後才消失。", img: "elemental-spirit/clips/es-blue.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1140" },
+          { text: "綠框 Multiplier（版本一）：BALL 停在綠框中乘上隨機倍率，並向外灑出隨機倍率到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-green.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=186" },
+          { text: "紫框 Twisting（版本二）：BALL 停在紫框中隨機加倍（加倍次數隨機），並向外灑出特效框到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-purple.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1244" },
+          { text: "紅框 Exploding：BALL 停在紅框中，向外灑出 BALL 到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-red.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=756" }
+        ]
+      }
+    ],
+    help: []
   }
 ];
