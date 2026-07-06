@@ -327,6 +327,14 @@ var GAMES = [
         ]
       }
     ],
-    help: []
+    help: [
+      "imperial-link/HELP/help-01.jpg",
+      "imperial-link/HELP/help-02.jpg",
+      "imperial-link/HELP/help-03.jpg",
+      "imperial-link/HELP/help-04.jpg",
+      "imperial-link/HELP/help-05.jpg",
+      "imperial-link/HELP/help-06.jpg",
+      "imperial-link/HELP/help-07.jpg"
+    ]
   }
 ];
