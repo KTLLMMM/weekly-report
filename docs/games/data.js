@@ -199,41 +199,6 @@ var GAMES = [
     ]
   },
   {
-    id: "golden-guardian",
-    vendor: "IGT",
-    year: "2026",
-    name: "Golden Guardian",
-    img: "",
-    tags: ["Cash on Reel", "狀態遊戲", "鎖定", "收集", "分數球", "雙免費遊戲"],
-    desc: "初版（實機觀察，待機台 HELP 補完）：BG 為狀態玩法，分數球落在特定軸會鎖定數個 SPIN；兩種免費遊戲分別擴大鎖定軸與每 SPIN 增球。",
-    symbols: [
-      { name: "分數球", role: "帶分數的球型標誌，落在指定軸時鎖定並保留數個 SPIN。", img: "" }
-    ],
-    play: [
-      {
-        type: "BASE GAME",
-        steps: [
-          { text: "狀態玩法：分數球落在 R3 時鎖定並保留 3 個 SPIN。", img: "", yt: "" }
-        ]
-      },
-      {
-        type: "FREE GAME",
-        name: "鎖定擴軸",
-        steps: [
-          { text: "同一鎖定玩法改在 R2 與 R4 進行：分數球落在 R2／R4 時鎖定並保留 3 個 SPIN。", img: "", yt: "" }
-        ]
-      },
-      {
-        type: "FREE GAME",
-        name: "每 SPIN 增球",
-        steps: [
-          { text: "每次 SPIN 額外增加 1 顆球。", img: "", yt: "" }
-        ]
-      }
-    ],
-    help: []
-  },
-  {
     id: "elemental-spirit",
     vendor: "Light & Wonder",
     year: "2026",
