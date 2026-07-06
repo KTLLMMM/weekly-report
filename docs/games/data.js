@@ -268,5 +268,65 @@ var GAMES = [
       }
     ],
     help: []
+  },
+  {
+    id: "imperial-link",
+    vendor: "Aristocrat",
+    year: "2026",
+    name: "Imperial Link",
+    img: "imperial-link/screens/cover.jpg",
+    tags: ["Hold & Spin", "Link", "GinG", "5支彩金", "分數球", "雙版本"],
+    symbols: [
+      { name: "SCATTER", role: "集滿 3 個以上觸發 6 場免費遊戲，可 retrigger。", img: "imperial-link/symbols/sc.jpg" },
+      { name: "牛頭", role: "分金／紫兩種；與分數球合計 6 個以上觸發特色遊戲（GinG），金牛頭與紫牛頭進入不同的 GinG。", img: "imperial-link/symbols/bull-gold.png" },
+      { name: "分數球", role: "隨機帶分數或彩金，是 Hold & Spin 的收集標的。", img: "imperial-link/symbols/score-ball.jpg" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "3×5 LINE GAME，5／25／50 線（隨 denom 改變）。雙版本：SKIN 與免費遊戲玩法不同。", img: "imperial-link/screens/jackpots.jpg", yt: "" },
+          { text: "固定觸發：盤面出現分數球（含牛頭）共 6 顆以上，即進入 Hold & Spin 特色。", img: "", yt: "" },
+          { text: "5 支彩金：GRAND／IMPERIAL／MAJOR（累積彩金），MINOR／MINI（固定彩金）；H&S 滿盤拿 GRAND，牛頭 GinG 滿盤拿 IMPERIAL。", img: "imperial-link/screens/jackpots.jpg", yt: "" },
+          { text: "集滿 3 個以上 SCATTER 觸發 6 場免費遊戲。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "Hold & Spin",
+        steps: [
+          { text: "3×5 盤面、固定 3 場；6 顆以上分數球固定觸發。每出現新的任意標誌，RESPIN 次數重置回 3。", img: "imperial-link/screens/hs.jpg", yt: "" },
+          { text: "滿盤獲得 GRAND；過程中可中 MAJOR／MINOR／MINI。", img: "", yt: "" },
+          { text: "H&S 中出現金／紫牛頭即觸發對應的 GinG（見下方分區）。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "GAME IN GAME",
+        name: "金牛頭",
+        steps: [
+          { text: "獨立 10 格盤面，其中 4 格為鎖定轉輪；固定 3 場，出球則 RESPIN 回 3。", img: "imperial-link/screens/ging-gold.jpg", yt: "" },
+          { text: "中間轉輪只隨機出現金／紫牛頭；出現金牛頭解鎖 1 格鎖定轉輪。", img: "", yt: "" },
+          { text: "滿盤獲得 IMPERIAL JP。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "GAME IN GAME",
+        name: "紫牛頭",
+        steps: [
+          { text: "獨立 10 格盤面；固定 3 場，出球則 RESPIN 回 3。", img: "imperial-link/screens/ging-purple.jpg", yt: "" },
+          { text: "紫牛頭固定在中間轉輪；特色結束時重複收分。", img: "", yt: "" },
+          { text: "滿盤獲得 IMPERIAL JP。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        steps: [
+          { text: "由 3 個以上 SCATTER 觸發 6 場、可 retrigger；雙版本的免費遊戲玩法不同（下列兩種）。", img: "imperial-link/screens/fg-mystery.jpg", yt: "" },
+          { text: "黏性分數球：分數球會黏著，每次 SPIN 往下移一格。", img: "imperial-link/screens/fg-sticky.jpg", yt: "" },
+          { text: "Mystery：開出相同 symbol，內容為一般獎項標誌或分數球。", img: "imperial-link/screens/fg-mystery.jpg", yt: "" }
+        ]
+      }
+    ],
+    help: []
   }
 ];
