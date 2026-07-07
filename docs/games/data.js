@@ -307,7 +307,7 @@ var GAMES = [
     vendor: "Aristocrat",
     year: "2026",
     name: "Crazy Chickens in Space",
-    img: "crazy-chickens-in-space/screens/cover.jpg",
+    img: "crazy-chickens-in-space/screens/keyart.png",
     tags: ["Hold & Spin", "Cash on Reel", "盤面延展", "乘倍", "收集", "2支彩金"],
     symbols: [
       { name: "紅／藍／綠星球", role: "落在主盤時，分別在主盤上方加 1～3 列 Boosters（紅）／Multipliers（藍）／Instant Win（綠）加列並觸發對應特色；之後轉為金幣，保留原分值。", img: "" },
