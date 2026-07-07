@@ -310,9 +310,13 @@ var GAMES = [
     img: "crazy-chickens-in-space/screens/keyart.png",
     tags: ["Hold & Spin", "Cash on Reel", "盤面延展", "乘倍", "收集", "2支彩金"],
     symbols: [
-      { name: "紅／藍／綠星球", role: "落在主盤時，分別在主盤上方加 1～3 列 Boosters（紅）／Multipliers（藍）／Instant Win（綠）加列並觸發對應特色；之後轉為金幣，保留原分值。", img: "" },
-      { name: "金幣", role: "帶分數的收集標的[[50～2000 credits × bet]]，held 在原位，特色結束時一次派發。", img: "" },
-      { name: "GRAND／MAJOR", role: "特色中落在主盤即中對應彩金後轉為金幣；主盤填滿 15 格亦得 GRAND。", img: "" }
+      { name: "WILD", role: "紅雞；替代除綠／紅／藍星球外的所有符號，只出現在第 2～5 軸。", img: "" },
+      { name: "綠星球", role: "落在主盤時在上方加 1～3 列 Instant Win 加列並觸發對應特色，之後轉為金幣；亦帶分數獎[[50～2000 credits × bet，bought game 才出現]]。", img: "" },
+      { name: "紅星球", role: "落在主盤時在上方加 1～3 列 Boosters 加列並觸發對應特色，之後轉為金幣；亦帶分數獎[[50～2000 credits × bet，bought game 才出現]]。", img: "" },
+      { name: "藍星球", role: "落在主盤時在上方加 1～3 列 Multipliers 加列並觸發對應特色，之後轉為金幣；亦帶分數獎[[50～2000 credits × bet，bought game 才出現]]。", img: "" },
+      { name: "金幣", role: "held 收集的分數幣，特色結束時一次派發。", img: "" },
+      { name: "GRAND", role: "特色中落在主盤即中 GRAND 彩金（主盤填滿 15 格亦得）後轉為金幣。", img: "" },
+      { name: "MAJOR", role: "特色中落在主盤即中 MAJOR 彩金後轉為金幣。", img: "" }
     ],
     play: [
       {
@@ -337,6 +341,7 @@ var GAMES = [
       }
     ],
     help: [
+      "crazy-chickens-in-space/HELP/paytable.jpg",
       "crazy-chickens-in-space/HELP/help-01.jpg",
       "crazy-chickens-in-space/HELP/help-02.jpg",
       "crazy-chickens-in-space/HELP/help-03.jpg",
