@@ -301,5 +301,51 @@ var GAMES = [
       "imperial-link/HELP/help-06.jpg",
       "imperial-link/HELP/help-07.jpg"
     ]
+  },
+  {
+    id: "crazy-chickens-in-space",
+    vendor: "Aristocrat",
+    year: "2026",
+    name: "Crazy Chickens in Space",
+    img: "crazy-chickens-in-space/screens/cover.jpg",
+    tags: ["Hold & Spin", "Cash on Reel", "盤面延展", "乘倍", "收集", "2支彩金"],
+    symbols: [
+      { name: "紅／藍／綠星球", role: "落在主盤時，分別在主盤上方加 1～3 列 Boosters（紅）／Multipliers（藍）／Instant Win（綠）加列並觸發對應特色；之後轉為金幣，保留原分值。", img: "" },
+      { name: "金幣", role: "帶分數的收集標的[[50～2000 credits × bet]]，held 在原位，特色結束時一次派發。", img: "" },
+      { name: "GRAND／MAJOR", role: "特色中落在主盤即中對應彩金後轉為金幣；主盤填滿 15 格亦得 GRAND。", img: "" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "主盤 5×3、50 線。彩金 GRAND、MAJOR（皆累積彩金）。", img: "crazy-chickens-in-space/screens/cover.jpg", yt: "" },
+          { text: "主盤上方設有 BONUS line；紅／藍／綠雞（星球）累積抵達 BONUS line 即觸發 Crazy Chickens in Space 系列特色。", img: "", yt: "" },
+          { text: "共 7 種特色組合：Instant Win／Multipliers／Boosters 三種單獨，及其兩兩、三合一組合，依觸發的星球顏色決定。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "Crazy Chickens in Space",
+        steps: [
+          { text: "初始給 3 次免費 SPIN。依觸發顏色在主盤上方加上加列，由上而下：Boosters（紅）→ Multipliers（藍）→ Instant Win（綠），每種最多 3 列。", img: "crazy-chickens-in-space/HELP/help-03.jpg", yt: "" },
+          { text: "紅／藍／綠星球落在主盤：分別增加對應加列並轉為金幣（held、保留分值）。金幣、GRAND、MAJOR 落在主盤會把剩餘 SPIN 重置回 3。", img: "crazy-chickens-in-space/HELP/help-04.jpg", yt: "" },
+          { text: "Boosters（紅列）：BOOSTERS 符號揭示隨機獎[[50～1000 credits × bet]]，派給同一直行所有 held 金幣。", img: "crazy-chickens-in-space/HELP/help-05.jpg", yt: "" },
+          { text: "Multipliers（藍列）：X2 使同一直行 held 金幣分值 ×2（每列最多 4 次）；X3 ×3（每列最多 1 次）。", img: "crazy-chickens-in-space/HELP/help-06.jpg", yt: "" },
+          { text: "Instant Win（綠列）：INSTANT WIN 收同一直行所有 held 金幣；WIN ALL 收全盤所有 held 金幣（每次 SPIN 限一軸出現）。", img: "crazy-chickens-in-space/HELP/help-07.jpg", yt: "" },
+          { text: "主盤填滿 15 格得 GRAND。SPIN 用完或主盤填滿即結束，所有金幣分值一次派發。", img: "", yt: "" }
+        ]
+      }
+    ],
+    help: [
+      "crazy-chickens-in-space/HELP/help-01.jpg",
+      "crazy-chickens-in-space/HELP/help-02.jpg",
+      "crazy-chickens-in-space/HELP/help-03.jpg",
+      "crazy-chickens-in-space/HELP/help-04.jpg",
+      "crazy-chickens-in-space/HELP/help-05.jpg",
+      "crazy-chickens-in-space/HELP/help-06.jpg",
+      "crazy-chickens-in-space/HELP/help-07.jpg",
+      "crazy-chickens-in-space/HELP/help-08.jpg",
+      "crazy-chickens-in-space/HELP/help-09.jpg"
+    ]
   }
 ];
