@@ -207,7 +207,7 @@ var GAMES = [
     tags: ["Hold & Spin", "Cash on Reel", "狀態框", "收集", "乘倍", "4支彩金"],
     symbols: [
       { name: "WILD", role: "百搭。", img: "" },
-      { name: "SCATTER", role: "進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "" },
+      { name: "SCATTER", role: "共 3 種（分 3 色）；進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "" },
       { name: "BALL", role: "帶分數／彩金的球，是 Hold & Spin 的收集標的；集滿 15 顆 BALL 得 GRAND。", img: "" }
     ],
     play: [
