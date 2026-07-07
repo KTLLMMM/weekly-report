@@ -203,7 +203,7 @@ var GAMES = [
     vendor: "Light & Wonder",
     year: "2026",
     name: "Elemental Spirit",
-    img: "elemental-spirit/screens/cover.jpg",
+    img: "elemental-spirit/screens/keyart.jpg",
     tags: ["Hold & Spin", "Cash on Reel", "狀態框", "收集", "乘倍", "4支彩金"],
     symbols: [
       { name: "WILD", role: "百搭。", img: "" },
