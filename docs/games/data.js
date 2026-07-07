@@ -215,8 +215,8 @@ var GAMES = [
         type: "BASE GAME",
         steps: [
           { text: "3×5 LINE GAME。", img: "elemental-spirit/clips/es-pot.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=103" },
-          { text: "進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "", yt: "" },
-          { text: "符號：字獎 ×4、M獎 ×5、WILD、SCATTER ×3、BALL。", img: "", yt: "" },
+          { text: "進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "elemental-spirit/clips/es-scatter.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=158" },
+          { text: "M獎採堆疊符號（stacked symbols）設計，同一轉軸可整堆出現相同符號。", img: "elemental-spirit/clips/es-symbol-stack.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=149" },
           { text: "共 4 支彩金：GRAND、MAJOR（累積彩金），MINOR、MINI（固定彩金）；GRAND 由集滿 15 顆 BALL 取得，MINOR／MINI 於 Hold & Spin 中取得。", img: "", yt: "" }
         ]
       },
@@ -224,9 +224,9 @@ var GAMES = [
         type: "FEATURE GAME",
         name: "狀態框特色（Hold & Spin）",
         steps: [
-          { text: "各狀態框特色皆為 Hold & Spin、倒數 3 場；隨機灑入 3 個同色狀態框，BALL 停在框中即觸發該框作用。", img: "", yt: "" },
-          { text: "藍框 Absorbing：BALL 停在藍框中，收集所有藍框外的 BALL；藍框在其他藍框作用完後才消失。", img: "elemental-spirit/clips/es-blue.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1140" },
-          { text: "綠框 Multiplier（版本一）：BALL 停在綠框中乘上隨機倍率，並向外灑出隨機倍率到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-green.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=186" },
+          { text: "各狀態框特色皆為 Hold & Spin、倒數 3 場；隨機灑入 3 個同色狀態框，BALL 停在框中即觸發該框作用。", img: "elemental-spirit/clips/es-hs-intro.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=189" },
+          { text: "藍框 Absorbing：BALL 停在藍框中，收集所有藍框外的 BALL；藍框在其他藍框作用完後才消失。", img: "elemental-spirit/clips/es-blue.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1141" },
+          { text: "綠框 Multiplier（版本一）：BALL 停在綠框中乘上隨機倍率，並向外灑出隨機倍率到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-green.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=189" },
           { text: "紫框 Twisting（版本二）：BALL 停在紫框中隨機加倍（加倍次數隨機），並向外灑出特效框到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-purple.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1244" },
           { text: "紅框 Exploding：BALL 停在紅框中，向外灑出 BALL 到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-red.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=756" }
         ]
