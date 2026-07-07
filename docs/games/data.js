@@ -311,18 +311,12 @@ var GAMES = [
     img: "crazy-chickens-in-space/screens/keyart.png",
     tags: ["Hold & Spin", "Cash on Reel", "盤面延展", "乘倍", "收集", "2支彩金"],
     symbols: [
-      { name: "WILD", role: "紅雞；替代除綠／紅／藍星球外的所有符號，只出現在第 2～5 軸。", img: "" },
       { name: "綠星球", role: "落在主盤時在上方加 1～3 列 Instant Win 加列並觸發對應特色，之後轉為金幣；亦帶分數獎[[50～2000 credits × bet，bought game 才出現]]。", img: "" },
       { name: "紅星球", role: "落在主盤時在上方加 1～3 列 Boosters 加列並觸發對應特色，之後轉為金幣；亦帶分數獎[[50～2000 credits × bet，bought game 才出現]]。", img: "" },
       { name: "藍星球", role: "落在主盤時在上方加 1～3 列 Multipliers 加列並觸發對應特色，之後轉為金幣；亦帶分數獎[[50～2000 credits × bet，bought game 才出現]]。", img: "" },
-      { name: "金幣", role: "held 收集的分數幣，特色結束時一次派發。", img: "" },
       { name: "BOOSTERS", role: "出現在 Boosters 加列；揭示隨機分數獎[[50～1000 credits × bet]]，派給同一直行所有 held 金幣。", img: "" },
-      { name: "X2", role: "出現在 Multipliers 加列；同一直行 held 金幣分值 ×2（每列最多 4 次）。", img: "" },
-      { name: "X3", role: "出現在 Multipliers 加列；同一直行 held 金幣分值 ×3（每列最多 1 次）。", img: "" },
       { name: "INSTANT WIN", role: "出現在 Instant Win 加列；收取同一直行所有 held 金幣的分值。", img: "" },
-      { name: "WIN ALL", role: "出現在 Instant Win 加列；收取全盤所有 held 金幣的分值（每次 SPIN 限一軸出現）。", img: "" },
-      { name: "GRAND", role: "特色中落在主盤即中 GRAND 彩金（主盤填滿 15 格亦得）後轉為金幣。", img: "" },
-      { name: "MAJOR", role: "特色中落在主盤即中 MAJOR 彩金後轉為金幣。", img: "" }
+      { name: "WIN ALL", role: "出現在 Instant Win 加列；收取全盤所有 held 金幣的分值（每次 SPIN 限一軸出現）。", img: "" }
     ],
     play: [
       {
