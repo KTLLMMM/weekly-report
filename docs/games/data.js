@@ -170,7 +170,7 @@ var GAMES = [
           { text: "YUMMY 啟用時前 4 場、YUMMY 未啟用而 SPICY／HONEY 啟用時前 3 場；若無新標誌落下則補對應場數。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-feature-spins.webm", yt: "https://www.youtube.com/watch?v=2MqF3cSSEd8&t=389s" },
           { text: "SPICY：辣椒將自身分值加到盤面所有包子幣（全加分），SPIN 結束後轉為包子幣。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-spicy-add-all.webm", yt: "https://www.youtube.com/watch?v=pHQwfHZX7jg&t=1699s" },
           { text: "HONEY：蜂蜜收走盤面所有包子幣的分值（全收分）後轉為包子幣（保留收集總值，僅由此轉變產生）；盤面無包子幣時，首個蜜罐自帶分值（15–500x／MINOR／MINI）轉為包子幣。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-collect-all.webm", yt: "https://www.youtube.com/watch?v=BDoZqEu9D3c&t=1498s" },
-          { text: "同一場兩個蜜罐同落時，後面的蜜罐會先收走前面的蜜罐。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-eats-honey.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2107s" },
+          { text: "同一 SPIN 落下兩個蜜罐時，先落的先收完盤面分變成包子幣，後落的再連這個包子幣一起收走。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-eats-honey.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2107s" },
           { text: "同一場辣椒與蜜罐同落時，先辣椒全加分、再蜜罐收分。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
           { text: "特色結束時，盤面各包子幣的分值全部派發。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-order-up-payout.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2232s" }
         ]
