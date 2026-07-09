@@ -147,9 +147,9 @@ var GAMES = [
       { name: "HOT（SCATTER）", role: "集 3 個以上觸發 HOT FEATURE，轉動 Hot Train。", img: "hot-hot-flaming-pots/symbols/hot.png" },
       { name: "🟢 YUMMY 分數球", role: "散落觸發 YUMMY ORDER UP 特色；帶分數或 MAJOR／MINOR／MINI。", img: "hot-hot-flaming-pots/symbols/yummy.png" },
       { name: "🟠 HONEY 分數球", role: "散落觸發 HONEY ORDER UP 特色；帶分數或 MAJOR／MINOR／MINI。", img: "hot-hot-flaming-pots/symbols/honey.png" },
-      { name: "🟣 SPICY 分數球", role: "散落觸發 SPICY ORDER UP 特色；帶分數或 MAJOR／MINOR／MINI。", img: "" },
+      { name: "🟣 SPICY 分數球", role: "散落觸發 SPICY ORDER UP 特色；帶分數或 MAJOR／MINOR／MINI。", img: "hot-hot-flaming-pots/symbols/spicy.png" },
       { name: "分數球（Coin）", role: "ORDER UP 特色內用來收集的分數球，帶分數或 MAJOR／MINOR／MINI，保留在盤面直到結算派發。", img: "hot-hot-flaming-pots/symbols/coin.png" },
-      { name: "辣椒（SPICY 專屬）", role: "將自身分值加到盤面所有分數球（全加分），該次 SPIN 結束後轉為分數球。", img: "" },
+      { name: "辣椒（SPICY 專屬）", role: "將自身分值加到盤面所有分數球（全加分），該次 SPIN 結束後轉為分數球。", img: "hot-hot-flaming-pots/symbols/chili.png" },
       { name: "蜂蜜罐（HONEY 專屬）", role: "收走盤面所有分數球的分值（全收分）後轉為分數球。", img: "hot-hot-flaming-pots/symbols/honey-jar.png" }
     ],
     play: [
