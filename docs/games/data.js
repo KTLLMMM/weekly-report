@@ -171,8 +171,8 @@ var GAMES = [
           { text: "YUMMY 啟用時前 4 場、YUMMY 未啟用而 SPICY／HONEY 啟用時前 3 場；若無新標誌落下則補對應場數。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
           { text: "SPICY：辣椒將自身分值加到盤面所有分數球（全加分），SPIN 結束後轉為分數球。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-feature-spins.webm", yt: "https://www.youtube.com/watch?v=2MqF3cSSEd8&t=389s" },
           { text: "HONEY：蜂蜜收走盤面所有分數球的分值（全收分）後轉為分數球（保留收集總值，僅由此轉變產生）；盤面無分數球時，首個蜜罐自帶分值（15–500x／MINOR／MINI）轉為分數球。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-spicy-add-all.webm", yt: "https://www.youtube.com/watch?v=pHQwfHZX7jg&t=1699s" },
-          { text: "同一 SPIN 落下兩個蜜罐時，先落的先收完盤面分變成分數球，後落的再連這個分數球一起收走。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-collect-all.webm", yt: "https://www.youtube.com/watch?v=BDoZqEu9D3c&t=1498s" },
-          { text: "同一場辣椒與蜜罐同落時，先辣椒全加分、再蜜罐收分。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "同一 SPIN 落下兩個蜜罐時，先落的先收完盤面分變成分數球，後落的再連這個分數球一起收走。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-eats-honey.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2107s" },
+          { text: "同一場辣椒與蜜罐同落時，先辣椒全加分、再蜜罐收分。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-collect-all.webm", yt: "https://www.youtube.com/watch?v=BDoZqEu9D3c&t=1498s" },
           { text: "特色結束時，盤面各分數球的分值全部派發。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-order-up-payout.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2232s" }
         ]
       },
