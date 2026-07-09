@@ -144,12 +144,13 @@ var GAMES = [
     tags: ["Reel Ways", "Mystery Stacked Reels", "三特色", "收集", "全收分", "全加分", "乘倍", "Hot Train", "升級", "4支彩金"],
     desc: "Big Hot Flaming Pots／Mr. Lee & Mrs. Wong 系列新版：三特色 YUMMY／HONEY／SPICY 收集，HOT／HOT HOT Train 轉輪帶 2x／3x 收分乘倍，4 支彩金。規格取自機台 HELP。",
     symbols: [
-      { name: "WILD（Mr. Lee 廚師）", role: "百搭，取代除 Feature 幣、包子與 HOT 外的所有標誌；只出現在第 2、3、4 軸，部分出現且參與連線時 nudge 填滿整軸。", img: "" },
-      { name: "HOT（SCATTER）", role: "集 3 個以上觸發 HOT FEATURE，轉動 Hot Train。", img: "" },
-      { name: "Feature 幣（🟢YUMMY／🟠HONEY／🟣SPICY）", role: "三特色的觸發標誌，帶分數或 MAJOR／MINOR／MINI；散落觸發對應的 ORDER UP 特色。", img: "" },
-      { name: "包子幣（Coin）", role: "ORDER UP 特色內的收集幣，帶分數或 MAJOR／MINOR／MINI，保留在盤面直到結算派發。", img: "" },
-      { name: "辣椒（SPICY 專屬）", role: "將自身分值加到盤面所有包子幣（全加分），該次 SPIN 結束後轉為包子幣。", img: "" },
-      { name: "蜂蜜罐（HONEY 專屬）", role: "收走盤面所有包子幣的分值（全收分）後轉為包子幣。", img: "" }
+      { name: "HOT（SCATTER）", role: "集 3 個以上觸發 HOT FEATURE，轉動 Hot Train。", img: "hot-hot-flaming-pots/symbols/hot.png" },
+      { name: "🟢 YUMMY 分數球", role: "散落觸發 YUMMY ORDER UP 特色；帶分數或 MAJOR／MINOR／MINI。", img: "" },
+      { name: "🟠 HONEY 分數球", role: "散落觸發 HONEY ORDER UP 特色；帶分數或 MAJOR／MINOR／MINI。", img: "hot-hot-flaming-pots/symbols/honey.png" },
+      { name: "🟣 SPICY 分數球", role: "散落觸發 SPICY ORDER UP 特色；帶分數或 MAJOR／MINOR／MINI。", img: "" },
+      { name: "分數球（Coin）", role: "ORDER UP 特色內用來收集的分數球，帶分數或 MAJOR／MINOR／MINI，保留在盤面直到結算派發。", img: "hot-hot-flaming-pots/symbols/coin.png" },
+      { name: "辣椒（SPICY 專屬）", role: "將自身分值加到盤面所有分數球（全加分），該次 SPIN 結束後轉為分數球。", img: "" },
+      { name: "蜂蜜罐（HONEY 專屬）", role: "收走盤面所有分數球的分值（全收分）後轉為分數球。", img: "hot-hot-flaming-pots/symbols/honey-jar.png" }
     ],
     play: [
       {
@@ -165,14 +166,14 @@ var GAMES = [
         type: "FEATURE GAME",
         name: "ORDER UP（收集）",
         steps: [
-          { text: "特色開始時，所有 Feature 幣轉為包子幣並保留分值，另隨機補包子幣使場上達 5～10 顆。[[每個包子幣 15–500x bet multiplier，或 MAJOR／MINOR／MINI]]", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-order-up-start.webm", yt: "https://www.youtube.com/watch?v=pHQwfHZX7jg&t=1668s" },
-          { text: "觸發的包子幣鎖定保留，每有新的包子幣、辣椒或蜜罐落下即重置剩餘 SPIN。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
+          { text: "特色開始時，所有 Feature 幣轉為分數球並保留分值，另隨機補分數球使場上達 5～10 顆。[[每個分數球 15–500x bet multiplier，或 MAJOR／MINOR／MINI]]", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-order-up-start.webm", yt: "https://www.youtube.com/watch?v=pHQwfHZX7jg&t=1668s" },
+          { text: "觸發的分數球鎖定保留，每有新的分數球、辣椒或蜜罐落下即重置剩餘 SPIN。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
           { text: "YUMMY 啟用時前 4 場、YUMMY 未啟用而 SPICY／HONEY 啟用時前 3 場；若無新標誌落下則補對應場數。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-feature-spins.webm", yt: "https://www.youtube.com/watch?v=2MqF3cSSEd8&t=389s" },
-          { text: "SPICY：辣椒將自身分值加到盤面所有包子幣（全加分），SPIN 結束後轉為包子幣。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-spicy-add-all.webm", yt: "https://www.youtube.com/watch?v=pHQwfHZX7jg&t=1699s" },
-          { text: "HONEY：蜂蜜收走盤面所有包子幣的分值（全收分）後轉為包子幣（保留收集總值，僅由此轉變產生）；盤面無包子幣時，首個蜜罐自帶分值（15–500x／MINOR／MINI）轉為包子幣。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-collect-all.webm", yt: "https://www.youtube.com/watch?v=BDoZqEu9D3c&t=1498s" },
-          { text: "同一 SPIN 落下兩個蜜罐時，先落的先收完盤面分變成包子幣，後落的再連這個包子幣一起收走。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-eats-honey.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2107s" },
+          { text: "SPICY：辣椒將自身分值加到盤面所有分數球（全加分），SPIN 結束後轉為分數球。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-spicy-add-all.webm", yt: "https://www.youtube.com/watch?v=pHQwfHZX7jg&t=1699s" },
+          { text: "HONEY：蜂蜜收走盤面所有分數球的分值（全收分）後轉為分數球（保留收集總值，僅由此轉變產生）；盤面無分數球時，首個蜜罐自帶分值（15–500x／MINOR／MINI）轉為分數球。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-collect-all.webm", yt: "https://www.youtube.com/watch?v=BDoZqEu9D3c&t=1498s" },
+          { text: "同一 SPIN 落下兩個蜜罐時，先落的先收完盤面分變成分數球，後落的再連這個分數球一起收走。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-honey-eats-honey.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2107s" },
           { text: "同一場辣椒與蜜罐同落時，先辣椒全加分、再蜜罐收分。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" },
-          { text: "特色結束時，盤面各包子幣的分值全部派發。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-order-up-payout.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2232s" }
+          { text: "特色結束時，盤面各分數球的分值全部派發。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-order-up-payout.webm", yt: "https://www.youtube.com/watch?v=KCUc3-4od4Q&t=2232s" }
         ]
       },
       {
@@ -180,7 +181,7 @@ var GAMES = [
         name: "HOT／HOT HOT（Hot Train 轉輪）",
         steps: [
           { text: "3 個以上 HOT 觸發，轉 1 次 Hot Train，停在 UPGRADE／Hot Order Up 特色／GRAND／MAJOR。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-hot-train-spin.webm", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=1275s" },
-          { text: "停 Hot Order Up 特色：以該特色進行 ORDER UP（場上 5～10 包子幣、對應 SPIN 數）。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-hot-order-up.webm", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=1288s" },
+          { text: "停 Hot Order Up 特色：以該特色進行 ORDER UP（場上 5～10 分數球、對應 SPIN 數）。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-hot-order-up.webm", yt: "https://www.youtube.com/watch?v=7eVMa3MsAjI&t=1288s" },
           { text: "停 UPGRADE：進入 HOT HOT FEATURE，轉 Hot Hot Train，停 Hot Hot Order Up 特色／GRAND／MAJOR（不再升級）。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-upgrade-to-hothot.webm", yt: "https://www.youtube.com/watch?v=6W8bFjdADYw&t=28s" },
           { text: "收分乘倍：HOT 階整欄鎖定收分乘 2 倍；HOT HOT 階整欄鎖定收分乘 3 倍（一般 ORDER UP 不乘倍）。", img: "hot-hot-flaming-pots/clips/hot-hot-flaming-pots-mult-3x.webm", yt: "https://www.youtube.com/watch?v=6W8bFjdADYw&t=45s" },
           { text: "Hot Train 停 GRAND／MAJOR 時，直接派發對應 meter 顯示值。", img: "", yt: "https://youtu.be/BDoZqEu9D3c" }
