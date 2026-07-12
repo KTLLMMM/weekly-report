@@ -246,13 +246,28 @@
       return out;
     }
 
+    /* 廠商排序：Aristocrat → Light & Wonder → IGT 固定置前，其餘依款數多寡（多→少）；
+       同款數維持出現順序（sort 穩定）。只列實際有資料的廠商。 */
+    function orderedVendors() {
+      var priority = ['Aristocrat', 'Light & Wonder', 'IGT'];
+      var counts = {};
+      GAMES.forEach(function (g) {
+        if (g.vendor != null && g.vendor !== '') counts[g.vendor] = (counts[g.vendor] || 0) + 1;
+      });
+      var all = uniqueBy('vendor');
+      var head = priority.filter(function (v) { return all.indexOf(v) !== -1; });
+      var rest = all.filter(function (v) { return priority.indexOf(v) === -1; });
+      rest.sort(function (a, b) { return counts[b] - counts[a]; });
+      return head.concat(rest);
+    }
+
     if (!GAMES.length) {
       document.querySelectorAll('.filter-row').forEach(function (r) { r.style.display = 'none'; });
       grid.outerHTML = '<div class="empty-state">尚未有競品遊戲資料。</div>';
     } else {
-      buildFilters(filtersVendor, uniqueBy('vendor'),
+      buildFilters(filtersVendor, orderedVendors(),
         function () { return currentVendor; }, function (v) { currentVendor = v; });
-      buildFilters(filtersYear, uniqueBy('year').sort().reverse(),
+      buildFilters(filtersYear, uniqueBy('year').sort(function (a, b) { return Number(b) - Number(a); }),
         function () { return currentYear; }, function (v) { currentYear = v; });
       renderGrid();
     }

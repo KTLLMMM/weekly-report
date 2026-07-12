@@ -353,5 +353,58 @@ var GAMES = [
       "crazy-chickens-in-space/HELP/help-08.jpg",
       "crazy-chickens-in-space/HELP/help-09.jpg"
     ]
+  },
+  {
+    id: "cash-wizard-magic-trio",
+    vendor: "Light & Wonder",
+    year: "2026",
+    name: "Cash Wizard Magic Trio",
+    img: "cash-wizard-magic-trio/cover.jpg",
+    tags: ["4608 Ways", "Cash on Reel", "Magic Falls", "三特色", "收集", "分數球", "4支彩金", "FreeGame"],
+    desc: "Cash Wizard 系列新作（Brainsaw Studios）：4608 Ways、以 Coin 逐軸保留填盤觸發 Magic Falls；免費遊戲為 Dusty／Baby Magic／Cash Wizard 三特色（Trio）及其組合。規格取自機台 HELP。",
+    symbols: [
+      { name: "Coin（分數球）", role: "顯示分數[[25–5000x bet multiplier]]或 JACKPOT。落在某軸時，該軸上所有 Coin 保留（held）接下來 3 次 SPIN（同投注與幣值），軸底顯示剩餘保留次數；落在 Coin 後方的符號不計分。", img: "cash-wizard-magic-trio/symbols/coin.png" },
+      { name: "Dusty（獨角獸）", role: "特色符號。出現時在非保留位置隨機增加[[2–11 個]]Coin。", img: "cash-wizard-magic-trio/symbols/dusty.png" },
+      { name: "Baby Magic（綠精靈）", role: "特色符號。出現時為場上每個 Coin 額外加上最多 5 筆分數[[25–500x bet multiplier]]（顯示 JACKPOT 的 Coin 不加）。", img: "cash-wizard-magic-trio/symbols/baby-magic.png" },
+      { name: "Cash Wizard（藍精靈）", role: "特色符號。出現時立即派發場上每個 Coin 顯示的獎，JACKPOT 派發 MEGA／MAJOR／MINOR／MINI。", img: "cash-wizard-magic-trio/symbols/cash-wizard.png" },
+      { name: "WILD", role: "只出現在第 2、3、4 軸；替代一般賠付標誌（不替代 Coin 與特色符號）。", img: "" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "5 軸、4608 Ways 玩法。[[最低投注 75 credits × bet multiplier；幣值 1¢／2¢／5¢／10¢，投注等級 75／150／225／375／600 credits]]", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-base-coins-held.webm", yt: "https://youtu.be/atpqyg6DrqY?t=21" },
+          { text: "Coin 顯示分數或 JACKPOT。Coin 落在某軸時，該軸所有 Coin 保留 3 次 SPIN，軸底以計數顯示剩餘保留次數。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-base-coins-held.webm", yt: "https://youtu.be/atpqyg6DrqY?t=21" },
+          { text: "Magic Falls：當某一軸每個位置都被 Coin 填滿，該軸觸發 Magic Falls，派發該軸所有 Coin 顯示的獎；顯示 JACKPOT 的 Coin 派發 MEGA／MAJOR／MINOR／MINI。派發後該軸 Coin 解除保留。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-magic-falls.webm", yt: "https://youtu.be/atpqyg6DrqY?t=49" },
+          { text: "共 4 支彩金：MEGA／MAJOR（累積彩金）、MINOR／MINI（固定彩金）；MEGA 或 MAJOR 中獎時，先派發並重置對應 meter 再結算其餘獎。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        name: "三特色 Trio",
+        steps: [
+          { text: "由 Dusty／Baby Magic／Cash Wizard 三特色之一或其組合觸發，獲得 8 次免費遊戲；基礎遊戲中可隨機觸發，或當一或多軸填滿 Coin 且至少一個顯示特色符號時依對應表觸發。免費遊戲落下的 Coin 都會保留。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-trigger.webm", yt: "https://youtu.be/atpqyg6DrqY?t=191" },
+          { text: "免費遊戲使用另一套轉輪，除 Coin 與三種特色符號外的標誌皆變灰不計分；每次免費 SPIN 前，部分位置可能替換為 Baby Magic 或 Cash Wizard。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-fill.webm", yt: "https://youtu.be/atpqyg6DrqY?t=214" },
+          { text: "Dusty（獨角獸）：出現時在非保留位置隨機增加[[2–11 個]]Coin。Baby Magic（綠精靈）：為場上每個 Coin 加上最多 5 筆分數[[25–500x bet multiplier]]（JACKPOT 的 Coin 不加）。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-fill.webm", yt: "https://youtu.be/atpqyg6DrqY?t=214" },
+          { text: "Cash Wizard（藍精靈）：出現時立即派發場上每個 Coin 顯示的獎，JACKPOT 派發 MEGA／MAJOR／MINOR／MINI。同一 SPIN 多者並存時，結算順序為 Dusty → Baby Magic → Cash Wizard。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-reel-win.webm", yt: "https://youtu.be/atpqyg6DrqY?t=249" },
+          { text: "免費遊戲中若觸發 Magic Falls，額外再加 2 次免費遊戲。", img: "", yt: "" },
+          { text: "免費遊戲結束時，派發場上每個 Coin 顯示的獎（含 JACKPOT→MEGA／MAJOR／MINOR／MINI）；結束後回到進入免費遊戲前的基礎遊戲狀態。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-reel-win.webm", yt: "https://youtu.be/atpqyg6DrqY?t=249" }
+        ]
+      }
+    ],
+    help: [
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-01.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-02.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-03.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-04.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-05.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-06.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-07.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-08.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-09.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-10.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-11.jpg",
+      "cash-wizard-magic-trio/HELP/cash-wizard-magic-trio-help-12.jpg"
+    ]
   }
 ];
