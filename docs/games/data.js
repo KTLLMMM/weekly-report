@@ -452,8 +452,8 @@ var GAMES = [
         type: "FEATURE GAME",
         name: "Tiger and Dragon Bonus（含 JACKPOT）",
         steps: [
-          { text: "觸發後獲得 3 次特色 SPIN；開局解鎖第 1～3 列，其餘列須在已解鎖列中累計收集[[6／9／14／19／25 個]]Coin 才依序解鎖第 4～8 列。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-rows.gif", yt: "https://youtu.be/Tivg2acvgnM?t=71" },
-          { text: "已解鎖列中的解鎖轉軸出現 Coin 時，特色 SPIN 剩餘次數重置為 3，該次出現的 Coin 數計入各列鎖頭計量，且全列（不分是否解鎖）出現 Coin 的位置皆鎖定至特色結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-lock.gif", yt: "https://youtu.be/Tivg2acvgnM?t=59" },
+          { text: "觸發後獲得 3 次特色 SPIN；開局解鎖第 1～3 列，其餘列須在已解鎖列中累計收集[[6／9／14／19／25 個]]Coin 才依序解鎖第 4～8 列。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-lock.gif", yt: "https://youtu.be/Tivg2acvgnM?t=59" },
+          { text: "已解鎖列中的解鎖轉軸出現 Coin 時，特色 SPIN 剩餘次數重置為 3，該次出現的 Coin 數計入各列鎖頭計量，且全列（不分是否解鎖）出現 Coin 的位置皆鎖定至特色結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-rows.gif", yt: "https://youtu.be/Tivg2acvgnM?t=71" },
           { text: "已解鎖列中累計出現[[32 個]]Coin 時，中 JACKPOT（單一累積彩金）。", img: "tiger-and-dragon-cash-on-reels/screens/td-bonus-jackpot-progress.jpg", yt: "https://youtu.be/Tivg2acvgnM?t=112" },
           { text: "SPIN 用完或所有轉軸鎖定後，依 Coin 群組規則結算派彩，Tiger and Dragon Bonus 結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-settle.gif", yt: "https://youtu.be/Tivg2acvgnM?t=189" }
         ]
