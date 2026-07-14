@@ -419,14 +419,14 @@ var GAMES = [
     tags: ["Cash on Reel", "收集", "多特色", "盤面延展", "累積彩金"],
     symbols: [
       { name: "WILD", role: "百搭符號，取代所有一般標誌；不取代木乃伊與寶石。連線最高賠付[[5個=100]]。", img: "fo-mo-mummy/symbols/wild.png" },
-      { name: "Ms. Mummy / Mr. Mummy（收集符號）", role: "本款兩位主角木乃伊，僅於 reel 1 出現（購買遊戲時可擴及其他輪）。搭配寶石觸發對應 Mo' 特色；特色中於盤面移動、收取分數，並可升級放大收集範圍。", img: "fo-mo-mummy/symbols/mummy.png" },
+      { name: "Ms. Mummy / Mr. Mummy（收集符號）", role: "本款兩位主角木乃伊，僅於 reel 1 出現。搭配寶石觸發對應 Mo' 特色；特色中於盤面移動、收取分數，並可升級放大收集範圍。", img: "fo-mo-mummy/symbols/mummy.png" },
       { name: "粉色寶石", role: "帶分數的寶石，搭配木乃伊觸發 Mo' Boosts；單獨出現時也可能隨機觸發。", img: "fo-mo-mummy/symbols/gem-pink.png" },
-      { name: "綠色寶石", role: "帶分數的寶石，觸發 Mo' Spins（或隨機觸發）。", img: "fo-mo-mummy/symbols/gem-green.png" },
-      { name: "紅色寶石", role: "帶分數的寶石，觸發 Mo' Prizes（或隨機觸發）。", img: "fo-mo-mummy/symbols/gem-red.png" },
-      { name: "藍色寶石", role: "帶分數的寶石，觸發 Mo' Symbols（或隨機觸發）。", img: "fo-mo-mummy/symbols/gem-blue.png" },
+      { name: "綠色寶石", role: "帶分數的寶石，觸發 Mo' Spins；單獨出現時也可能隨機觸發。", img: "fo-mo-mummy/symbols/gem-green.png" },
+      { name: "紅色寶石", role: "帶分數的寶石，觸發 Mo' Prizes；單獨出現時也可能隨機觸發。", img: "fo-mo-mummy/symbols/gem-red.png" },
+      { name: "藍色寶石", role: "帶分數的寶石，觸發 Mo' Symbols；單獨出現時也可能隨機觸發。", img: "fo-mo-mummy/symbols/gem-blue.png" },
       { name: "彩色寶石（Multi-colour）", role: "可啟動任一或多個尚未啟動的 Mo' 特色。", img: "fo-mo-mummy/symbols/gem-multi.png" },
-      { name: "Diamond（鑽石）", role: "特色中由寶石轉換而成，保留原寶石的分數，供收集符號收取；可攜帶 +1 Spin 等。", img: "fo-mo-mummy/symbols/diamond.png" },
-      { name: "Ankh（安卡）", role: "特色中的帶分數符號，落在收集符號範圍內即被收取。", img: "fo-mo-mummy/symbols/ankh.png" }
+      { name: "Diamond（鑽石）", role: "只出現在特色中，由寶石轉換而成，保留原寶石的分數，供收集符號收取；可攜帶分數、彩金、+1 Spin 符號。", img: "fo-mo-mummy/symbols/diamond.png" },
+      { name: "Ankh（安卡）", role: "只出現在特色中，可攜帶分數、彩金、+1 Spin 符號，落在收集符號範圍內即被收取。", img: "fo-mo-mummy/symbols/ankh.png" }
     ],
     play: [
       {
