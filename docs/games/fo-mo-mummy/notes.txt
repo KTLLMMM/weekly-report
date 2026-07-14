@@ -1,0 +1,69 @@
+Fo' Mo' Mummy — 競品介紹 交付說明（notes）
+製作日：2026-07-08
+
+■ 遊戲身份
+- 廠商：Aristocrat（機台畫面左下角 logo；HELP 頁亦標「Aristocrat product…patents」）。
+- 遊戲名：Fo' Mo' Mummy，含兩位主角木乃伊 Ms. Mummy 與 Mr. Mummy（1-LINK 雙機台，共用同一份 HELP／同一套 Mo' 特色）。
+  ※ HELP 賠付表標題為「FO' MO' MUMMY™ MR. MUMMY™ PAYTABLE」；影片標題稱 "New Mo Mummy"。
+- 年份：2026（依 2025 G2E 亮相、2026 發行；使用者提供）。
+
+■ 彩金屬性（依機台 HELP「JACKPOTS」頁，已確認、非推測）
+- Grand、Major、Maxi ＝ 累積彩金（progressive）。
+- Minor、Mini ＝ 固定彩金（fixed）。
+- 五種彩金皆不乘 bet multiplier。
+
+■ 更正紀錄（相對於初版 mo-mummy）
+- slug：mo-mummy → fo-mo-mummy。
+- 年份：待確認 → 2026。
+- 名稱：Mo Mummy → Fo' Mo' Mummy（Ms. Mummy / Mr. Mummy）。
+- 收集符號：初版誤標「Pharaoh 法老」，實為兩位主角木乃伊 Ms. Mummy／Mr. Mummy，已更正（HELP 逐字稿 help.md 內以 [木乃伊] 表示的收集符號亦同）。
+
+■ 版本差異（已查證，收錄為 play「版本差異」分區，不拆兩筆）
+- 兩版共用 Mo' 特色核心；差在收集符號角色與招牌效果：
+  - Ms. Mummy（粉）：寶箱隨機開獎——依 Ms. 版 HELP（help-11）：升級版 Ms. Mummy 在場時，寶箱可出現在其範圍內空位，翻出最多 5 個 diamond/ankh，獎項 (2–50)×Total Bet、Mini 或 Minor；Mo' Spins 啟動時另可開出 +1~+3 Spin。動圖來源影片A 13:56~14:58。
+  - Mr. Mummy（法老）：乘倍框（收集符號帶乘倍，畫面顯示如「3X THIS SPIN」）。來源 LM5TDGr1DC8 18:48~20:01。※乘倍框未在已取得的 HELP 頁中載明，屬實機觀察。
+- Ms. Mummy 版 HELP 3 頁已收錄為 help-09~11（來源 LM5TDGr1DC8 24:33~24:40）；其餘頁與 Mr. 版相同未重複收錄。
+- help-11 新增收集升級規則：收滿 5/4/3 顆 diamond 依序 2×2→3×3→4×4→5×5，加 3/2/1 次 Spin；升級時木乃伊可隨機升級為升級版。
+- 注意：Ms. 版 HELP 顯示獎項量級 (0.5–100)×Total Bet，與影片A HELP 的 (0.4–100) 不同，依機台押分/denom 設定而異，數值待核對。
+
+■ 待確認清單
+1. 兩版數值/機率層面是否另有差異，無公開資料，未臆測。
+2. Mo' 特色觸發的隨機機率、購買遊戲（bought games）規則細節，HELP 僅文字帶過。
+3. gem-pink（粉色寶石）用的是帶「MINI」字樣的紫鑽（依使用者指定）；如需純色無字版可再換。
+4. wild.png 為官方透明素材、解析度大（約 1.9MB）；如需可再壓縮縮圖。
+
+■ 玩法結構（play，已依使用者指定來源重錄）
+- BASE GAME（2 段）：8cNHd9Hyzqk 9:40；jJYtlp19OIA 1:49。
+- FEATURE GAME「Mo' Features」（7 段）：
+  1 特色開始/5×5/初始5SPIN — dbgGg7X9HCc 19:15
+  2 粉＝Mo' Boosts — hJNcHvZolVo 9:23
+  3 綠＝Mo' Spins — jJYtlp19OIA 6:14
+  4 紅＝Mo' Prizes — jJYtlp19OIA 3:18
+  5 藍＝Mo' Symbols — 0f7B6O9_Jko 9:38
+  6 四特色同時啟動/+1SPIN — dbgGg7X9HCc 10:39
+  7 木乃伊收集移動收分/2×2→5×5升級 — 0IrTTLg-IVo 24:29
+- 版本差異（2 段）：Ms 寶箱 jJYtlp19OIA 3:46；Mr 乘倍框 LM5TDGr1DC8 19:30。
+- 註：全部 11 段皆為 1x 全速錄製（曾有慢速/卡頓問題，已全數重錄修正）。
+
+■ 玩法重點（HELP 共 11 頁，逐字見 HELP/help.md）
+- 5×3、25 線、bet multiplier 下注。四色寶石（Cash on Reel 帶分數）各觸發一種 Mo' 特色：粉 Boosts／綠 Spins／紅 Prizes／藍 Symbols；彩色寶石可啟動任一未啟動特色。
+- 特色於 5×5、初始 5 SPIN；寶石轉 diamond 保留分數，木乃伊收集符號（2×2→5×5）移動收分，四特色可同時啟動。
+- 彩金：Grand/Major/Maxi 累積、Minor/Mini 固定。
+
+■ 素材來源
+- 1nglDXEeFxg：HELP 36:25~36:43。
+- 8cNHd9Hyzqk：BASE 9:40。
+- jJYtlp19OIA（Ms. Mummy 實機）：BASE 1:49、紅Prizes 3:18、Ms差異 3:46、綠Spins 6:14。
+- dbgGg7X9HCc：特色開始 19:15、四特色 10:39。
+- hJNcHvZolVo：粉Boosts 9:23。
+- 0f7B6O9_Jko：藍Symbols 9:38。
+- 0IrTTLg-IVo：收集升級 24:29；Ms. Mummy 版 HELP 亦取自 LM5TDGr1DC8 24:33。
+- LM5TDGr1DC8：Mr 乘倍框 19:30、Ms.版 HELP 24:33。
+- UpCGGiozqKo：Ms. Mummy 實機（未取用片段，供參）。
+
+■ 檔案清單
+- fo-mo-mummy-cover.webp（封面＝官方 keyart，Mr.+Ms. 雙主角）
+- clips/（11 段 .webm）：base-1 / base-2 / feat-start / feat-boosts / feat-spins / feat-prizes / feat-symbols / feat-allactive / feat-collect / diff-ms / diff-mr
+- HELP/：fo-mo-mummy-help-01~08.jpg（Mr.版：賠付表→彩金→Mo' Features×3→Boosts/Spins→Symbols/Prizes→Game Rules）＋ help-09~11.jpg（Ms. Mummy 版 Mo' Features 3 頁）＋ help.md 逐字
+- symbols/（9 個去背 PNG）：wild / mummy（Ms.+Mr. 收集符號）/ gem-pink / gem-green / gem-red / gem-blue / gem-multi / diamond / ankh（_src/ 為原圖暫存，交付時排除）
+- fo-mo-mummy-entry.txt（data.js 物件一筆）
