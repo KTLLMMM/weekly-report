@@ -374,8 +374,11 @@ var GAMES = [
         type: "BASE GAME",
         steps: [
           { text: "5 軸、4608 Ways 玩法。[[最低投注 75 credits × bet multiplier；幣值 1¢／2¢／5¢／10¢，投注等級 75／150／225／375／600 credits]]", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-base-coins-held.webm", yt: "https://youtu.be/atpqyg6DrqY?t=21" },
-          { text: "Coin 顯示分數或 JACKPOT。Coin 落在某軸時，該軸所有 Coin 保留 3 次 SPIN，軸底以計數顯示剩餘保留次數。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-base-coins-held.webm", yt: "https://youtu.be/atpqyg6DrqY?t=21" },
-          { text: "Magic Falls：當某一軸每個位置都被 Coin 填滿，該軸觸發 Magic Falls，派發該軸所有 Coin 顯示的獎；顯示 JACKPOT 的 Coin 派發 MEGA／MAJOR／MINOR／MINI。派發後該軸 Coin 解除保留。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-magic-falls.webm", yt: "https://youtu.be/atpqyg6DrqY?t=49" },
+          { text: "Coin 顯示分數或 JACKPOT。Coin 落在某軸時，該軸所有 Coin 保留 3 次 SPIN，軸底以計數顯示剩餘保留次數。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-base-coins-held.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=223" },
+          { text: "Magic Falls：當某一軸每個位置都被 Coin 填滿，該軸觸發 Magic Falls，派發該軸所有 Coin 顯示的獎；派發後該軸 Coin 解除保留。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-magic-falls.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=206" },
+          { text: "Magic Falls 觸發時，若填滿的 Coin 中有 Feature Coin（Dusty／Baby Magic／Cash Wizard，分別對應粉／綠／藍），依組合依對應表觸發相應顏色的免費遊戲特色。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-magic-falls.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=479" },
+          { text: "Magic Falls 觸發時，若填滿的 Coin 中有顯示 JACKPOT 的 Coin，播放彩金轉動畫面，決定派發 MEGA／MAJOR／MINOR／MINI 中的一項。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-magic-falls.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=1188" },
+          { text: "轉出對應顏色的鑽石時，往上打擊、判定是否觸發相應顏色的免費遊戲特色（打擊觸發）。", img: "", yt: "https://youtu.be/NFas1fc9Qyo?t=235" },
           { text: "共 4 支彩金：MEGA／MAJOR（累積彩金）、MINOR／MINI（固定彩金）；MEGA 或 MAJOR 中獎時，先派發並重置對應 meter 再結算其餘獎。", img: "", yt: "" }
         ]
       },
@@ -383,12 +386,12 @@ var GAMES = [
         type: "FREE GAME",
         name: "三特色 Trio",
         steps: [
-          { text: "由 Dusty／Baby Magic／Cash Wizard 三特色之一或其組合觸發，獲得 8 次免費遊戲；基礎遊戲中可隨機觸發，或當一或多軸填滿 Coin 且至少一個顯示特色符號時依對應表觸發。免費遊戲落下的 Coin 都會保留。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-trigger.webm", yt: "https://youtu.be/atpqyg6DrqY?t=191" },
-          { text: "免費遊戲使用另一套轉輪，除 Coin 與三種特色符號外的標誌皆變灰不計分；每次免費 SPIN 前，部分位置可能替換為 Baby Magic 或 Cash Wizard。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-fill.webm", yt: "https://youtu.be/atpqyg6DrqY?t=214" },
-          { text: "Dusty（獨角獸）：出現時在非保留位置隨機增加[[2–11 個]]Coin。Baby Magic（綠精靈）：為場上每個 Coin 加上最多 5 筆分數[[25–500x bet multiplier]]（JACKPOT 的 Coin 不加）。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-fill.webm", yt: "https://youtu.be/atpqyg6DrqY?t=214" },
-          { text: "Cash Wizard（藍精靈）：出現時立即派發場上每個 Coin 顯示的獎，JACKPOT 派發 MEGA／MAJOR／MINOR／MINI。同一 SPIN 多者並存時，結算順序為 Dusty → Baby Magic → Cash Wizard。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-reel-win.webm", yt: "https://youtu.be/atpqyg6DrqY?t=249" },
-          { text: "免費遊戲中若觸發 Magic Falls，額外再加 2 次免費遊戲。", img: "", yt: "" },
-          { text: "免費遊戲結束時，派發場上每個 Coin 顯示的獎（含 JACKPOT→MEGA／MAJOR／MINOR／MINI）；結束後回到進入免費遊戲前的基礎遊戲狀態。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-reel-win.webm", yt: "https://youtu.be/atpqyg6DrqY?t=249" }
+          { text: "由 Dusty／Baby Magic／Cash Wizard 三特色之一或其組合觸發，獲得 8 次免費遊戲。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-trigger.webm", yt: "https://youtu.be/atpqyg6DrqY?t=191" },
+          { text: "Dusty（獨角獸）：出現時在非保留位置隨機增加[[2–11 個]]Coin。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-fill.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=538" },
+          { text: "Cash Wizard（藍精靈）：出現時立即派發場上每個 Coin 顯示的獎，JACKPOT 派發 MEGA／MAJOR／MINOR／MINI。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-reel-win.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=998" },
+          { text: "Baby Magic（綠精靈）：出現時為場上每個 Coin 額外加上最多 5 筆分數[[25–500x bet multiplier]]（顯示 JACKPOT 的 Coin 不加）。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-fill.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=1387" },
+          { text: "免費遊戲中若觸發 Magic Falls，額外再加 2 次免費遊戲。", img: "", yt: "https://youtu.be/NFas1fc9Qyo?t=397" },
+          { text: "免費遊戲結束時，派發場上每個 Coin 顯示的獎（含 JACKPOT→MEGA／MAJOR／MINOR／MINI）；結束後回到進入免費遊戲前的基礎遊戲狀態。", img: "cash-wizard-magic-trio/clips/cash-wizard-magic-trio-free-games-reel-win.webm", yt: "https://youtu.be/NFas1fc9Qyo?t=549" }
         ]
       }
     ],
