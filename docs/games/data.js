@@ -410,11 +410,11 @@ var GAMES = [
   {
     id: "tiger-and-dragon-cash-on-reels",
     vendor: "IGT",
-    year: "2024",
+    year: "2023",
     name: "Tiger and Dragon: Cash on Reels",
     img: "tiger-and-dragon-cash-on-reels/cover.jpg",
     tags: ["243 Ways", "Cash on Reel", "三特色", "累積彩金", "打擊觸發"],
-    desc: "IGT 中國風機台，243 ways；Coin 符號每 SPIN 顯示分數或轉換值，搭配 Tiger／Dragon 兩個特色符號分別觸發 Tiger Bonus／Dragon Bonus，兩者組合可觸發 Tiger and Dragon Bonus 並挑戰單一累積 JACKPOT。規格取自機台 HELP（© 2023 IGT，上市年份 2024 待與使用者確認何者為準）。",
+    desc: "IGT 中國風機台，243 ways；Coin 符號每 SPIN 顯示分數或轉換值，搭配 Tiger／Dragon 兩個特色符號分別觸發 Tiger Bonus／Dragon Bonus，兩者組合可觸發 Tiger and Dragon Bonus 並挑戰單一累積 JACKPOT。規格取自機台 HELP（© 2023 IGT）。",
     symbols: [
       { name: "Tiger（老虎）", role: "3 個觸發 Tiger Bonus；1 或 2 個時可能隨機觸發。", img: "tiger-and-dragon-cash-on-reels/symbols/tiger.jpg" },
       { name: "Dragon（龍）", role: "3 個觸發 Dragon Bonus；1 或 2 個時可能隨機觸發。任意組合 5 個 Tiger＋Dragon 觸發 Tiger and Dragon Bonus（1~2 個各一時可能隨機觸發）。", img: "tiger-and-dragon-cash-on-reels/symbols/dragon.jpg" },
@@ -425,7 +425,7 @@ var GAMES = [
       {
         type: "BASE GAME",
         steps: [
-          { text: "5 軸 243 ways 玩法；每次 SPIN 後，盤面上每個 Coin 顯示[[1–99 分數]]或 Up Arrow。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-base-game.webm", yt: "https://youtu.be/Tivg2acvgnM?t=333" },
+          { text: "5 軸 243 ways 玩法；每次 SPIN 後，盤面上每個 Coin 顯示[[1–99 分數]]或 Up Arrow。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-base-game.gif", yt: "https://youtu.be/Tivg2acvgnM?t=333" },
           { text: "未中 MultiWay 賠付的 SPIN，有機率隨機觸發 Mystery Gong：額外在盤面加派 1 個以上 Coin（不會疊加在既有 Coin、Dragon、Tiger 符號位置）。", img: "", yt: "" },
           { text: "3 個 Tiger 觸發 Tiger Bonus；3 個 Dragon 觸發 Dragon Bonus；任意組合 5 個 Tiger＋Dragon 觸發 Tiger and Dragon Bonus（1 或 2 個時皆可能隨機觸發對應特色）。", img: "", yt: "" },
           { text: "2 個以上橫向相鄰的 Coin 群組結算：每格顯示[[1–99 分數]]或 Up Arrow，Up Arrow 轉換為 0 並為群組最左側數值加上[[1–90]]，最終由左到右讀出總分派彩。", img: "", yt: "" }
@@ -435,27 +435,27 @@ var GAMES = [
         type: "FEATURE GAME",
         name: "Tiger Bonus",
         steps: [
-          { text: "觸發後獲得 3 次特色 SPIN；每個解鎖位置各自為獨立轉軸，特色 SPIN 中只會出現 Coin 符號。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-tiger-bonus-trigger.webm", yt: "https://www.youtube.com/shorts/RhY_jy6r_vo?t=30" },
-          { text: "任一解鎖轉軸出現 Coin 時，特色 SPIN 剩餘次數重置為 3，該軸上的 Coin 鎖定至特色結束；若所有轉軸皆鎖定，剩餘 SPIN 不再進行。", img: "", yt: "" },
-          { text: "SPIN 用完或所有轉軸鎖定後，依 Coin 群組規則結算派彩，Tiger Bonus 結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-tiger-bonus-lastspin.webm", yt: "https://www.youtube.com/shorts/RhY_jy6r_vo?t=86" }
+          { text: "觸發後獲得 3 次特色 SPIN；每個解鎖位置各自為獨立轉軸，特色 SPIN 中只會出現 Coin 符號。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-tiger-bonus-trigger.gif", yt: "https://www.youtube.com/shorts/RhY_jy6r_vo?t=30" },
+          { text: "任一解鎖轉軸出現 Coin 時，特色 SPIN 剩餘次數重置為 3，該軸上的 Coin 鎖定至特色結束；若所有轉軸皆鎖定，剩餘 SPIN 不再進行。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-tiger-bonus-lock.gif", yt: "https://www.youtube.com/shorts/RhY_jy6r_vo?t=42" },
+          { text: "SPIN 用完或所有轉軸鎖定後，依 Coin 群組規則結算派彩，Tiger Bonus 結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-tiger-bonus-settle.gif", yt: "https://www.youtube.com/shorts/RhY_jy6r_vo?t=96" }
         ]
       },
       {
         type: "FEATURE GAME",
         name: "Dragon Bonus",
         steps: [
-          { text: "觸發後獲得 1 次特色 SPIN；同樣以解鎖位置為獨立轉軸，SPIN 中只會出現 Coin 符號。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-dragon-bonus-fill.webm", yt: "https://www.youtube.com/shorts/6R4FHK9DXcg?t=10" },
-          { text: "特色 SPIN 結束後，直接依 Coin 群組規則結算派彩，Dragon Bonus 結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-dragon-bonus-reveal.webm", yt: "https://www.youtube.com/shorts/6R4FHK9DXcg?t=33" }
+          { text: "觸發後獲得 1 次特色 SPIN；同樣以解鎖位置為獨立轉軸，SPIN 中只會出現 Coin 符號。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-dragon-bonus-fill.gif", yt: "https://www.youtube.com/shorts/6R4FHK9DXcg?t=10" },
+          { text: "特色 SPIN 結束後，直接依 Coin 群組規則結算派彩，Dragon Bonus 結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-dragon-bonus-reveal.gif", yt: "https://www.youtube.com/shorts/6R4FHK9DXcg?t=33" }
         ]
       },
       {
         type: "FEATURE GAME",
         name: "Tiger and Dragon Bonus（含 JACKPOT）",
         steps: [
-          { text: "觸發後獲得 3 次特色 SPIN；開局解鎖第 1～3 列，其餘列須在已解鎖列中累計收集[[6／9／14／19／25 個]]Coin 才依序解鎖第 4～8 列。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-rows.webm", yt: "https://youtu.be/Tivg2acvgnM?t=71" },
-          { text: "已解鎖列中的解鎖轉軸出現 Coin 時，特色 SPIN 剩餘次數重置為 3，該次出現的 Coin 數計入各列鎖頭計量，且全列（不分是否解鎖）出現 Coin 的位置皆鎖定至特色結束。", img: "", yt: "" },
-          { text: "已解鎖列中累計出現[[32 個]]Coin 時，中 JACKPOT（單一累積彩金）。", img: "", yt: "" },
-          { text: "SPIN 用完或所有轉軸鎖定後，依 Coin 群組規則結算派彩，Tiger and Dragon Bonus 結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-settle.webm", yt: "https://youtu.be/Tivg2acvgnM?t=189" }
+          { text: "觸發後獲得 3 次特色 SPIN；開局解鎖第 1～3 列，其餘列須在已解鎖列中累計收集[[6／9／14／19／25 個]]Coin 才依序解鎖第 4～8 列。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-rows.gif", yt: "https://youtu.be/Tivg2acvgnM?t=71" },
+          { text: "已解鎖列中的解鎖轉軸出現 Coin 時，特色 SPIN 剩餘次數重置為 3，該次出現的 Coin 數計入各列鎖頭計量，且全列（不分是否解鎖）出現 Coin 的位置皆鎖定至特色結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-lock.gif", yt: "https://youtu.be/Tivg2acvgnM?t=59" },
+          { text: "已解鎖列中累計出現[[32 個]]Coin 時，中 JACKPOT（單一累積彩金）。", img: "tiger-and-dragon-cash-on-reels/screens/td-bonus-jackpot-progress.jpg", yt: "https://youtu.be/Tivg2acvgnM?t=112" },
+          { text: "SPIN 用完或所有轉軸鎖定後，依 Coin 群組規則結算派彩，Tiger and Dragon Bonus 結束。", img: "tiger-and-dragon-cash-on-reels/clips/tiger-and-dragon-cash-on-reels-td-bonus-settle.gif", yt: "https://youtu.be/Tivg2acvgnM?t=189" }
         ]
       }
     ],
