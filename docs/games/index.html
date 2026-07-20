@@ -51,6 +51,19 @@
   h1 { font-size: 28px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
   .sub { color: var(--muted); font-size: 16px; margin-top: 6px; }
 
+  /* 標題中的品牌字：逐字可點（解鎖用），外觀與一般標題完全相同 */
+  .brand-word { -webkit-user-select: none; user-select: none; }
+  .brand-word > i { font-style: inherit; }
+
+  /* 解鎖後才出現的狀態標記 */
+  .unlock-tag {
+    display: none; margin-left: 8px; vertical-align: 2px;
+    font-size: 12px; font-weight: 700; letter-spacing: .5px;
+    color: #b26a00; background: #fff4e0; border: 1px solid #ffd79a;
+    border-radius: 999px; padding: 2px 10px; cursor: pointer;
+  }
+  body.unlocked .unlock-tag { display: inline-block; }
+
   /* ===== 篩選方塊 ===== */
   .filter-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
   .filter-row:last-of-type { margin-bottom: 28px; }
@@ -119,6 +132,17 @@
   .tile .body { padding: 14px 16px 16px; }
   .tile .name { font-size: 17px; font-weight: 700; line-height: 1.4; color: var(--text); }
 
+  /* 未公開的方格（僅解鎖後可見）：外觀明顯區隔，避免誤以為已上線 */
+  .tile.is-hidden { border-style: dashed; border-color: #ffcf85; background: #fffdf8; }
+  .tile.is-hidden .vendor { justify-content: flex-start; }
+  .tile.is-hidden .vendor::after {
+    content: "未公開"; order: 2;
+    font-size: 11px; font-weight: 700; letter-spacing: .5px;
+    color: #b26a00; background: #fff4e0; border: 1px solid #ffd79a;
+    border-radius: 999px; padding: 1px 8px; text-transform: none;
+  }
+  .tile.is-hidden .vendor .year { order: 3; margin-left: auto; }
+
   /* 空狀態 */
   .empty-state {
     border: 1px dashed var(--line); border-radius: 12px;
@@ -151,8 +175,8 @@
     <div class="head-row">
       <img src="../logo.png" alt="傳奇亞太科技 ALPHABET">
       <div class="head-text">
-        <h1>LANDBASE 遊戲總覽</h1>
-        <div class="sub">競品遊戲介紹</div>
+        <h1><span class="brand-word" id="brandWord"><i data-i="0">L</i><i data-i="1">A</i><i data-i="2">N</i><i data-i="3">D</i><i data-i="4">B</i><i data-i="5">A</i><i data-i="6">S</i><i data-i="7">E</i></span> 遊戲總覽</h1>
+        <div class="sub">競品遊戲介紹<span class="unlock-tag" id="unlockTag" title="點一下重新隱藏">未公開已顯示</span></div>
       </div>
     </div>
   </header>
@@ -184,6 +208,20 @@
     var currentVendor = ALL;
     var currentYear = ALL;
 
+    /* ===== 未公開遊戲的顯示開關 =====
+       data.js 標 hidden: true 的遊戲平常不出現在總覽（連篩選方塊也不算它）。
+       解鎖密技：點標題「LANDBASE」的 S→A→L→A→D 五個字母（= SALAD）。
+       解鎖狀態存在本機瀏覽器；同一組密技再點一次即恢復隱藏。
+       正式對外公開時，把該筆的 hidden 拿掉（或改 false）再 push。 */
+    var UNLOCK_KEY = 'landbase-games-unlocked';
+    var UNLOCK_SEQ = [6, 1, 0, 5, 3];
+    var unlocked = false;
+    try { unlocked = localStorage.getItem(UNLOCK_KEY) === '1'; } catch (e) {}
+
+    function visibleGames() {
+      return GAMES.filter(function (g) { return unlocked || !g.hidden; });
+    }
+
     function esc(s) {
       return String(s).replace(/[&<>"]/g, function (c) {
         return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
@@ -195,12 +233,12 @@
       grid.innerHTML = '';
       var shown = 0;
       /* 反向顯示：data.js 新遊戲一律往後 append，總覽最新的排最前面 */
-      GAMES.slice().reverse().forEach(function (g, i) {
+      visibleGames().reverse().forEach(function (g, i) {
         if (currentVendor !== ALL && g.vendor !== currentVendor) return;
         if (currentYear !== ALL && String(g.year) !== currentYear) return;
         shown++;
         var tile = document.createElement('a');
-        tile.className = 'tile';
+        tile.className = 'tile' + (g.hidden ? ' is-hidden' : '');
         tile.href = encodeURIComponent(g.id) + '.html';
         var thumb = g.img
           ? '<span class="thumb"><img src="' + esc(g.img) + '" alt="' + esc(g.name) + '" loading="lazy"></span>'
@@ -239,7 +277,7 @@
 
     function uniqueBy(key) {
       var out = [];
-      GAMES.forEach(function (g) {
+      visibleGames().forEach(function (g) {
         var val = g[key];
         if (val != null && val !== '' && out.indexOf(String(val)) === -1) out.push(String(val));
       });
@@ -251,7 +289,7 @@
     function orderedVendors() {
       var priority = ['Aristocrat', 'Light & Wonder', 'IGT'];
       var counts = {};
-      GAMES.forEach(function (g) {
+      visibleGames().forEach(function (g) {
         if (g.vendor != null && g.vendor !== '') counts[g.vendor] = (counts[g.vendor] || 0) + 1;
       });
       var all = uniqueBy('vendor');
@@ -261,15 +299,58 @@
       return head.concat(rest);
     }
 
+    /* 重建兩組篩選方塊（解鎖／恢復隱藏後遊戲清單會變，選項要跟著變） */
+    function renderFilters() {
+      var vendors = orderedVendors();
+      var years = uniqueBy('year').sort(function (a, b) { return Number(b) - Number(a); });
+      if (vendors.indexOf(currentVendor) === -1) currentVendor = ALL;
+      if (years.indexOf(currentYear) === -1) currentYear = ALL;
+      filtersVendor.innerHTML = '';
+      filtersYear.innerHTML = '';
+      buildFilters(filtersVendor, vendors,
+        function () { return currentVendor; }, function (v) { currentVendor = v; });
+      buildFilters(filtersYear, years,
+        function () { return currentYear; }, function (v) { currentYear = v; });
+    }
+
+    function renderAll() {
+      document.body.classList.toggle('unlocked', unlocked);
+      renderFilters();
+      renderGrid();
+    }
+
+    function setUnlocked(v) {
+      unlocked = v;
+      try { v ? localStorage.setItem(UNLOCK_KEY, '1') : localStorage.removeItem(UNLOCK_KEY); } catch (e) {}
+      renderAll();
+    }
+
+    /* 密技：依序點 LANDBASE 的 S→A→L→A→D；點錯即重來，5 秒沒動作也重來 */
+    (function bindUnlock() {
+      var brand = document.getElementById('brandWord');
+      var tag = document.getElementById('unlockTag');
+      if (!brand) return;
+      var pos = 0, timer = null;
+      brand.addEventListener('click', function (ev) {
+        var el = ev.target.closest('i[data-i]');
+        if (!el) return;
+        var i = Number(el.getAttribute('data-i'));
+        pos = (i === UNLOCK_SEQ[pos]) ? pos + 1 : (i === UNLOCK_SEQ[0] ? 1 : 0);
+        clearTimeout(timer);
+        timer = setTimeout(function () { pos = 0; }, 5000);
+        if (pos === UNLOCK_SEQ.length) {
+          pos = 0;
+          setUnlocked(!unlocked);
+        }
+      });
+      if (tag) tag.addEventListener('click', function () { setUnlocked(false); });
+    })();
+
     if (!GAMES.length) {
       document.querySelectorAll('.filter-row').forEach(function (r) { r.style.display = 'none'; });
       grid.outerHTML = '<div class="empty-state">尚未有競品遊戲資料。</div>';
     } else {
-      buildFilters(filtersVendor, orderedVendors(),
-        function () { return currentVendor; }, function (v) { currentVendor = v; });
-      buildFilters(filtersYear, uniqueBy('year').sort(function (a, b) { return Number(b) - Number(a); }),
-        function () { return currentYear; }, function (v) { currentYear = v; });
-      renderGrid();
+      renderAll();
     }
   })();
 </script>

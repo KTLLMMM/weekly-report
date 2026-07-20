@@ -17,6 +17,11 @@
                     yt:  "該 GIF 對應的 YouTube 影片連結（留空則不顯示影片連結）" }, ... ] }
        一種玩法分一區，沒內容的區自動不顯示。
    - help     HELP／賠率表截圖路徑陣列（可留空），會在詳情頁底部以圖庫呈現
+   - hidden   true = 未公開：總覽頁不顯示這款（連篩選選項也不算它）。
+              自己要看／分享時，在總覽頁點標題「LANDBASE」的 S→A→L→A→D 五個字母解鎖，
+              解鎖後未公開的方格會以橘色虛線＋「未公開」標記出現。分享完要正式公開，
+              把這行 hidden 刪掉（或改 false）再 push 即可。
+              注意：這是「不顯示」不是「加密」——詳情頁網址與本檔原始碼仍在線上可被直接開啟。
 
    圖片/GIF 路徑相對於 games/ 資料夾（例：../landbase/weeks/W25/xxx.jpg、shen-shu/HELP/xxx.jpg）
 =========================================================== */
@@ -137,6 +142,7 @@ var GAMES = [
   },
   {
     id: "hot-hot-flaming-pots",
+    hidden: true,
     vendor: "Light & Wonder",
     year: "2026",
     name: "Hot Hot Flaming Pots",
@@ -236,6 +242,7 @@ var GAMES = [
   },
   {
     id: "imperial-link",
+    hidden: true,
     vendor: "Aristocrat",
     year: "2026",
     name: "Imperial Link",
@@ -305,6 +312,7 @@ var GAMES = [
   },
   {
     id: "crazy-chickens-in-space",
+    hidden: true,
     vendor: "Aristocrat",
     year: "2026",
     name: "Crazy Chickens in Space",
@@ -356,6 +364,7 @@ var GAMES = [
   },
   {
     id: "cash-wizard-magic-trio",
+    hidden: true,
     vendor: "Light & Wonder",
     year: "2026",
     name: "Cash Wizard Magic Trio",
@@ -412,6 +421,7 @@ var GAMES = [
   },
   {
     id: "fo-mo-mummy",
+    hidden: true,
     vendor: "Aristocrat",
     year: "2026",
     name: "Fo' Mo' Mummy（Ms. Mummy / Mr. Mummy）",
@@ -474,6 +484,7 @@ var GAMES = [
   },
   {
     id: "tiger-and-dragon-cash-on-reels",
+    hidden: true,
     vendor: "IGT",
     year: "2023",
     name: "Tiger and Dragon: Cash on Reels",
@@ -532,6 +543,112 @@ var GAMES = [
       "tiger-and-dragon-cash-on-reels/HELP/tiger-and-dragon-cash-on-reels-help-05.jpg",
       "tiger-and-dragon-cash-on-reels/HELP/tiger-and-dragon-cash-on-reels-help-06.jpg",
       "tiger-and-dragon-cash-on-reels/HELP/tiger-and-dragon-cash-on-reels-help-07.jpg"
+    ]
+  },
+  {
+    id: "triple-flip-empress",
+    hidden: true,
+    vendor: "Aristocrat",
+    year: "2026",
+    name: "Triple Flip Empress",
+    img: "",
+    tags: ["243 Ways", "收集", "三特色", "組合特色", "Dragon Feature", "5支彩金"],
+    desc: "Aristocrat 新機（實機拍攝地 Atlantis Reno）：243 ways；藍/紅/綠三色 Coin 分別觸發加值／開紅包／乘倍三種特色，可組合成雙特色、三特色；特色中收集達標可再觸發巢狀的 Dragon Feature。規格取自機台 HELP；封面待補（無官方公開素材可查）。",
+    symbols: [
+      { name: "WILD", role: "只出現在第 2、3、4 軸；替代除六色 Coin 外的所有符號。", img: "" },
+      { name: "Happy Coin（藍）", role: "落下時觸發或參與 HAPPY 系列特色（加值）；最多同時出現 5 個。", img: "" },
+      { name: "Lucky Coin（紅）", role: "落下時觸發或參與 LUCKY 系列特色（開紅包）；最多同時出現 5 個。", img: "" },
+      { name: "Fortune Coin（綠）", role: "落下時觸發或參與 FORTUNE 系列特色（乘倍）；最多同時出現 5 個。", img: "" },
+      { name: "Dragon Coin（金）", role: "僅出現於 DRAGON FEATURE；落下計入 DRAGON PRIZE 計量表，達 8 個可能轉出 MAJOR（累積彩金）。", img: "" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "5 軸、243 ways 玩法。[[最低投注 88 credits × bet multiplier]]", img: "", yt: "" },
+          { text: "Coin（藍/紅/綠三色）顯示分數[[38～10888 credits × bet multiplier]]或固定彩金 MINI／MINOR／MAXI；藍色觸發 HAPPY、紅色觸發 LUCKY、綠色觸發 FORTUNE 系列特色（1 個以上即可能觸發）。", img: "", yt: "" },
+          { text: "同一次 SPIN 觸發多色時，派發對應組合特色（HAPPY LUCKY／HAPPY FORTUNE／LUCKY FORTUNE／HAPPY LUCKY FORTUNE），只派發最高組合、不與單色特色疊加。", img: "", yt: "" },
+          { text: "共 5 支彩金：GRAND、MAJOR（累積彩金），MINI、MINOR、MAXI（固定彩金）。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "單色特色（HAPPY／LUCKY／FORTUNE）",
+        steps: [
+          { text: "觸發畫面上的觸發色 Coin 原地鎖定，其餘位置轉為獨立轉輪，初始 3 次 SPIN；再出現同色 Coin 即一併鎖定並將剩餘 SPIN 重置。", img: "", yt: "" },
+          { text: "HAPPY：藍 Coin 落下開加值 tier[[Tier 1～5 對應 +100／+200／+350／+500／+1000 × bet multiplier]]，觸發者必加值、其餘 Coin 依同 tier 可疊加加值。", img: "", yt: "" },
+          { text: "LUCKY：紅 Coin 落下開紅包 tier，Tier 1～5 對應派發 1～5 個獎項；獎項可能是 JACKPOT BOOST（提升本回合 MINI／MINOR／MAXI 額度）、JACKPOT COIN（直接派 MINI／MINOR／MAXI × bet multiplier）、DRAGON（指定格轉為對應色 Coin），或各色 Coin／EXTRA SPIN。", img: "", yt: "" },
+          { text: "FORTUNE：綠 Coin 落下開乘倍 tier[[Tier 1～5 對應 ×2／×3／×4／×5／×10]]，觸發者必乘倍、其餘 Coin 依同 tier 可疊加乘倍（疊加為加法）。", img: "", yt: "" },
+          { text: "SPIN 用完或中 GRAND 即結束，派發場上所有 Coin 當時顯示的獎；結束時場上藍/紅/綠 Coin 達 6 個以上，觸發 Dragon Feature。", img: "", yt: "" },
+          { text: "特色進行中可再內部觸發尚未派發的其他色特色，組合升級為雙色／三色特色。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "組合特色（雙特色／三特色）",
+        steps: [
+          { text: "雙特色（HAPPY LUCKY／HAPPY FORTUNE／LUCKY FORTUNE）：觸發、鎖定、3 次 SPIN 機制同單色特色；場上對應色 Coin 分別依各自特色規則結算（HAPPY 加值、LUCKY 開紅包、FORTUNE 乘倍），同一 SPIN 內並行。", img: "", yt: "" },
+          { text: "三特色 HAPPY LUCKY FORTUNE：三色 Coin 依序各自結算（HAPPY 加值 → LUCKY 開紅包 → FORTUNE 乘倍）；已是最高組合，特色中途只能再觸發 Dragon Feature。", img: "", yt: "" },
+          { text: "結束條件、Dragon Feature 觸發門檻（6 個以上 Coin）與派彩規則同單色特色。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "GAME IN GAME",
+        name: "Dragon Feature",
+        steps: [
+          { text: "由任一單色或組合特色結束時，場上藍/紅/綠 Coin 達 6 個以上觸發；獨立 3×3 盤面，觸發時場上所有 Coin 分數加總計入 DRAGON PRIZE 計量表。", img: "", yt: "" },
+          { text: "轉場後初始 3 次 SPIN；金色 Dragon Coin 落下即鎖定、剩餘 SPIN 重置為 3，並計入落下數計數器。每個落下的 Dragon Coin 派發計量表當下顯示的獎額。", img: "", yt: "" },
+          { text: "已解鎖 Dragon Coin 累計達 8 個，MAJOR（累積彩金）可能在第 9 格轉出。", img: "", yt: "" },
+          { text: "SPIN 用完或中 MAJOR 即結束，畫面轉回原本觸發的特色繼續；特色中不會再觸發其他特色。", img: "", yt: "" }
+        ]
+      }
+    ],
+    help: [
+      "triple-flip-empress/HELP/triple-flip-empress-help-01.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-02.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-03.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-04.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-05.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-06.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-07.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-08.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-09.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-10.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-11.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-12.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-13.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-14.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-15.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-16.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-17.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-18.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-19.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-20.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-21.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-22.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-23.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-24.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-25.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-26.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-27.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-28.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-29.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-30.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-31.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-32.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-33.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-34.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-35.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-36.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-37.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-38.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-39.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-40.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-41.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-42.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-43.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-44.jpg",
+      "triple-flip-empress/HELP/triple-flip-empress-help-45.jpg"
     ]
   }
 ];

@@ -79,5 +79,3 @@
 
 ## 14 LEGAL NOTICES
 - The look and feel of the game ... trade dress of Light & Wonder, Inc. TM and © **2025 Light & Wonder, Inc.** All rights reserved. **Brainsaw Studios — A Light & Wonder Studio.**
-</content>
-</invoke>
