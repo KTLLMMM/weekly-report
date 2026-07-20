@@ -376,7 +376,7 @@ var GAMES = [
       { name: "Dusty（獨角獸）", role: "特色符號。出現時在非保留位置隨機增加[[2–11 個]]Coin。", img: "cash-wizard-magic-trio/symbols/dusty.png" },
       { name: "Baby Magic（綠精靈）", role: "特色符號。出現時為場上每個 Coin 額外加上最多 5 筆分數[[25–500x bet multiplier]]（顯示 JACKPOT 的 Coin 不加）。", img: "cash-wizard-magic-trio/symbols/baby-magic.png" },
       { name: "Cash Wizard（藍精靈）", role: "特色符號。出現時立即派發場上每個 Coin 顯示的獎，JACKPOT 派發 MEGA／MAJOR／MINOR／MINI。", img: "cash-wizard-magic-trio/symbols/cash-wizard.png" },
-      { name: "WILD", role: "只出現在第 2、3、4 軸；替代一般賠付標誌（不替代 Coin 與特色符號）。", img: "" }
+      { name: "WILD", role: "只出現在第 2、3、4 軸；替代一般賠付標誌（不替代 Coin 與特色符號）。", img: "cash-wizard-magic-trio/symbols/wild.png" }
     ],
     play: [
       {
@@ -552,54 +552,53 @@ var GAMES = [
     year: "2026",
     name: "Triple Flip Empress",
     img: "",
-    tags: ["243 Ways", "收集", "三特色", "組合特色", "Dragon Feature", "5支彩金"],
-    desc: "Aristocrat 新機（實機拍攝地 Atlantis Reno）：243 ways；藍/紅/綠三色 Coin 分別觸發加值／開紅包／乘倍三種特色，可組合成雙特色、三特色；特色中收集達標可再觸發巢狀的 Dragon Feature。規格取自機台 HELP；封面待補（無官方公開素材可查）。",
+    tags: ["243 Ways", "H&S", "三色能力", "組合特色", "Dragon Feature", "5支彩金"],
+    desc: "Aristocrat 新機（實機拍攝地 Atlantis Reno）：243 ways；藍/紅/綠三色分數球各帶一種能力（加值／開紅包／乘倍），7 種特色共用同一套 H&S 框架，差別只在場上開了哪幾色能力；特色結算時分數球夠多再加開 Game in Game 的 Dragon Feature。規格取自機台 HELP；封面待補（無官方公開素材可查）。",
     symbols: [
-      { name: "WILD", role: "只出現在第 2、3、4 軸；替代除六色 Coin 外的所有符號。", img: "" },
-      { name: "Happy Coin（藍）", role: "落下時觸發或參與 HAPPY 系列特色（加值）；最多同時出現 5 個。", img: "" },
-      { name: "Lucky Coin（紅）", role: "落下時觸發或參與 LUCKY 系列特色（開紅包）；最多同時出現 5 個。", img: "" },
-      { name: "Fortune Coin（綠）", role: "落下時觸發或參與 FORTUNE 系列特色（乘倍）；最多同時出現 5 個。", img: "" },
+      { name: "WILD（鞭炮）", role: "只出現在第 2、3、4 軸；替代除六色 Coin 外的所有符號。", img: "triple-flip-empress/symbols/wild.png" },
+      { name: "Happy Coin（藍）", role: "藍色分數球，能力＝加值；觸發／參與 HAPPY 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/happy-coin.png" },
+      { name: "Lucky Coin（紅）", role: "紅色分數球，能力＝開紅包；觸發／參與 LUCKY 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/lucky-coin.png" },
+      { name: "Fortune Coin（綠）", role: "綠色分數球，能力＝乘倍；觸發／參與 FORTUNE 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/fortune-coin.png" },
       { name: "Dragon Coin（金）", role: "僅出現於 DRAGON FEATURE；落下計入 DRAGON PRIZE 計量表，達 8 個可能轉出 MAJOR（累積彩金）。", img: "" }
     ],
     play: [
       {
         type: "BASE GAME",
         steps: [
-          { text: "5 軸、243 ways 玩法。[[最低投注 88 credits × bet multiplier]]", img: "", yt: "" },
-          { text: "Coin（藍/紅/綠三色）顯示分數[[38～10888 credits × bet multiplier]]或固定彩金 MINI／MINOR／MAXI；藍色觸發 HAPPY、紅色觸發 LUCKY、綠色觸發 FORTUNE 系列特色（1 個以上即可能觸發）。", img: "", yt: "" },
-          { text: "同一次 SPIN 觸發多色時，派發對應組合特色（HAPPY LUCKY／HAPPY FORTUNE／LUCKY FORTUNE／HAPPY LUCKY FORTUNE），只派發最高組合、不與單色特色疊加。", img: "", yt: "" },
-          { text: "共 5 支彩金：GRAND、MAJOR（累積彩金），MINI、MINOR、MAXI（固定彩金）。", img: "", yt: "" }
+          { text: "5 軸、243 ways 玩法；WILD 只出現在第 2、3、4 軸。[[最低投注 88 credits，BET ×1／×2／×3／×6／×10]]", img: "", yt: "" },
+          { text: "三色分數球各帶一種能力：藍＝HAPPY（加值）、紅＝LUCKY（開紅包）、綠＝FORTUNE（乘倍）；球上顯示分數或 MINI／MINOR／MAXI（固定彩金）。[[分數依投注檔 38～888 至 398～10888；MINI＝1088、MINOR＝2888、MAXI＝10880，固定彩金不吃 bet multiplier]]", img: "", yt: "" },
+          { text: "任一色分數球出現 1 顆以上就有機會觸發該色特色；同一次 SPIN 多色觸發時，直接進對應的組合特色。", img: "", yt: "" },
+          { text: "共 5 支彩金：GRAND／MAJOR（累積彩金）、MINI／MINOR／MAXI（固定彩金）。", img: "", yt: "" }
         ]
       },
       {
         type: "FEATURE GAME",
-        name: "單色特色（HAPPY／LUCKY／FORTUNE）",
+        name: "特色框架——7 種特色是同一套玩法",
         steps: [
-          { text: "觸發畫面上的觸發色 Coin 原地鎖定，其餘位置轉為獨立轉輪，初始 3 次 SPIN；再出現同色 Coin 即一併鎖定並將剩餘 SPIN 重置。", img: "", yt: "" },
-          { text: "HAPPY：藍 Coin 落下開加值 tier[[Tier 1～5 對應 +100／+200／+350／+500／+1000 × bet multiplier]]，觸發者必加值、其餘 Coin 依同 tier 可疊加加值。", img: "", yt: "" },
-          { text: "LUCKY：紅 Coin 落下開紅包 tier，Tier 1～5 對應派發 1～5 個獎項；獎項可能是 JACKPOT BOOST（提升本回合 MINI／MINOR／MAXI 額度）、JACKPOT COIN（直接派 MINI／MINOR／MAXI × bet multiplier）、DRAGON（指定格轉為對應色 Coin），或各色 Coin／EXTRA SPIN。", img: "", yt: "" },
-          { text: "FORTUNE：綠 Coin 落下開乘倍 tier[[Tier 1～5 對應 ×2／×3／×4／×5／×10]]，觸發者必乘倍、其餘 Coin 依同 tier 可疊加乘倍（疊加為加法）。", img: "", yt: "" },
-          { text: "SPIN 用完或中 GRAND 即結束，派發場上所有 Coin 當時顯示的獎；結束時場上藍/紅/綠 Coin 達 6 個以上，觸發 Dragon Feature。", img: "", yt: "" },
-          { text: "特色進行中可再內部觸發尚未派發的其他色特色，組合升級為雙色／三色特色。", img: "", yt: "" }
+          { text: "單色（HAPPY／LUCKY／FORTUNE）、雙色、三色共 7 種特色，全部是同一套 H&S：觸發的分數球原地鎖定、其餘位置轉為獨立轉輪，初始 3 次 SPIN；任何顏色的分數球落下都會鎖定並重置剩餘 SPIN。特色名稱只代表「場上開了哪幾色能力」。[[重置為 3＋紅包開出的 EXTRA SPIN 數]]", img: "", yt: "" },
+          { text: "特色中落下尚未參與的顏色即內部觸發、就地升級為對應組合（例：FORTUNE 中落紅球 → 升級 LUCKY FORTUNE）；HAPPY LUCKY FORTUNE 已是最高組合，之後只會再開 Dragon Feature。", img: "", yt: "" },
+          { text: "SPIN 用完或中 GRAND 即結束，結束時一次派發場上所有分數球顯示的獎；特色期間不計連線派彩。特色中累計收集 14 顆分數球後，第 15 格有機會轉出 GRAND（累積彩金，每次特色最多一次）。", img: "", yt: "" },
+          { text: "結束結算時場上分數球達 6 顆以上，即固定觸發 Dragon Feature（見下）。", img: "", yt: "" }
         ]
       },
       {
         type: "FEATURE GAME",
-        name: "組合特色（雙特色／三特色）",
+        name: "三色能力",
         steps: [
-          { text: "雙特色（HAPPY LUCKY／HAPPY FORTUNE／LUCKY FORTUNE）：觸發、鎖定、3 次 SPIN 機制同單色特色；場上對應色 Coin 分別依各自特色規則結算（HAPPY 加值、LUCKY 開紅包、FORTUNE 乘倍），同一 SPIN 內並行。", img: "", yt: "" },
-          { text: "三特色 HAPPY LUCKY FORTUNE：三色 Coin 依序各自結算（HAPPY 加值 → LUCKY 開紅包 → FORTUNE 乘倍）；已是最高組合，特色中途只能再觸發 Dragon Feature。", img: "", yt: "" },
-          { text: "結束條件、Dragon Feature 觸發門檻（6 個以上 Coin）與派彩規則同單色特色。", img: "", yt: "" }
+          { text: "藍 HAPPY＝加值：藍球落下依當前 tier 加值，落下的球必加值，場上其他球也可能同步加值；藍球每顆最多吃 3 次、紅綠每顆最多 2 次。[[Tier 1～5＝+100／+200／+350／+500／+1000 × bet multiplier]]", img: "", yt: "" },
+          { text: "紅 LUCKY＝開紅包：紅球落下開出對應紅包，tier 幾就派幾個獎；獎項包含 JACKPOT BOOST（墊高本特色期間的 MINI／MINOR／MAXI 額度，特色結束回復）、JACKPOT COIN（直接派 MINI／MINOR／MAXI × bet multiplier）、DRAGON（指定一格，該格現有或之後落入的分數球轉為同色另一款）、加派各色分數球、EXTRA SPIN。[[紅包 Tier 1～5＝派 1～5 個獎；JACKPOT BOOST 每次 MINI +100–300、MINOR +400–600、MAXI +1000–2000]]", img: "", yt: "" },
+          { text: "綠 FORTUNE＝乘倍：綠球落下依當前 tier 乘倍，落下的球必乘，場上其他球也可能同步乘倍（加法疊加）；綠球每顆最多疊 3 次、藍紅每顆最多 2 次。[[Tier 1～5＝×2／×3／×4／×5／×10]]", img: "", yt: "" },
+          { text: "組合特色在同一次 SPIN 內依序結算：先紅（開紅包）→ 再藍（加值）→ 最後綠（乘倍）；除結算順序外，規則與單色特色完全相同。", img: "", yt: "" }
         ]
       },
       {
         type: "GAME IN GAME",
         name: "Dragon Feature",
         steps: [
-          { text: "由任一單色或組合特色結束時，場上藍/紅/綠 Coin 達 6 個以上觸發；獨立 3×3 盤面，觸發時場上所有 Coin 分數加總計入 DRAGON PRIZE 計量表。", img: "", yt: "" },
-          { text: "轉場後初始 3 次 SPIN；金色 Dragon Coin 落下即鎖定、剩餘 SPIN 重置為 3，並計入落下數計數器。每個落下的 Dragon Coin 派發計量表當下顯示的獎額。", img: "", yt: "" },
-          { text: "已解鎖 Dragon Coin 累計達 8 個，MAJOR（累積彩金）可能在第 9 格轉出。", img: "", yt: "" },
-          { text: "SPIN 用完或中 MAJOR 即結束，畫面轉回原本觸發的特色繼續；特色中不會再觸發其他特色。", img: "", yt: "" }
+          { text: "任一特色結束結算時分數球達 6 顆以上觸發；轉場到獨立 3×3 盤面，原特色場上所有分數球的分值加總灌入 DRAGON PRIZE 計量表，初始 3 次 SPIN。", img: "", yt: "" },
+          { text: "金色 Dragon Coin 落下即鎖定並重置剩餘 SPIN 為 3；每顆 Dragon Coin 各派發一次計量表的獎額——收越多顆，同一筆獎額領越多次。", img: "", yt: "" },
+          { text: "累計 8 顆 Dragon Coin 後，第 9 格有機會轉出 MAJOR（累積彩金，每次 Dragon Feature 最多一次）。", img: "", yt: "" },
+          { text: "SPIN 用完或中 MAJOR 即結束，轉回原本觸發的特色繼續；Dragon Feature 中不會再內部觸發其他特色。", img: "", yt: "" }
         ]
       }
     ],
