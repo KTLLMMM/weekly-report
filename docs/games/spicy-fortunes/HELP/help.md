@@ -35,18 +35,18 @@ royal：A / K / Q / J / 10 皆 5=50、4=10、3=5。
 
 ## help-03 — SPICY FORTUNES SYMBOLS（特殊符號）
 - **粉鑽、藍鑽、綠鑽、彩鑽（rainbow diamond）** — may appear during **bought games**。
-- **[UPGRADE 鑽]、綠辣椒、橙辣椒、紅辣椒、或 [彩色辣椒串]** — may appear during **Spicy Fortunes features**。
-- **紅辣椒 或 [彩色辣椒串]** — may appear during **Super features**。
+- **[UPGRADE 鑽]、綠辣椒、黃辣椒、紅辣椒、或 [鑽石辣椒]** — may appear during **Spicy Fortunes features**。
+- **紅辣椒 或 [鑽石辣椒]** — may appear during **Super features**。
 
 ## help-04 — SPICY FORTUNES SYMBOLS（續：辣椒開獎值）
-Each [綠／橙／紅／彩 辣椒] reveals one of the below prizes at the end of the feature：
+Each [綠／黃／紅／鑽石 辣椒] reveals one of the below prizes at the end of the feature：
 | 辣椒 | 獎項 |
 |---|---|
 | 綠辣椒 | (0.5 – 2) × total bet |
-| 橙辣椒 | (2.5 – 6) × total bet、Mini 或 Minor |
+| 黃辣椒 | (2.5 – 6) × total bet、Mini 或 Minor |
 | 紅辣椒 | (7.5 – 50) × total bet、Major 或 Grand |
-| 彩色辣椒串 | (50 – 200) × total bet、Major 或 Grand |
-- Odds of [橙／紅／彩辣椒] credit prizes change with the bet multiplier and denomination.
+| 鑽石辣椒 | (50 – 200) × total bet、Major 或 Grand |
+- Odds of [黃／紅／鑽石辣椒] credit prizes change with the bet multiplier and denomination.
 
 ## help-05 — SPICY FORTUNES FEATURES（特色觸發）
 - Any one or more [鑽] in a spin may trigger **Extra Spins** feature.

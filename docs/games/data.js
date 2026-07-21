@@ -679,15 +679,15 @@ var GAMES = [
     img: "spicy-fortunes/spicy-fortunes-cover.jpg",
     tags: ["Hold & Spin", "升級", "轉輪", "多特色", "累積彩金"],
     symbols: [
-      { name: "WILD（戴帽辣椒）", role: "百搭符號，取代所有一般標誌；不取代鑽石。僅出現於 reel 2～5；同輪 2、3 個 WILD 參與連線時以雙疊／三疊呈現。", img: "spicy-fortunes/symbols/wild.png" },
+      { name: "WILD（戴帽辣椒）", role: "百搭符號，取代除鑽石外的所有標誌（含 M獎）。僅出現於 reel 2～5；同輪 2、3 個 WILD 參與連線時以雙疊／三疊呈現。", img: "spicy-fortunes/symbols/wild.png" },
       { name: "粉鑽", role: "觸發符號，任一顆或多顆即可打擊觸發 Extra Spins 特色；多特色同一 SPIN 觸發時合併進行。", img: "spicy-fortunes/symbols/gem-pink.png" },
       { name: "藍鑽", role: "觸發符號，觸發 Extra Pays 特色。", img: "spicy-fortunes/symbols/gem-blue.png" },
       { name: "綠鑽", role: "觸發符號，觸發 Extra Rows 特色。", img: "spicy-fortunes/symbols/gem-green.png" },
-      { name: "複合彩鑽", role: "觸發符號，可觸發任一或多個特色。", img: "spicy-fortunes/symbols/gem-multi.png" },
+      { name: "複合彩鑽", role: "觸發符號，可觸發任一或多個特色（HELP 僅載「任一或多顆鑽石可觸發各特色，多特色同 SPIN 觸發即合併」，未載各色與特色的對應，色別對應待確認）。", img: "spicy-fortunes/symbols/gem-multi.png" },
       { name: "UPGRADE 鑽石", role: "特色中出現，隨機指定一顆辣椒升級一階（綠→黃→紅→鑽），不依等級高低。", img: "spicy-fortunes/symbols/upgrade.png" },
-      { name: "綠辣椒", role: "帶獎符號，特色結束時開獎[[0.5～2 × total bet]]。圖左為一般（單顆）樣式、圖右為 Extra Pays 啟動時的（雙顆）樣式。", img: "spicy-fortunes/symbols/chili-green.png" },
-      { name: "黃辣椒", role: "帶獎符號，開獎[[2.5～6 × total bet、Mini 或 Minor]]。圖左一般（單顆）、圖右 Extra Pays（雙顆）樣式。", img: "spicy-fortunes/symbols/chili-yellow.png" },
-      { name: "紅辣椒", role: "帶獎符號，開獎[[7.5～50 × total bet、Major 或 Grand]]。圖左一般（單顆）、圖右 Extra Pays（雙顆）樣式。", img: "spicy-fortunes/symbols/chili-red.png" },
+      { name: "綠辣椒", role: "帶獎符號，特色結束時開獎[[0.5～2 × total bet]]。圖左為一般（單顆）樣式、圖右為 Extra Pays 啟動時的（雙顆）樣式（樣式對應待實機確認）。", img: "spicy-fortunes/symbols/chili-green.png" },
+      { name: "黃辣椒", role: "帶獎符號，開獎[[2.5～6 × total bet、Mini 或 Minor]]。圖左一般（單顆）、圖右 Extra Pays（雙顆）樣式（樣式對應待實機確認）。", img: "spicy-fortunes/symbols/chili-yellow.png" },
+      { name: "紅辣椒", role: "帶獎符號，開獎[[7.5～50 × total bet、Major 或 Grand]]。圖左一般（單顆）、圖右 Extra Pays（雙顆）樣式（樣式對應待實機確認）。", img: "spicy-fortunes/symbols/chili-red.png" },
       { name: "鑽石辣椒", role: "最高階帶獎符號，開獎[[50～200 × total bet、Major 或 Grand]]；辣椒升級的最終階。", img: "spicy-fortunes/symbols/chili-diamond.png" }
     ],
     play: [
@@ -699,7 +699,7 @@ var GAMES = [
         ]
       },
       {
-        type: "FEATURE GAME",
+        type: "HOLD & SPIN",
         name: "Spicy Fortunes 特色",
         steps: [
           { text: "任意單色鑽石或複合彩鑽打擊觸發特色，特色觸發後可獲得一次轉輪機會，轉輪可加開其他特色、彩金或 Super Spicy Wheel。", img: "spicy-fortunes/clips/spicy-fortunes-trigger-wheel.webm", yt: "https://www.youtube.com/watch?v=sDWZGWwThoo&t=733s" },
@@ -708,11 +708,11 @@ var GAMES = [
           { text: "Extra Rows：加開 3 列，特色改於 6×5 盤面進行。", img: "spicy-fortunes/clips/spicy-fortunes-extra-rows.webm", yt: "https://www.youtube.com/watch?v=GgUf3pl9Q8k&t=900s" },
           { text: "彩金獲得方式：彩金共 4 段——Grand／Major 為累積彩金、Minor／Mini 為固定彩金。取得方式：(1) 由轉輪直接開出；(2) 特色中辣椒開獎時攜帶——黃辣椒可帶 Mini／Minor，紅辣椒與鑽石辣椒可帶 Major／Grand。", img: "spicy-fortunes/clips/spicy-fortunes-wheel-jackpot.webm", yt: "https://www.youtube.com/watch?v=n_hJPzg-8tk&t=354s" },
           { text: "特色中每顆鑽石可升級一次辣椒：綠→黃→紅→鑽；升級鑽石隨機指定一顆辣椒升級，不依等級高低。", img: "spicy-fortunes/clips/spicy-fortunes-upgrade.webm", yt: "https://www.youtube.com/watch?v=n_hJPzg-8tk&t=325s" },
-          { text: "特色滿盤後可額外獲得 4 顆 UPGRADE 鑽石，優先選擇高階辣椒進行升級。", img: "spicy-fortunes/clips/spicy-fortunes-diamond-chili.webm", yt: "https://www.youtube.com/shorts/LTVJnspP8GA" }
+          { text: "特色滿盤後額外獲得 3 次升級；Extra Spins 啟動時改為 4 次。實機觀察為優先升高階辣椒（HELP 僅載隨機指定）。", img: "spicy-fortunes/clips/spicy-fortunes-diamond-chili.webm", yt: "https://www.youtube.com/shorts/LTVJnspP8GA" }
         ]
       },
       {
-        type: "FEATURE GAME",
+        type: "HOLD & SPIN",
         name: "Super 特色",
         steps: [
           { text: "自第一層 Wheel 特色可贏得 Super Spicy Wheel，開出 Super Extra Spins／Super Extra Pays／Super Extra Rows 或彩金；依初始觸發與轉輪結果，單一或多個 Super 特色合併進行。", img: "spicy-fortunes/clips/spicy-fortunes-super-features.webm", yt: "https://www.youtube.com/watch?v=Nlm4hV1eq5w&t=350s" }
