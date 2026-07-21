@@ -210,31 +210,56 @@ var GAMES = [
     year: "2026",
     name: "Elemental Spirit",
     img: "elemental-spirit/screens/keyart.jpg",
-    tags: ["Hold & Spin", "Cash on Reel", "狀態框", "收集", "乘倍", "4支彩金"],
+    tags: ["Hold & Spin", "Cash on Reel", "狀態框", "收集", "乘倍", "4支彩金", "雙版本"],
     symbols: [
       { name: "WILD", role: "百搭。", img: "" },
-      { name: "SCATTER", role: "共 3 種（分 3 色）；進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "" },
-      { name: "BALL", role: "帶分數／彩金的球，是 Hold & Spin 的收集標的；集滿 15 顆 BALL 得 GRAND。", img: "" }
+      { name: "SCATTER", role: "分 3 色，對應該版本的狀態框顏色（版本一 藍／綠／紅，版本二 藍／紫／紅）。", img: "" },
+      { name: "BALL", role: "帶分數／彩金的球，是 Hold & Spin 的收集標的；進入特色前，畫面上所有 BALL 會先收集成 1 顆，集滿 15 顆 BALL 得 GRAND。", img: "" }
     ],
     play: [
       {
         type: "BASE GAME",
         steps: [
-          { text: "3×5 LINE GAME。", img: "elemental-spirit/clips/es-pot.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=103" },
-          { text: "進入特色前，畫面上所有 SCATTER 會先收集成 1 顆。", img: "elemental-spirit/clips/es-scatter.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=158" },
-          { text: "M獎採堆疊符號（stacked symbols）設計，同一轉軸可整堆出現相同符號。", img: "elemental-spirit/clips/es-symbol-stack.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=149" },
+          { text: "3×5 LINE GAME；SCATTER 分 3 色，對應該版本的狀態框顏色。M獎採堆疊符號（stacked symbols）設計，同一轉軸可整堆出現相同符號。", img: "elemental-spirit/clips/es-bg-1.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=157" },
           { text: "共 4 支彩金：GRAND、MAJOR（累積彩金），MINOR、MINI（固定彩金）；GRAND 由集滿 15 顆 BALL 取得，MINOR／MINI 於 Hold & Spin 中取得。", img: "", yt: "" }
         ]
       },
       {
-        type: "FEATURE GAME",
-        name: "狀態框特色（Hold & Spin）",
+        type: "HOLD & SPIN",
+        name: "狀態框特色（Frames）",
         steps: [
-          { text: "各狀態框特色皆為 Hold & Spin、倒數 3 場；隨機灑入 3 個同色狀態框，BALL 停在框中即觸發該框作用。", img: "elemental-spirit/clips/es-hs-intro.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=189" },
-          { text: "藍框 Absorbing：BALL 停在藍框中，收集所有藍框外的 BALL；藍框在其他藍框作用完後才消失。", img: "elemental-spirit/clips/es-blue.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1141" },
-          { text: "綠框 Multiplier（版本一）：BALL 停在綠框中乘上隨機倍率，並向外灑出隨機倍率到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-green.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=189" },
-          { text: "紫框 Twisting（版本二）：BALL 停在紫框中隨機加倍（加倍次數隨機），並向外灑出特效框到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-purple.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1244" },
-          { text: "紅框 Exploding：BALL 停在紅框中，向外灑出 BALL 到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-red.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=756" }
+          { text: "進入特色前所有 BALL 先收集成 1 顆。各狀態框（Frame）特色皆為 Hold & Spin、倒數 3 場；隨機灑入 3 個同色狀態框，BALL 停在框中即觸發該框作用，集滿 15 顆 BALL 得 GRAND。", img: "elemental-spirit/clips/es-bg-2.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1147" },
+          { text: "分兩版本：版本一為藍框 Absorbing／綠框 Multiplier／紅框 Exploding；版本二為藍框 Absorbing／紫框 Twisting／紅框 Exploding。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "Absorbing Frames（藍框）",
+        steps: [
+          { text: "BALL 停在藍框中，藍框以漩渦收集所有藍框外的 BALL。", img: "elemental-spirit/clips/es-absorbing-1.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1151" },
+          { text: "被收集的 BALL 帶分數或彩金，過程中可命中 MINI／MINOR 固定彩金。", img: "elemental-spirit/clips/es-absorbing-2.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1177" },
+          { text: "藍框在其他藍框作用完後才消失，收集可持續多輪。", img: "elemental-spirit/clips/es-absorbing-3.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1201" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "Multiplier Frames（綠框・版本一）",
+        steps: [
+          { text: "BALL 停在綠框中乘上隨機倍率，並向外灑出隨機倍率到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-multiplier-1.webm", yt: "https://youtu.be/lvv9e10qi9E?t=15" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "Exploding Frames（紅框）",
+        steps: [
+          { text: "BALL 停在紅框中，向外灑出 BALL 到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-exploding-1.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=780" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "Twisting Frames（紫框・版本二）",
+        steps: [
+          { text: "BALL 停在紫框中隨機加倍（加倍次數隨機），並向外灑出特效框到轉輪或其他 BALL。", img: "elemental-spirit/clips/es-twisting-1.webm", yt: "https://youtu.be/WxtQzrHSf0U?t=1275" }
         ]
       }
     ],
@@ -553,10 +578,10 @@ var GAMES = [
     name: "Triple Flip Empress",
     img: "",
     tags: ["243 Ways", "H&S", "三色能力", "組合特色", "Dragon Feature", "5支彩金"],
-    desc: "Aristocrat 新機（實機拍攝地 Atlantis Reno）：243 ways；藍/紅/綠三色分數球各帶一種能力（加值／開紅包／乘倍），7 種特色共用同一套 H&S 框架，差別只在場上開了哪幾色能力；特色結算時分數球夠多再加開 Game in Game 的 Dragon Feature。規格取自機台 HELP；封面待補（無官方公開素材可查）。",
+    desc: "Aristocrat 新機（實機拍攝地 Atlantis Reno）：243 ways；藍/紅/綠三色分數球各帶一種能力（加分／開紅包／乘倍），7 種特色共用同一套 H&S 框架，差別只在場上開了哪幾色能力；特色結算時分數球夠多再加開 Game in Game 的 Dragon Feature。規格取自機台 HELP；封面待補（無官方公開素材可查）。",
     symbols: [
       { name: "WILD（鞭炮）", role: "只出現在第 2、3、4 軸；替代除六色 Coin 外的所有符號。", img: "triple-flip-empress/symbols/wild.png" },
-      { name: "Happy Coin（藍）", role: "藍色分數球，能力＝加值；觸發／參與 HAPPY 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/happy-coin.png" },
+      { name: "Happy Coin（藍）", role: "藍色分數球，能力＝加分；觸發／參與 HAPPY 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/happy-coin.png" },
       { name: "Lucky Coin（紅）", role: "紅色分數球，能力＝開紅包；觸發／參與 LUCKY 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/lucky-coin.png" },
       { name: "Fortune Coin（綠）", role: "綠色分數球，能力＝乘倍；觸發／參與 FORTUNE 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/fortune-coin.png" },
       { name: "Dragon Coin（金）", role: "僅出現於 DRAGON FEATURE；落下計入 DRAGON PRIZE 計量表，達 8 個可能轉出 MAJOR（累積彩金）。", img: "" }
@@ -565,30 +590,25 @@ var GAMES = [
       {
         type: "BASE GAME",
         steps: [
-          { text: "5 軸、243 ways 玩法；WILD 只出現在第 2、3、4 軸。[[最低投注 88 credits，BET ×1／×2／×3／×6／×10]]", img: "", yt: "" },
-          { text: "三色分數球各帶一種能力：藍＝HAPPY（加值）、紅＝LUCKY（開紅包）、綠＝FORTUNE（乘倍）；球上顯示分數或 MINI／MINOR／MAXI（固定彩金）。[[分數依投注檔 38～888 至 398～10888；MINI＝1088、MINOR＝2888、MAXI＝10880，固定彩金不吃 bet multiplier]]", img: "", yt: "" },
-          { text: "任一色分數球出現 1 顆以上就有機會觸發該色特色；同一次 SPIN 多色觸發時，直接進對應的組合特色。", img: "", yt: "" },
-          { text: "共 5 支彩金：GRAND／MAJOR（累積彩金）、MINI／MINOR／MAXI（固定彩金）。", img: "", yt: "" }
+          { text: "5 軸、243 ways 玩法；WILD 只出現在第 2、3、4 軸。[[最低投注 88 credits，BET ×1／×2／×3／×6／×10]]", img: "triple-flip-empress/clips/triple-flip-empress-base-game.jpg", yt: "https://youtu.be/yDqWA0d7SfE?t=38" },
+          { text: "轉出分數球即打擊觸發，判定是否觸發該色特色：藍＝HAPPY（加分）、紅＝LUCKY（開紅包）、綠＝FORTUNE（乘倍）；球上顯示分數或固定彩金。[[分數依投注檔 38～888 至 398～10888；MINI＝1088、MINOR＝2888、MAXI＝10880，固定彩金不吃 bet multiplier]]", img: "triple-flip-empress/clips/triple-flip-empress-coin-hit-trigger.webm", yt: "https://youtu.be/yDqWA0d7SfE?t=46" },
+          { text: "共 5 支彩金：GRAND／MAJOR（累積彩金）、MINI／MINOR／MAXI（固定彩金）。", img: "triple-flip-empress/clips/triple-flip-empress-jackpots.jpg", yt: "https://youtu.be/KBojhjCD5Ac?t=8" }
         ]
       },
       {
         type: "FEATURE GAME",
-        name: "特色框架——7 種特色是同一套玩法",
         steps: [
-          { text: "單色（HAPPY／LUCKY／FORTUNE）、雙色、三色共 7 種特色，全部是同一套 H&S：觸發的分數球原地鎖定、其餘位置轉為獨立轉輪，初始 3 次 SPIN；任何顏色的分數球落下都會鎖定並重置剩餘 SPIN。特色名稱只代表「場上開了哪幾色能力」。[[重置為 3＋紅包開出的 EXTRA SPIN 數]]", img: "", yt: "" },
+          { text: "Hold & Spin 玩法，倒數 3 場；分數球一定帶有特色顏色。", img: "triple-flip-empress/clips/triple-flip-empress-feature-hold-spin.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1349" },
+          { text: "HAPPY（藍）＝加分：上螢幕有一排加分層，亮著的那層就是這次要加的分數。剛進特色、還沒開始轉之前，觸發畫面上的藍球先結算，把當前這層的分數加上去；這層用完就變暗，下一次從上一層開始。[[層 1～5＝+100／+200／+350／+500／+1000 × bet multiplier；影片為 BETx10，畫面顯示 +1000～+10000]]", img: "triple-flip-empress/clips/triple-flip-empress-happy-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1301" },
+          { text: "特色進行中每轉出一顆藍球，就用掉當前這層、下一次再往上推一層。當前層的分數一定會加到剛轉出的那顆藍球上，場上其他球（含紅、綠）也可能跟著加同一層分數。同一顆藍球最多被加 3 次，紅、綠球各最多 2 次。", img: "triple-flip-empress/clips/triple-flip-empress-happy-boost.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1338" },
+          { text: "LUCKY（紅）＝開紅包：上螢幕中間那排是紅包，由下往上分別裝 1、2、3、4、5 個獎。剛進特色、還沒開始轉之前，觸發畫面上的紅球先開當前這個紅包，裡面有幾個就給幾個獎；開完就變暗，下一次從上一個紅包開始。", img: "triple-flip-empress/clips/triple-flip-empress-lucky-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1696" },
+          { text: "特色進行中每轉出一顆紅球，就開掉當前這個紅包、下一次再往上推一個，越後面開到的紅包裝的獎越多。紅包裡開出的可能是：JACKPOT BOOST（把這回合的 MINI／MINOR／MAXI 墊高，特色結束回復）、JACKPOT COIN（直接給 MINI／MINOR／MAXI × bet multiplier）、DRAGON（指定一格，該格的球轉成同色另一款）、各色分數球（往空格補一顆；補到紅球時會再開掉下一個紅包）、EXTRA SPIN（把「重置場數」加 1，之後每次重置都多一場）；同一個紅包裡可能開出重複的獎。[[JACKPOT BOOST 每次 MINI +100–300、MINOR +400–600、MAXI +1000–2000]]", img: "triple-flip-empress/clips/triple-flip-empress-lucky-envelope.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1765" },
+          { text: "FORTUNE（綠）＝乘倍：上螢幕右邊那排是乘倍層，由下往上是 ×2、×3、×4、×5、×10。剛進特色、還沒開始轉之前，觸發畫面上的綠球先用掉當前這層，在球底下掛一個倍率標記（球上的分數不變，結算時才乘）；這層用完就變暗，下一次從上一層開始。", img: "triple-flip-empress/clips/triple-flip-empress-fortune-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=491" },
+          { text: "特色進行中每轉出一顆綠球，就用掉當前這層、下一次再往上推一層。倍率一定會掛到剛轉出的那顆綠球上，場上其他球（含藍、紅）也可能跟著掛同一層的倍率。同一顆綠球最多疊 3 次，藍、紅球各最多 2 次；同一顆球疊到多個倍率是相加、不是相乘——吃到 ×2 再吃 ×3 等於 ×5。", img: "triple-flip-empress/clips/triple-flip-empress-fortune-multiply.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=575" },
+          { text: "雙色、三色的組合特色只是同一場開了多種能力，玩法與單色特色完全相同；同一次 SPIN 內依序結算：先紅（開紅包）→ 再藍（加分）→ 最後綠（乘倍）。", img: "", yt: "" },
           { text: "特色中落下尚未參與的顏色即內部觸發、就地升級為對應組合（例：FORTUNE 中落紅球 → 升級 LUCKY FORTUNE）；HAPPY LUCKY FORTUNE 已是最高組合，之後只會再開 Dragon Feature。", img: "", yt: "" },
           { text: "SPIN 用完或中 GRAND 即結束，結束時一次派發場上所有分數球顯示的獎；特色期間不計連線派彩。特色中累計收集 14 顆分數球後，第 15 格有機會轉出 GRAND（累積彩金，每次特色最多一次）。", img: "", yt: "" },
           { text: "結束結算時場上分數球達 6 顆以上，即固定觸發 Dragon Feature（見下）。", img: "", yt: "" }
-        ]
-      },
-      {
-        type: "FEATURE GAME",
-        name: "三色能力",
-        steps: [
-          { text: "藍 HAPPY＝加值：藍球落下依當前 tier 加值，落下的球必加值，場上其他球也可能同步加值；藍球每顆最多吃 3 次、紅綠每顆最多 2 次。[[Tier 1～5＝+100／+200／+350／+500／+1000 × bet multiplier]]", img: "", yt: "" },
-          { text: "紅 LUCKY＝開紅包：紅球落下開出對應紅包，tier 幾就派幾個獎；獎項包含 JACKPOT BOOST（墊高本特色期間的 MINI／MINOR／MAXI 額度，特色結束回復）、JACKPOT COIN（直接派 MINI／MINOR／MAXI × bet multiplier）、DRAGON（指定一格，該格現有或之後落入的分數球轉為同色另一款）、加派各色分數球、EXTRA SPIN。[[紅包 Tier 1～5＝派 1～5 個獎；JACKPOT BOOST 每次 MINI +100–300、MINOR +400–600、MAXI +1000–2000]]", img: "", yt: "" },
-          { text: "綠 FORTUNE＝乘倍：綠球落下依當前 tier 乘倍，落下的球必乘，場上其他球也可能同步乘倍（加法疊加）；綠球每顆最多疊 3 次、藍紅每顆最多 2 次。[[Tier 1～5＝×2／×3／×4／×5／×10]]", img: "", yt: "" },
-          { text: "組合特色在同一次 SPIN 內依序結算：先紅（開紅包）→ 再藍（加值）→ 最後綠（乘倍）；除結算順序外，規則與單色特色完全相同。", img: "", yt: "" }
         ]
       },
       {
@@ -648,6 +668,72 @@ var GAMES = [
       "triple-flip-empress/HELP/triple-flip-empress-help-43.jpg",
       "triple-flip-empress/HELP/triple-flip-empress-help-44.jpg",
       "triple-flip-empress/HELP/triple-flip-empress-help-45.jpg"
+    ]
+  },
+  {
+    id: "spicy-fortunes",
+    hidden: true,
+    vendor: "Aristocrat",
+    year: "待確認",
+    name: "Spicy Fortunes（Diamond Fiesta）",
+    img: "spicy-fortunes/spicy-fortunes-cover.jpg",
+    tags: ["Hold & Spin", "升級", "轉輪", "多特色", "累積彩金"],
+    symbols: [
+      { name: "WILD（戴帽辣椒）", role: "百搭符號，取代所有一般標誌；不取代鑽石。僅出現於 reel 2～5；同輪 2、3 個 WILD 參與連線時以雙疊／三疊呈現。", img: "spicy-fortunes/symbols/wild.png" },
+      { name: "粉鑽", role: "觸發符號，任一顆或多顆即可打擊觸發 Extra Spins 特色；多特色同一 SPIN 觸發時合併進行。", img: "spicy-fortunes/symbols/gem-pink.png" },
+      { name: "藍鑽", role: "觸發符號，觸發 Extra Pays 特色。", img: "spicy-fortunes/symbols/gem-blue.png" },
+      { name: "綠鑽", role: "觸發符號，觸發 Extra Rows 特色。", img: "spicy-fortunes/symbols/gem-green.png" },
+      { name: "複合彩鑽", role: "觸發符號，可觸發任一或多個特色。", img: "spicy-fortunes/symbols/gem-multi.png" },
+      { name: "UPGRADE 鑽石", role: "特色中出現，隨機指定一顆辣椒升級一階（綠→黃→紅→鑽），不依等級高低。", img: "spicy-fortunes/symbols/upgrade.png" },
+      { name: "綠辣椒", role: "帶獎符號，特色結束時開獎[[0.5～2 × total bet]]。圖左為一般（單顆）樣式、圖右為 Extra Pays 啟動時的（雙顆）樣式。", img: "spicy-fortunes/symbols/chili-green.png" },
+      { name: "黃辣椒", role: "帶獎符號，開獎[[2.5～6 × total bet、Mini 或 Minor]]。圖左一般（單顆）、圖右 Extra Pays（雙顆）樣式。", img: "spicy-fortunes/symbols/chili-yellow.png" },
+      { name: "紅辣椒", role: "帶獎符號，開獎[[7.5～50 × total bet、Major 或 Grand]]。圖左一般（單顆）、圖右 Extra Pays（雙顆）樣式。", img: "spicy-fortunes/symbols/chili-red.png" },
+      { name: "鑽石辣椒", role: "最高階帶獎符號，開獎[[50～200 × total bet、Major 或 Grand]]；辣椒升級的最終階。", img: "spicy-fortunes/symbols/chili-diamond.png" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "3×5 盤面、25 線。WILD 堆疊符線延展；機台頂部三色意象物分別對應 Extra Spins／Extra Pays／Extra Rows 特色。", img: "spicy-fortunes/clips/spicy-fortunes-base-ww.webm", yt: "https://www.youtube.com/watch?v=6XAVjv3VfEk&t=421s" },
+          { text: "基本遊戲中三色意象物立於盤面上方，盤面可落下複合彩鑽、單色鑽石等觸發符號。", img: "spicy-fortunes/clips/spicy-fortunes-gems.webm", yt: "https://www.youtube.com/watch?v=tIJFKP0e0yQ&t=710s" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "Spicy Fortunes 特色",
+        steps: [
+          { text: "任意單色鑽石或複合彩鑽打擊觸發特色，特色觸發後可獲得一次轉輪機會，轉輪可加開其他特色、彩金或 Super Spicy Wheel。", img: "spicy-fortunes/clips/spicy-fortunes-trigger-wheel.webm", yt: "https://www.youtube.com/watch?v=sDWZGWwThoo&t=733s" },
+          { text: "特色於 3×5 盤面進行、初始 3 次 SPIN；已有辣椒／鑽石的位置鎖定，其餘位置獨立轉動，新落符號時剩餘次數重置。Extra Spins：改為 4 次 SPIN，出現辣椒／鑽石時重置為 4 次 SPIN。", img: "spicy-fortunes/clips/spicy-fortunes-extra-spins.webm", yt: "https://www.youtube.com/watch?v=Nlm4hV1eq5w&t=650s" },
+          { text: "Extra Pays：觸發 SPIN 中的鑽石轉為辣椒，特色中辣椒可直接出現在任意位置。", img: "spicy-fortunes/clips/spicy-fortunes-extra-pays.webm", yt: "https://www.youtube.com/shorts/QqHdlbgSvlU" },
+          { text: "Extra Rows：加開 3 列，特色改於 6×5 盤面進行。", img: "spicy-fortunes/clips/spicy-fortunes-extra-rows.webm", yt: "https://www.youtube.com/watch?v=GgUf3pl9Q8k&t=900s" },
+          { text: "彩金獲得方式：彩金共 4 段——Grand／Major 為累積彩金、Minor／Mini 為固定彩金。取得方式：(1) 由轉輪直接開出；(2) 特色中辣椒開獎時攜帶——黃辣椒可帶 Mini／Minor，紅辣椒與鑽石辣椒可帶 Major／Grand。", img: "spicy-fortunes/clips/spicy-fortunes-wheel-jackpot.webm", yt: "https://www.youtube.com/watch?v=n_hJPzg-8tk&t=354s" },
+          { text: "特色中每顆鑽石可升級一次辣椒：綠→黃→紅→鑽；升級鑽石隨機指定一顆辣椒升級，不依等級高低。", img: "spicy-fortunes/clips/spicy-fortunes-upgrade.webm", yt: "https://www.youtube.com/watch?v=n_hJPzg-8tk&t=325s" },
+          { text: "特色滿盤後可額外獲得 4 顆 UPGRADE 鑽石，優先選擇高階辣椒進行升級。", img: "spicy-fortunes/clips/spicy-fortunes-diamond-chili.webm", yt: "https://www.youtube.com/shorts/LTVJnspP8GA" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "Super 特色",
+        steps: [
+          { text: "自第一層 Wheel 特色可贏得 Super Spicy Wheel，開出 Super Extra Spins／Super Extra Pays／Super Extra Rows 或彩金；依初始觸發與轉輪結果，單一或多個 Super 特色合併進行。", img: "spicy-fortunes/clips/spicy-fortunes-super-features.webm", yt: "https://www.youtube.com/watch?v=Nlm4hV1eq5w&t=350s" }
+        ]
+      }
+    ],
+    help: [
+      "spicy-fortunes/HELP/spicy-fortunes-help-01.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-02.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-03.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-04.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-05.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-06.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-07.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-08.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-09.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-10.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-11.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-12.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-13.jpg",
+      "spicy-fortunes/HELP/spicy-fortunes-help-14.jpg"
     ]
   }
 ];
