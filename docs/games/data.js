@@ -735,5 +735,73 @@ var GAMES = [
       "spicy-fortunes/HELP/spicy-fortunes-help-13.jpg",
       "spicy-fortunes/HELP/spicy-fortunes-help-14.jpg"
     ]
+  },
+  {
+    id: "yin-yarn",
+    hidden: true,
+    vendor: "Aristocrat",
+    year: "待確認",
+    name: "Yin Yarn（Cheeky / Beefy）",
+    img: "yin-yarn/yin-yarn-cover.png",
+    tags: ["盤面延展", "升級", "收集", "多特色", "累積彩金"],
+    symbols: [
+      { name: "WILD", role: "百搭符號，取代所有一般標誌；不取代毛線球／分數幣／Gem。出現於 reel 2～5。", img: "yin-yarn/symbols/wild.png" },
+      { name: "Jackpot Gem", role: "購買遊戲中出現的彩金符號；盤面落 1～5 顆開出對應段數（越多顆越高段）。5 段彩金：Grand／Major／Super 為累積彩金，Minor／Mini 為固定彩金。", img: "yin-yarn/symbols/jackpot-gem.png" },
+      { name: "Multiplier Gem", role: "特色中的乘倍符號，對其所在輪／位置的獎值乘倍。", img: "yin-yarn/symbols/multiplier.png" },
+      { name: "Upgrade Gem", role: "特色中的升級符號，提升該輪分數的等級。", img: "yin-yarn/symbols/upgrade.png" },
+      { name: "紅幣（red coin）", role: "帶分數的收集符號，最低值階；每次 coin upgrade 獎值上下限[[+10／+20 credits × bet multiplier]]。所在輪紅 counter 滿 3 升為藍。", img: "yin-yarn/symbols/coin-red.png" },
+      { name: "藍幣（blue coin）", role: "帶分數的收集符號，中值階；每次 coin upgrade[[+20／+80 credits × bet multiplier]]。藍 counter 滿 3 升為金。", img: "yin-yarn/symbols/coin-blue.png" },
+      { name: "金幣（gold coin）", role: "帶分數的收集符號，最高值階；每次 coin upgrade[[+200／+800 credits × bet multiplier]]。", img: "yin-yarn/symbols/coin-gold.png" },
+      { name: "綠毛線球", role: "觸發 Growth 特色（Cheeky 版核心）：每顆使所有輪高度 +1 列，每增 1 列加 20 線（最多 6 顆）。", img: "yin-yarn/symbols/yarn-green.png" },
+      { name: "藍毛線球", role: "觸發 Upgrade 特色：提升該輪分數的等級。", img: "yin-yarn/symbols/yarn-blue.png" },
+      { name: "粉毛線球", role: "觸發 Boost 特色：落在帶紅 counter 的輪上揭示 3 個紅幣、藍 counter 揭示 3 個藍幣；金 counter 則該輪粉球替換為貓符。每輪最多 2 顆。", img: "yin-yarn/symbols/yarn-pink.png" },
+      { name: "橙毛線球", role: "觸發 Extra 特色：每顆加 1 場免費遊戲（YARNIER 加 1～2 場）。", img: "yin-yarn/symbols/yarn-orange.png" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "4×5 盤面、基本 40 線。面額（denom）1¢／2¢／5¢／10¢；兩種押分：YARNY（80 credits）或 YARNIER（100 credits），bet multiplier ×1／×2／×3／×5／×10。", img: "yin-yarn/clips/yin-yarn-base.webm", yt: "https://www.youtube.com/watch?v=I3UZ2YoJUi0&t=137s" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "YinYarn 特色",
+        steps: [
+          { text: "特色以免費遊戲進行（YARNY 8 場／YARNIER 9 場），coin 分紅→藍→金三色值階，每條轉輪上方收集欄位收集 3 個分數幣進行升級（紅→藍→金）。", img: "yin-yarn/clips/yin-yarn-feature-intro.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1268s" },
+          { text: "Growth 特色（綠毛線球）：每顆綠毛線球使所有輪高度 +1 列（每增 1 列加 20 線），最多 6 顆。", img: "yin-yarn/clips/yin-yarn-growth.webm", yt: "https://www.youtube.com/watch?v=nyEFpQzRtPw&t=1459s" },
+          { text: "Upgrade 特色（藍毛線球）：提升該輪分數的等級，該輪獎值依等級乘倍。", img: "yin-yarn/clips/yin-yarn-upgrade-feature.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1185s" },
+          { text: "Boost 特色（粉毛線球）：粉毛線球落在帶紅 counter 的輪上揭示 3 個紅幣、藍 counter 揭示 3 個藍幣；金 counter 則該輪粉球替換為貓符。每輪最多 2 顆。", img: "yin-yarn/clips/yin-yarn-boost.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=855s" },
+          { text: "Extra 特色（黃毛線球）：每顆加 1 場免費遊戲（YARNIER 加 1～2 場）。", img: "yin-yarn/clips/yin-yarn-extra.webm", yt: "https://www.youtube.com/watch?v=46Dnp-7G69w&t=283s" },
+          { text: "Coin Upgrade 特色：每次升級提高分數幣的獎值。", img: "yin-yarn/clips/yin-yarn-upgrade.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1128s" },
+          { text: "Multiplier 特色：對所有已獲得分數的轉輪進行乘倍。", img: "yin-yarn/clips/yin-yarn-multiplier.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1031s" },
+          { text: "彩金：Jackpot Gem 於購買遊戲落 1～5 顆開出對應段數；Grand／Major／Super 為累積彩金、Minor／Mini 為固定彩金。", img: "yin-yarn/clips/yin-yarn-jackpot.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1448s" }
+        ]
+      }
+    ],
+    help: [
+      "yin-yarn/HELP/yin-yarn-help-01.jpg",
+      "yin-yarn/HELP/yin-yarn-help-02.jpg",
+      "yin-yarn/HELP/yin-yarn-help-03.jpg",
+      "yin-yarn/HELP/yin-yarn-help-04.jpg",
+      "yin-yarn/HELP/yin-yarn-help-05.jpg",
+      "yin-yarn/HELP/yin-yarn-help-06.jpg",
+      "yin-yarn/HELP/yin-yarn-help-07.jpg",
+      "yin-yarn/HELP/yin-yarn-help-08.jpg",
+      "yin-yarn/HELP/yin-yarn-help-09.jpg",
+      "yin-yarn/HELP/yin-yarn-help-10.jpg",
+      "yin-yarn/HELP/yin-yarn-help-11.jpg",
+      "yin-yarn/HELP/yin-yarn-help-12.jpg",
+      "yin-yarn/HELP/yin-yarn-help-13.jpg",
+      "yin-yarn/HELP/yin-yarn-help-14.jpg",
+      "yin-yarn/HELP/yin-yarn-help-15.jpg",
+      "yin-yarn/HELP/yin-yarn-help-16.jpg",
+      "yin-yarn/HELP/yin-yarn-help-17.jpg",
+      "yin-yarn/HELP/yin-yarn-help-18.jpg",
+      "yin-yarn/HELP/yin-yarn-help-19.jpg",
+      "yin-yarn/HELP/yin-yarn-help-20.jpg",
+      "yin-yarn/HELP/yin-yarn-help-21.jpg",
+      "yin-yarn/HELP/yin-yarn-help-22.jpg"
+    ]
   }
 ];
