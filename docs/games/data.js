@@ -267,7 +267,6 @@ var GAMES = [
   },
   {
     id: "imperial-link",
-    hidden: true,
     vendor: "Aristocrat",
     year: "2026",
     name: "Imperial Link",
