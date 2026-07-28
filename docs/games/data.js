@@ -776,7 +776,7 @@ var GAMES = [
           { text: "Extra 特色（金毛線球）：每顆加 1 場免費遊戲（YARNIER 加 1～2 場）。", img: "yin-yarn/clips/yin-yarn-extra.webm", yt: "https://www.youtube.com/watch?v=46Dnp-7G69w&t=283s" },
           { text: "Coin Upgrade 特色：每次升級提高分數幣的獎值。", img: "yin-yarn/clips/yin-yarn-upgrade.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1128s" },
           { text: "Multiplier 特色：對所有已獲得分數的轉輪進行乘倍。", img: "yin-yarn/clips/yin-yarn-multiplier.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1216s" },
-          { text: "彩金：Jackpot Gem 於購買遊戲落 1～5 顆開出對應段數；Grand／Major 為累積彩金（jackpot）、Super／Minor／Mini 為固定彩金（bonus）。", img: "yin-yarn/clips/yin-yarn-jackpot.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1448s" }
+          { text: "彩金：Jackpot Gem 於基本遊戲落 1～5 顆開出對應段數；Grand／Major 為累積彩金（jackpot）、Super／Minor／Mini 為固定彩金（bonus）。", img: "yin-yarn/clips/yin-yarn-jackpot.webm", yt: "https://www.youtube.com/watch?v=44D80zeEJ_Y&t=1448s" }
         ]
       }
     ],
