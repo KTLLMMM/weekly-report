@@ -806,5 +806,73 @@ var GAMES = [
       "yin-yarn/HELP/yin-yarn-help-23.jpg",
       "yin-yarn/HELP/yin-yarn-help-24.jpg"
     ]
+  },
+  {
+    id: "red-fortune-rail-foliage",
+    hidden: true,
+    vendor: "KONAMI",
+    year: "2025",
+    name: "Red Fortune Rail Foliage",
+    img: "red-fortune-rail-foliage/keyart.png",
+    tags: ["50 線", "H&S", "FreeGame", "Game in Game", "乘倍", "累積彩金"],
+    desc: "KONAMI 中國風火車主題，5×3、50 線；盤面符號以堆疊方式出現。金元寶與太極兩種 BONUS 符號合計 6 個以上觸發 Red Fortune Rail Feature（Hold & Spin），3 個紅錢幣 SCATTER 觸發免費遊戲。彩金共 5 支：GRAND（累積彩金）與 MEGA／MAJOR／MINOR／MINI（固定彩金，隨投注放大）；GRAND 亦可能於任一 primary game 結束時隨機獲得。規格取自機台 HELP（Red Fortune Rail 系列 2025 年 G2E 首發）。",
+    symbols: [
+      { name: "SUBSTITUTE（仙女）", role: "百搭符號；僅出現在第 2、3、4、5 軸，替代除 SCATTER 與 BONUS 符號外的所有賠付符號。", img: "red-fortune-rail-foliage/symbols/wild.jpg" },
+      { name: "SCATTER（紅錢幣）", role: "僅出現在第 2、3、4 軸、任意位置皆計；3 個觸發免費遊戲並派彩。", img: "red-fortune-rail-foliage/symbols/scatter.jpg" },
+      { name: "BONUS（金元寶）", role: "BONUS 符號之一；與太極 BONUS 符號合計 6 個以上觸發 Red Fortune Rail Feature。Red Fortune Rail Feature 開始時，所有金元寶轉為紅錢幣並揭示 MEGA／MAJOR／MINOR／MINI 或分數獎項。", img: "red-fortune-rail-foliage/symbols/bonus-ingot.jpg" },
+      { name: "BONUS（太極）", role: "BONUS 符號之一；與金元寶 BONUS 符號合計 6 個以上觸發 Red Fortune Rail Feature。Feature 中出現的太極會轉為鈴鐺類符號，可累加額外 Bonus SPIN；盤面出現特定鈴鐺時，於 Feature 結束後啟動 Golden Fortune Rail Feature。", img: "red-fortune-rail-foliage/symbols/bonus-yinyang.jpg" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "5×3、50 線；盤面符號以堆疊方式出現（同一軸相鄰位置替換為同一符號）。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-base-game-1.webm", yt: "https://youtu.be/9uQoiYQmduM?t=77" },
+          { text: "觸發方式一：落下 1～5 個 BONUS 符號時，有機會觸發 GOOD LUCK BESTOWED，隨機補進額外 BONUS 符號湊滿 6 個而觸發 Red Fortune Rail Feature。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-base-trigger-2.webm", yt: "https://youtu.be/j3TexyXDD8A?t=137" },
+          { text: "觸發方式二：金元寶與太極兩種 BONUS 符號，一次 SPIN 落下合計 6 個以上，直接觸發 Red Fortune Rail Feature。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-base-trigger-1.webm", yt: "https://youtu.be/iSUN507QB6M?t=565" },
+          { text: "GRAND（累積彩金）可能於任一 primary game 結束時隨機獲得。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        name: "免費遊戲",
+        steps: [
+          { text: "3 個 SCATTER 觸發後獲得 5 次免費遊戲。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-free-game-1.webm", yt: "https://youtu.be/9uQoiYQmduM?t=155" },
+          { text: "盤面上方設有 EXTRA 區；每次免費遊戲會有 1～5 個 BONUS 符號出現在 EXTRA 區。當盤面出現 6 個以上 BONUS 符號，該局派彩後 EXTRA 區的 BONUS 符號下移進盤面，觸發 Red Fortune Rail Feature。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-free-game-2.webm", yt: "https://youtu.be/9uQoiYQmduM?t=208" },
+          { text: "（同一支影片中的另一款 Red Fortune Rail 系列玩法）此款免費遊戲中，部分轉軸會整軸轉為紅色 MYSTERY 符號。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-free-game-mode2.webm", yt: "https://youtu.be/iSUN507QB6M?t=1254" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "Red Fortune Rail Feature",
+        steps: [
+          { text: "6 個以上 BONUS 符號觸發；開始時所有金元寶轉為紅錢幣揭示 MEGA／MAJOR／MINOR／MINI 或分數獎項，其餘位置成為各自獨立的轉軸，獲得 5 次 Bonus SPIN。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-hold-spin-2.webm", yt: "https://youtu.be/9uQoiYQmduM?t=228" },
+          { text: "Feature 中，落下帶有「+1 SPIN」圖案的金元寶或太極時，才會多獲得 1 次 Bonus SPIN。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-hold-spin-addspin.webm", yt: "https://youtu.be/9uQoiYQmduM?t=258" },
+          { text: "Bonus SPIN 歸零、或盤面 15 個位置全部填滿時 Feature 結束；填滿 15 個位置即中 GRAND（累積彩金）。Feature 結束時結算所有紅錢幣的獎項總和。", img: "", yt: "" },
+          { text: "Yin-Yang Boost：Bonus SPIN 中出現 2x／3x／4x／5x 乘倍，落在紅錢幣上時將該紅錢幣的獎項乘上對應倍數。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-hold-spin-4.webm", yt: "https://youtu.be/9uQoiYQmduM?t=255" },
+          { text: "Yin-Yang Boost 也會作用在鈴鐺符號上：鈴鐺可由 1 個升級為 2 個（等值於 2 個鈴鐺），鈴鐺數量決定後續 Golden Fortune Rail Feature 的乘倍。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-hold-spin-bell.webm", yt: "https://youtu.be/9uQoiYQmduM?t=252" },
+          { text: "Feature 中盤面出現特定鈴鐺符號時，Feature 結束後啟動 Golden Fortune Rail Feature。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-hold-spin-1.webm", yt: "https://youtu.be/9uQoiYQmduM?t=220" }
+        ]
+      },
+      {
+        type: "GAME IN GAME",
+        name: "Golden Fortune Rail Feature",
+        steps: [
+          { text: "承接 Red Fortune Rail Feature；盤面窗格縮為單列（1-1-1-1-1）、輪帶重置，獲得 5 次 Bonus SPIN，盤面僅出現帶分數的金錢幣與一個乘倍數字（等於先前盤面鈴鐺符號的數量）。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-gig-1.webm", yt: "https://youtu.be/9uQoiYQmduM?t=327" },
+          { text: "每個金錢幣出現即加 1 次 Bonus SPIN 並鎖定；5 個位置全部填滿即中 GRAND。Feature 結束時，所有金錢幣分數乘上該乘倍數字後一次派發。", img: "red-fortune-rail-foliage/clips/red-fortune-rail-foliage-gig-2.webm", yt: "https://youtu.be/9uQoiYQmduM?t=363" }
+        ]
+      }
+    ],
+    help: [
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-01.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-02.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-03.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-04.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-05.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-06.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-07.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-08.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-09.jpg",
+      "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-10.jpg"
+    ]
   }
 ];
