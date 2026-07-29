@@ -966,39 +966,38 @@ var GAMES = [
     name: "Li Yu Long Men（Cash Leap）",
     img: "li-yu-long-men-cash-leap/cover.jpg",
     tags: ["MEGA REEL POWER", "H&S", "收集", "乘倍", "鯉躍龍門", "4支彩金"],
-    desc: "Aristocrat 2026 年新機（實機拍攝地 Barona, San Diego）：MEGA REEL POWER 每軸 3～6 個符號、243～7,776 ways。盤面上方有 5 條 Koi Stream，一軸一條；H&S 中鯉魚 SCATTER 不落在盤面，而是往上游進所在欄的 Koi Stream 排隊，綠、金鯉魚會把排在它上方的鯉魚獎值乘倍，每條流塞滿 3 隻後最上面那隻被擠出、獎值收進頂端的收集計量表——把「鯉躍龍門」做成一條會擠人、會加倍的隊伍。規格取自機台 HELP。",
+    desc: "Aristocrat 2026 年新機（實機拍攝地 Barona, San Diego）：MEGA REEL POWER 每軸 3～6 個符號、243～7,776 ways。盤面上方有 5 條 Koi Stream，一軸一條；H&S 中鯉魚 SCATTER 不落在盤面，而是往上游進所在欄的 Koi Stream 排隊，綠、金鯉魚會把排在它上方的鯉魚分數乘倍，每條流塞滿 3 隻後最上面那隻被擠出、分數收進頂端的收集計量表——把「鯉躍龍門」做成一條會擠人、會加倍的隊伍。規格取自機台 HELP。",
     symbols: [
       { name: "WILD（LI YU LONG MEN 字牌）", role: "只出現在第 2～5 軸；替代除鯉魚 SCATTER、SUPER KOI 與分數球外的所有標誌。", img: "li-yu-long-men-cash-leap/symbols/wild.png" },
-      { name: "紫鯉魚（SCATTER）", role: "只出現在第 1、5 軸（該欄 Koi Stream 標示 SINGLE COLLECT）；有機會觸發 H&S，進 Koi Stream 後不改動其他鯉魚的獎值。[[獎值 28～8888 credits × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-purple.png" },
-      { name: "綠鯉魚（SCATTER）", role: "只出現在第 2、4 軸（DOUBLE COLLECT）；有機會觸發 H&S，進 Koi Stream 時把排在它上方的所有鯉魚獎值乘 2。[[獎值 28～8888 credits × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-green.png" },
-      { name: "金鯉魚（SCATTER）", role: "只出現在第 3 軸（TRIPLE COLLECT）；有機會觸發 H&S，進 Koi Stream 時把排在它上方的所有鯉魚獎值乘 3。[[獎值 28～8888 credits × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-gold.png" },
-      { name: "SUPER KOI（彩色鯉魚）", role: "只在 100 分投注制的檔位才會出現，可落任一軸、每次 SPIN 最多 1 個；出現即固定觸發 H&S，並比其他鯉魚先進 Koi Stream。H&S 中不會出現。圖面是三色鯉魚同框（金 1、綠 2、紫 2），對上盤面 5 條 Koi Stream 的三種顏色。[[獎值 28～8888 credits × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-super.png" },
-      { name: "分數球（金幣）", role: "H&S 中落下即鎖定到特色結束；帶分數或 MINI／MINOR／MAJOR，也可能開出 MAJOR Reset Prize（此項不吃 bet multiplier）。[[分數 20～750 credits × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/coin.png" }
+      { name: "紫鯉魚（SCATTER）", role: "只出現在第 1、5 軸（該欄 Koi Stream 標示 SINGLE COLLECT）；有機會觸發 H&S，進 Koi Stream 後不改動其他鯉魚的分數。[[28～8888 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-purple.png" },
+      { name: "綠鯉魚（SCATTER）", role: "只出現在第 2、4 軸（DOUBLE COLLECT）；有機會觸發 H&S，進 Koi Stream 時把排在它上方的所有鯉魚分數乘 2。[[28～8888 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-green.png" },
+      { name: "金鯉魚（SCATTER）", role: "只出現在第 3 軸（TRIPLE COLLECT）；有機會觸發 H&S，進 Koi Stream 時把排在它上方的所有鯉魚分數乘 3。[[28～8888 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-gold.png" },
+      { name: "SUPER KOI（彩色鯉魚）", role: "只在 100 分投注制的檔位才會出現，可落任一軸、每次 SPIN 最多 1 個；出現即固定觸發 H&S，並比其他鯉魚先進 Koi Stream。H&S 中不會出現。幣面是 5 隻鯉魚同框（金 1、綠 2、紫 2）。[[28～8888 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-super.png" },
+      { name: "分數球（金幣）", role: "H&S 中落下即鎖定到特色結束；帶分數或 MINI／MINOR／MAJOR，也可能開出 MAJOR Reset Prize（此項不吃 bet multiplier）。[[20～750 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/coin.png" }
     ],
     play: [
       {
         type: "BASE GAME",
         steps: [
           { text: "5 軸 MEGA REEL POWER：每軸的符號數 3～6 個在該次 SPIN 開始時決定、各軸可以不同，連線方式隨之在 243～7,776 ways 之間變動。[[BET ×1＝88 分，另有 ×2／×3／×5／×10]]", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-base-game.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=50" },
-          { text: "盤面上方橫排 5 條 Koi Stream，一軸一條，柱身標示 SINGLE／DOUBLE／TRIPLE COLLECT，對應該軸會出現的鯉魚顏色與乘倍能力（作用見 HOLD & SPIN）。五條流只有三種顏色：第 1、5 軸同為紫、第 2、4 軸同為綠、第 3 軸金。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-streams.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=1080" },
-          { text: "轉出一個以上鯉魚 SCATTER，有機會觸發 HOLD & SPIN FEATURE；觸發與否不是看數量。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-trigger.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=1071" },
-          { text: "改投 100 分投注制的檔位，輪帶才會有 SUPER KOI；SUPER KOI 一出現就固定觸發 HOLD & SPIN FEATURE，機台按鈕面板上直接標示「GUARANTEES FEATURE!」。[[100／200／300／500／1000 分，對應 BET ×1～×10]]", img: "", yt: "" },
+          { text: "盤面上方橫排 5 條 Koi Stream，一軸一條，柱身標示 SINGLE／DOUBLE／TRIPLE COLLECT。五條流只有三種顏色：第 1、5 軸紫、第 2、4 軸綠、第 3 軸金。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-streams.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=1080" },
+          { text: "轉出鯉魚 SC 即打擊觸發，判定是否進 HOLD & SPIN FEATURE。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-trigger.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=75" },
+          { text: "改投 100 分投注制的檔位，輪帶才會有 SUPER KOI；SUPER KOI 一出現就固定觸發 HOLD & SPIN FEATURE，機台按鈕面板上直接標示「GUARANTEES FEATURE!」。[[100／200／300／500／1000 分，對應 BET ×1～×10]]", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-streams.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=1080" },
           { text: "共 4 支彩金：GRAND／MAJOR（累積彩金）、MINOR／MINI（固定彩金，均 × bet multiplier）。沒觸發特色的 BASE GAME SPIN 也有機會直接中 GRAND。[[MINI＝1000 分、MINOR＝2500 分 × bet multiplier；GRAND／MAJOR 計量表上限各 $3,999,999.99]]", img: "li-yu-long-men-cash-leap/screens/jackpots.jpg", yt: "https://youtu.be/DNo4ktgcyOs?t=20" }
         ]
       },
       {
         type: "HOLD & SPIN",
         steps: [
-          { text: "開場 3 場，轉出分數球或鯉魚就重置回 3 場；分數球落下即鎖定，鯉魚則往上游進所在欄的 Koi Stream，不佔盤面位置。特色期間不計連線派彩，改用 Bonus Reels，投注沿用觸發時的投注。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-start.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=118" },
-          { text: "觸發的鯉魚先各自啟動所在欄的 Koi Stream，顯示獎值後從該軸頂端依序排進去。", img: "", yt: "" },
-          { text: "之後鯉魚落在已啟動的欄，就直接排進該欄的 Koi Stream；落在還沒啟動的欄，則有機會啟動該欄的 Koi Stream。", img: "", yt: "" },
-          { text: "紫鯉魚（第 1、5 軸，SINGLE COLLECT）排進來只帶自己的獎值進場，不動同一條流裡其他鯉魚的獎值。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-purple-in.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=124" },
-          { text: "綠鯉魚（第 2、4 軸，DOUBLE COLLECT）排進來時，把同一條流中排在它上方的所有鯉魚獎值乘 2；排在它下方的不受影響。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-green-x2.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=144" },
-          { text: "金鯉魚（第 3 軸，TRIPLE COLLECT）排進來時，把同一條流中排在它上方的所有鯉魚獎值乘 3；同樣只往上作用。", img: "", yt: "" },
-          { text: "SUPER KOI 可落任一軸，進的是它落下那一欄的 Koi Stream；同一次 SPIN 中它比其他鯉魚先排進去，位置因此在它們之上，後面綠、金鯉魚的乘倍吃得到。進場後這條流照原規則繼續運作。", img: "", yt: "" },
-          { text: "每條 Koi Stream 最多排 3 隻鯉魚：第 4 隻要進來時，最上面那隻先被擠出、獎值收進 Koi Stream 上方的收集計量表，接著新進來的鯉魚才對留在流裡的鯉魚做乘倍。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-stream-push-out.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=204" },
-          { text: "場數用完，或盤面所有位置都被分數球填滿即結束；填滿的情況直接派 GRAND（累積彩金），且盤面分數球與 Koi Stream 上的鯉魚獎值照樣另外給。", img: "", yt: "" },
-          { text: "結束時把盤面所有分數球、各條 Koi Stream 上剩下的鯉魚獎值全部加進收集計量表，再一次派發計量表的總額。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-payout.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=284" },
+          { text: "開場 3 場，落分數球或鯉魚即 RESPIN 回 3；觸發的鯉魚先各自啟動所在欄的 Koi Stream，顯示分數後從該軸頂端依序排進去，不佔盤面位置。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-start.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=118" },
+          { text: "之後鯉魚落在已啟動的欄，就直接排進該欄的 Koi Stream；落在還沒啟動的欄，則有機會啟動該欄的 Koi Stream。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-into-stream.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=514" },
+          { text: "紫鯉魚（第 1、5 軸）排進來只帶自己的分數進場，不動同一條流裡其他鯉魚的分數；柱身標的 SINGLE COLLECT 就是不乘倍。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-purple-in.webm", yt: "https://youtu.be/ZvQwfwIyNqE?t=32" },
+          { text: "綠鯉魚（第 2、4 軸）排進來時，把同一條流中排在它上方的所有鯉魚分數乘 2；排在它下方的不受影響。柱身標的 DOUBLE COLLECT 就是這個倍率。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-green-x2.webm", yt: "https://youtu.be/ZvQwfwIyNqE?t=87" },
+          { text: "金鯉魚（第 3 軸）排進來時，把同一條流中排在它上方的所有鯉魚分數乘 3；同樣只往上作用。柱身標的 TRIPLE COLLECT 就是這個倍率。", img: "", yt: "" },
+          { text: "SUPER KOI 進的是它落下那一欄的 Koi Stream；同一次 SPIN 中它比其他鯉魚先排進去，位置因此在它們之上，後面綠、金鯉魚的乘倍吃得到。進場後這條流照原規則繼續運作。", img: "", yt: "" },
+          { text: "每條 Koi Stream 最多排 3 隻鯉魚：第 4 隻要進來時，最上面那隻先被擠出、分數收進 Koi Stream 上方的收集計量表，接著新進來的鯉魚才對留在流裡的鯉魚做乘倍。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-stream-push-out.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=204" },
+          { text: "場數用完，或盤面所有位置都被分數球填滿即結束；填滿的情況直接派 GRAND（累積彩金），且盤面分數球與 Koi Stream 上的鯉魚分數照樣另外給。", img: "", yt: "" },
+          { text: "結束時把盤面所有分數球、各條 Koi Stream 上剩下的鯉魚分數全部加進收集計量表，再一次派發計量表的總額。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-payout.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=284" },
           { text: "分數球上出現 MAJOR，特色結束時即得 MAJOR（累積彩金）。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-major-collect.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=1300" }
         ]
       }
