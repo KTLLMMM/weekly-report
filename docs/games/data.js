@@ -888,5 +888,74 @@ var GAMES = [
       "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-09.jpg",
       "red-fortune-rail-foliage/HELP/red-fortune-rail-foliage-help-10.jpg"
     ]
+  },
+  {
+    id: "triple-treasure-pot-spin-heavenly-wealth",
+    hidden: true,
+    vendor: "Aruze",
+    year: "2026",
+    name: "Triple Treasure Pot Spin — Heavenly Wealth",
+    img: "triple-treasure-pot-spin-heavenly-wealth/cover.png",
+    tags: ["中國風", "免費遊戲", "轉盤", "收集彩金", "多特色"],
+    symbols: [
+      { name: "WILD", role: "取代所有一般標誌，除 Coin、Wheel scatter、收集標誌、特色標誌、龍爪、+1 SPIN 標誌。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/wild.png" },
+      { name: "MYSTERY（堆疊）", role: "基本遊戲中隨機出現的堆疊神秘符號，開出除分數幣以外的一般標誌。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/mystery.png" },
+      { name: "Coin（分數幣）", role: "帶獎值的分數幣[[50～2000 credits × bet multiplier]]；只出現於 R1～R4。搭配 R5 的收集標誌（COLLECT／EXTRA CREDIT／MULTIPLIER）收分。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/coin.png" },
+      { name: "Wheel scatter（SPIN）", role: "基本遊戲出現 3 個以上觸發 WHEEL FEATURE（大轉輪開出彩金或生肖特色）。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/wheel-scatter.png" },
+      { name: "COLLECT（收集標誌）", role: "出現於 R5；使盤面各 coin 上的獎值直接收分。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/action-collect.png" },
+      { name: "EXTRA CREDIT（收集標誌）", role: "出現於 R5；各 coin 獎值加上此標誌顯示的值後收分[[30／50／100／200／500／1000 credits × bet multiplier]]。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/action-extra-credit.png" },
+      { name: "MULTIPLIER（收集標誌）", role: "出現於 R5；各 coin 獎值乘上此標誌顯示的倍數後收分[[×2／×3／×5]]。每局最多 1 個收集標誌。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/action-multiplier.png" },
+      { name: "Dragon（特色標誌）", role: "出現 1 個以上有機率觸發 DRAGON FEATURE（10 次免費場次）。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/dragon.png" },
+      { name: "Tiger（特色標誌）", role: "出現 1 個以上有機率觸發 TIGER FEATURE（5 次免費場次、分數幣推移補滿輪帶）。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/tiger.png" },
+      { name: "Ox（特色標誌）", role: "出現 1 個以上有機率觸發 OX FEATURE（5 次免費場次、盤面向上延展 2 列）。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/ox.png" },
+      { name: "龍爪（彩金）", role: "Dragon 系特色中，龍爪上顯示 CREDIT 獎值[[100／500／1000 × bet multiplier]]或 MINI／MINOR／MAJOR／GRAND；彩金收集進對應彩金欄位。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/pot.png" },
+      { name: "+1 SPIN", role: "Dragon 系特色中每出現 1 個加 1 次免費場次，最多加 5。", img: "triple-treasure-pot-spin-heavenly-wealth/symbols/free-spin.png" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "押注分 5 檔，以 bet multiplier 選擇[[BET ×1＝100、×2＝200、×3＝300、×5＝500、×10＝1000 credits]]。", img: "triple-treasure-pot-spin-heavenly-wealth/screens/triple-treasure-pot-spin-heavenly-wealth-betscreen.jpg", yt: "https://www.youtube.com/watch?v=iFxbgwtnmu8&t=1433s" },
+          { text: "3×5 盤面、50 線。基本遊戲中隨機出現堆疊 MYSTERY，可開出除分數幣以外的標誌。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/mystery.webm", yt: "https://www.youtube.com/watch?v=9cZplHo6KVc&t=178s" },
+          { text: "基本遊戲玩法：盤面 1 個以上 coin ＋ R5 的 COLLECT 直接收分。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/base.webm", yt: "https://www.youtube.com/watch?v=iFxbgwtnmu8&t=1433s" },
+          { text: "基本遊戲玩法：盤面 1 個以上 coin ＋ R5 的 EXTRA CREDIT 加值後收分。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/extra-credit-collect.webm", yt: "https://www.youtube.com/watch?v=iFxbgwtnmu8&t=1082s" },
+          { text: "基本遊戲玩法：盤面 1 個以上 coin ＋ R5 的 MULTIPLIER，乘倍後收分[[×2／×3／×5]]。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/multiplier-collect.webm", yt: "https://www.youtube.com/watch?v=iFxbgwtnmu8&t=1031s" }
+        ]
+      },
+      {
+        type: "FEATURE GAME",
+        name: "Wheel／生肖特色",
+        steps: [
+          { text: "WHEEL FEATURE（大轉輪）：基本遊戲出現 3 個以上 SPIN 觸發，大轉輪轉一次，指針指到的段開出——GRAND／MAJOR，或 Tiger／Dragon／Ox 及其組合特色。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/wheel.webm", yt: "https://www.youtube.com/watch?v=9cZplHo6KVc&t=258s" },
+          { text: "DRAGON FEATURE：10 次免費場次，每個龍爪顯示 CREDIT 獎值[[100／500／1000 × bet multiplier]]或 MINI／MINOR／MAJOR／GRAND；龍爪上的 CREDIT 直接贏得，彩金收集進彩金欄位。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/jackpot.webm", yt: "https://www.youtube.com/watch?v=iFxbgwtnmu8&t=880s" },
+          { text: "TIGER FEATURE：5 次免費場次，當 R5 出現收集標誌，則盤面上有 1 個以上分數幣的轉輪，分數幣將推移並補滿整條輪帶；線分於推移前判定、分數幣獎項將於推移後贏得。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/nudge.webm", yt: "https://www.youtube.com/watch?v=iFxbgwtnmu8&t=1334s" },
+          { text: "OX FEATURE：5 次免費場次，開始前轉輪向上延展 2 列。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/ox.webm", yt: "" },
+          { text: "彩金收集：於 Dragon 特色中龍爪顯示的 MINI／MINOR／MAJOR／GRAND 收集進彩金欄位，集滿給對應彩金 - GRAND／MAJOR 為累積彩金、MINOR／MINI 為固定彩金。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/jackpot-collect.webm", yt: "https://www.youtube.com/watch?v=c1FqRgane9I&t=205s" },
+          { text: "特色再觸發：免費場次中再觸發生肖特色時，於當前特色結束後接續進行。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/retrigger.webm", yt: "https://www.youtube.com/watch?v=iFxbgwtnmu8&t=1305s" },
+          { text: "+1 SPIN：Dragon 系特色中每出現 1 個 +1 SPIN 加 1 次免費場次（最多加 5）。", img: "triple-treasure-pot-spin-heavenly-wealth/clips/plus-1-spin.webm", yt: "https://www.youtube.com/shorts/nlTIJsgfm-M" }
+        ]
+      }
+    ],
+    help: [
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-01.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-02.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-03.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-04.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-05.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-06.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-07.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-08.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-09.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-10.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-11.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-12.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-13.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-14.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-15.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-16.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-17.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-18.jpg",
+      "triple-treasure-pot-spin-heavenly-wealth/HELP/triple-treasure-pot-spin-heavenly-wealth-help-19.jpg"
+    ]
   }
 ];
