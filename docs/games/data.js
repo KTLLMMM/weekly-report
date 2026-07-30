@@ -963,6 +963,7 @@ var GAMES = [
     hidden: true,
     vendor: "Aristocrat",
     year: "2026",
+    studio: "BG studio",
     name: "Li Yu Long Men（Cash Leap）",
     img: "li-yu-long-men-cash-leap/cover.jpg",
     tags: ["MEGA REEL POWER", "H&S", "收集", "乘倍", "鯉躍龍門", "4支彩金"],
@@ -973,6 +974,8 @@ var GAMES = [
       { name: "綠鯉魚（SCATTER）", role: "只出現在第 2、4 軸（DOUBLE COLLECT）；有機會觸發 H&S，進 Koi Stream 時把排在它上方的所有鯉魚分數乘 2。[[28～8888 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-green.png" },
       { name: "金鯉魚（SCATTER）", role: "只出現在第 3 軸（TRIPLE COLLECT）；有機會觸發 H&S，進 Koi Stream 時把排在它上方的所有鯉魚分數乘 3。[[28～8888 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-gold.png" },
       { name: "SUPER KOI（彩色鯉魚）", role: "只在 100 分投注制的檔位才會出現，可落任一軸、每次 SPIN 最多 1 個；出現即固定觸發 H&S，並比其他鯉魚先進 Koi Stream。H&S 中不會出現。幣面是 5 隻鯉魚同框（金 1、綠 2、紫 2）。[[28～8888 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/koi-super.png" },
+      { name: "紅鯉魚（SCATTER，Game 2）", role: "只出現在 Game 2，對應 KOI BOOST 河道；排進 Koi Stream 時把上方鯉魚的分數加上自身分數。", img: "li-yu-long-men-cash-leap/symbols/koi-red.png" },
+      { name: "藍鯉魚（SCATTER，Game 2）", role: "只出現在 Game 2，對應 ????? 河道；會轉出其他四種特色的顏色，依轉到的顏色執行對應的特色功能。", img: "li-yu-long-men-cash-leap/symbols/koi-blue.png" },
       { name: "分數球（金幣）", role: "H&S 中落下即鎖定到特色結束；帶分數或 MINI／MINOR／MAJOR，也可能開出 MAJOR Reset Prize（此項不吃 bet multiplier）。[[20～750 分 × bet multiplier]]", img: "li-yu-long-men-cash-leap/symbols/coin.png" }
     ],
     play: [
@@ -988,6 +991,7 @@ var GAMES = [
       },
       {
         type: "HOLD & SPIN",
+        name: "( Game 1 )",
         steps: [
           { text: "開場 3 場，落分數球或鯉魚即 RESPIN 回 3；觸發的鯉魚先各自啟動所在欄的 Koi Stream，顯示分數後從該軸頂端依序排進去，不佔盤面位置。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-start.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=118" },
           { text: "之後鯉魚落在已啟動的欄，就直接排進該欄的 Koi Stream；落在還沒啟動的欄，則有機會啟動該欄的 Koi Stream。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-into-stream.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=514" },
@@ -999,6 +1003,15 @@ var GAMES = [
           { text: "場次歸 0，或滿盤拉 GRAND（累積彩金），遊戲即結束。", img: "", yt: "" },
           { text: "結束時把盤面所有分數球、各條 Koi Stream 上剩下的鯉魚分數全部加進收集計量表，再一次派發計量表的總額。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-payout.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=284" },
           { text: "分數球上出現 MAJOR，特色結束時即得 MAJOR（累積彩金）。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-major-collect.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=1300" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "( Game 2 )",
+        steps: [
+          { text: "五條 Koi Stream 的配置換成 SINGLE COLLECT／DOUBLE COLLECT／TRIPLE COLLECT／KOI BOOST／?????：Game 1 的第 4 條 DOUBLE 與第 5 條 SINGLE，在這裡改成 KOI BOOST 與 ?????。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-g2-streams.webm", yt: "https://youtu.be/NkfGP6wyr0U?t=18" },
+          { text: "KOI BOOST（紅鯉魚）是加分特色：轉出的紅鯉魚往上排進該欄的 Koi Stream，並把上方鯉魚的分數加上自身分數。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-g2-koi-boost.webm", yt: "https://youtu.be/NkfGP6wyr0U?t=86" },
+          { text: "?????（藍鯉魚）會轉出其他四種特色的顏色，依轉到的顏色執行對應的特色功能。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-g2-mystery.webm", yt: "https://youtu.be/NkfGP6wyr0U?t=108" }
         ]
       }
     ],

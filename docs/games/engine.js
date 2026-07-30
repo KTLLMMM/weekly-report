@@ -49,7 +49,7 @@
   /* 標頭 */
   html +=
     '<div class="vendor-line"><span>' + esc(g.vendor) + '</span>' +
-      (g.year ? '<span class="year">' + esc(g.year) + '</span>' : '') +
+      (g.year ? '<span class="year">' + esc(g.year) + (g.studio ? '（' + esc(g.studio) + '）' : '') + '</span>' : '') +
     '</div>' +
     '<h2 class="game-name">' + esc(g.name) + '</h2>' +
     (g.img ? '<img class="game-img" src="' + esc(g.img) + '" alt="' + esc(g.name) + '">' : '');
