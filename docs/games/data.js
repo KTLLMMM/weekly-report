@@ -1024,5 +1024,77 @@ var GAMES = [
       "li-yu-long-men-cash-leap/HELP/li-yu-long-men-cash-leap-help-06.jpg",
       "li-yu-long-men-cash-leap/HELP/li-yu-long-men-cash-leap-help-07.jpg"
     ]
+  },
+  {
+    id: "bomberman-boom",
+    hidden: true,
+    vendor: "KONAMI",
+    year: "2025",
+    name: "Bomberman Boom",
+    img: "bomberman-boom/cover.jpg",
+    tags: ["40 線", "三特色", "H&S", "FreeGame", "乘倍", "收集", "累積彩金", "IP 授權"],
+    desc: "KONAMI Bomberman IP 授權主題，Solstice 新機型；5×4、40 線，最低投注 80 credits。三種炸彈符號各自對應一個特色：FREE GAME、BOMBER GAME、JACKPOT FEATURE，且每次 SPIN 只會出現其中一種。彩金共 5 支：GRAND JACKPOT（累積彩金）與 MEGA／MAJOR／MINOR／MINI（固定彩金，隨面額與投注放大）；GRAND 亦可能於任一 primary game 結束時隨機獲得。同時首發的換皮版為 Bomberman Blast，玩法相同。規格取自機台 HELP（本款收錄 PAGE 1～11）。",
+    symbols: [
+      { name: "SUBSTITUTE（Bomberman）", role: "百搭符號；僅出現在第 2、3、4 軸，替代除三種炸彈符號外的所有賠付符號。基本遊戲中整疊 SUBSTITUTE 全部用於連線時，該疊會替換為含 WILD 的組合，且變體與 WILD 在連線上等同 SUBSTITUTE。", img: "bomberman-boom/symbols/substitute.png" },
+      { name: "FREE GAME（紅炸彈）", role: "觸發 FREE GAME FEATURE。僅出現在第 2、3、4 軸、任意位置皆計；1～2 顆時有機會觸發，3 顆必定觸發。三種炸彈每次 SPIN 只會出現一種，觸發時另派彩[[80 × bet per line]]。", img: "bomberman-boom/symbols/bomb-free-game.png" },
+      { name: "BOMBER GAME（金炸彈）", role: "觸發 BOMBER GAME FEATURE。僅出現在第 2、3、4 軸、任意位置皆計；1～2 顆時有機會觸發，3 顆必定觸發。三種炸彈每次 SPIN 只會出現一種，觸發時另派彩[[80 × bet per line]]。", img: "bomberman-boom/symbols/bomb-bomber-game.png" },
+      { name: "JACKPOT FEATURE（藍炸彈）", role: "觸發 JACKPOT FEATURE。僅出現在第 2、3、4 軸、任意位置皆計；1～2 顆時有機會觸發，3 顆必定觸發。三種炸彈每次 SPIN 只會出現一種，觸發時另派彩[[80 × bet per line]]。", img: "bomberman-boom/symbols/bomb-jackpot-feature.png" },
+      { name: "BOMBERMAN（粉紅）", role: "免費遊戲專屬；出現在第 2、3、4 軸時，把整軸變為 BOMBERMAN 全軸或 2x／3x／5x 乘倍全軸。", img: "bomberman-boom/symbols/bomberman-reel-change.png" },
+      { name: "GOLD BOMB", role: "免費遊戲專屬；轉動中落在第 2、3、4 軸時把整軸變為 2x／3x／5x 乘倍全軸，落在 BOMBERMAN 全軸上時把該軸升級為乘倍全軸。每局最多 1 顆能落在 BOMBERMAN 全軸上。", img: "bomberman-boom/symbols/gold-bomb.png" },
+      { name: "乘倍全軸（2x／3x／5x）", role: "免費遊戲中作為百搭；參與連線時套用對應倍數，多個並存時倍率相乘。3x 與 5x 每局各限出現一次且不同時出現。", img: "bomberman-boom/symbols/multiplier-reel.png" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "5×4、40 線。", img: "bomberman-boom/clips/bomberman-boom-base-trigger.webm", yt: "https://www.youtube.com/watch?v=eVJe6WwpbSc&t=130s" },
+          { text: "所有轉軸停止後，第 2、3、4 軸若重轉並落下炸彈，或該三軸任 3 個位置被替換為 3 顆同色炸彈，即觸發對應特色；重轉與符號替換都不會讓該次盤面總分變少。", img: "", yt: "" },
+          { text: "GRAND JACKPOT（累積彩金）可能於任一 primary game 結束時隨機獲得。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "BOMBER GAME FEATURE",
+        steps: [
+          { text: "3 顆金炸彈觸發，獲得 5 次 SPIN；盤面換成 25 個各自獨立的轉軸，最上與最下一排一開始被磚牆覆蓋而不作動。每次 SPIN 隨機選用金幣或彩金符號轉軸，落下金幣或彩金符號即鎖定並多得 1 次 SPIN。每顆金幣各自帶有分數[[40／60／80／100／120／200 × bet per line]]。", img: "bomberman-boom/clips/bomberman-boom-bomber-collect.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=534" },
+          { text: "炸彈以十字形爆破範圍收分；2x 炸彈先把範圍內的獎項乘 2 再收。獎項若落在兩個爆破範圍交叉的位置，會在每顆炸彈上各收一次。", img: "bomberman-boom/clips/bomberman-boom-bomber-2x-collect.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=508" },
+          { text: "彩金符號落下時為上鎖狀態、無法直接派發，被爆破範圍涵蓋才解鎖；盤面最多同時鎖住 3 個。", img: "bomberman-boom/clips/bomberman-boom-bomber-unlock-bonus.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=595" },
+          { text: "磚牆被爆破時揭示獎項：火焰使爆破範圍往各方向再延伸 1 格（最多 3 次）、額外炸彈軸（最多 2 次）、或彩金符號（最多 2 次）。爆破範圍不會越過磚牆延伸到相鄰轉軸。", img: "bomberman-boom/clips/bomberman-boom-bomber-brick-bomb-fire.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=574" },
+          { text: "磚牆也可能揭示 +1 SPIN，最多 3 次。", img: "bomberman-boom/clips/bomberman-boom-bomber-brick-plus-spin.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=556" },
+          { text: "火焰累積後，爆破範圍可延伸成整列，一次收走該列所有獎項並解鎖範圍內的彩金符號。", img: "bomberman-boom/clips/bomberman-boom-bomber-expanded-blast.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=631" },
+          { text: "SPIN 歸零時結束，結算所有金幣上的分數。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        steps: [
+          { text: "3 顆紅炸彈觸發，獲得 5 次免費遊戲；免費遊戲中可再獲得額外次數。", img: "bomberman-boom/clips/bomberman-boom-fg-trigger.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=2023" },
+          { text: "粉紅 BOMBERMAN 落在第 2、3、4 軸時，把整軸變為 BOMBERMAN 全軸或 2x／3x／5x 乘倍全軸；GOLD BOMB 轉動中落在這三軸則只會變成 2x／3x／5x 乘倍全軸，落在 BOMBERMAN 全軸上時把該軸升級為乘倍全軸。", img: "bomberman-boom/clips/bomberman-boom-fg-boom-1.webm", yt: "https://www.youtube.com/shorts/0ElxDDrIvlk?t=23" },
+          { text: "多個乘倍全軸並存時倍率相乘，每局總乘倍最高 20x。", img: "bomberman-boom/clips/bomberman-boom-fg-boom-2.webm", yt: "https://www.youtube.com/shorts/efa6rL-azGA?t=35" },
+          { text: "免費遊戲中可內部觸發 BOMBER GAME FEATURE 與 JACKPOT FEATURE。", img: "", yt: "" },
+          { text: "免費遊戲另有一種畫面：整軸的字獎符號會被統一換成同一個 M 獎或 WILD（實機觀察，畫面取自換皮版 Bomberman Blast）。", img: "bomberman-boom/clips/bomberman-boom-fg-reel-change.webm", yt: "https://youtu.be/Q1Z-OkRaPWQ?t=1984" }
+        ]
+      },
+      {
+        type: "JACKPOT FEATURE",
+        steps: [
+          { text: "3 顆藍炸彈觸發；出現 18 顆蛋供選，點開揭示 GRAND JACKPOT／MEGA／MAJOR／MINOR／MINI 或 BOMBER GAME，集滿 3 個相同即獲得對應彩金或觸發 BOMBER GAME FEATURE，特色結束。玩家的選擇不影響結果。", img: "bomberman-boom/clips/bomberman-boom-jackpot-egg-pick.webm", yt: "https://youtu.be/QSFSyASXTQs?t=37" },
+          { text: "集滿 3 個相同符號時，最後揭示的那個符號可能改變成其他符號、改以另外 3 個相同符號中獎；符號改變不會讓該次盤面總分變少。在 JACKPOT FEATURE 中觸發 BOMBER GAME FEATURE 不另外派彩。", img: "", yt: "" }
+        ]
+      }
+    ],
+    help: [
+      "bomberman-boom/HELP/bomberman-boom-help-01.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-02.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-03.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-04.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-05.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-06.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-07.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-08.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-09.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-10.jpg",
+      "bomberman-boom/HELP/bomberman-boom-help-11.jpg"
+    ]
   }
 ];
