@@ -991,12 +991,12 @@ var GAMES = [
         steps: [
           { text: "開場 3 場，落分數球或鯉魚即 RESPIN 回 3；觸發的鯉魚先各自啟動所在欄的 Koi Stream，顯示分數後從該軸頂端依序排進去，不佔盤面位置。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-start.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=118" },
           { text: "之後鯉魚落在已啟動的欄，就直接排進該欄的 Koi Stream；落在還沒啟動的欄，則有機會啟動該欄的 Koi Stream。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-into-stream.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=514" },
-          { text: "紫鯉魚（第 1、5 軸）排進來只帶自己的分數進場，不動同一條流裡其他鯉魚的分數；柱身標的 SINGLE COLLECT 就是不乘倍。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-purple-in.webm", yt: "https://youtu.be/ZvQwfwIyNqE?t=32" },
-          { text: "綠鯉魚（第 2、4 軸）排進來時，把同一條流中排在它上方的所有鯉魚分數乘 2；排在它下方的不受影響。柱身標的 DOUBLE COLLECT 就是這個倍率。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-green-x2.webm", yt: "https://youtu.be/ZvQwfwIyNqE?t=87" },
-          { text: "金鯉魚（第 3 軸）排進來時，把同一條流中排在它上方的所有鯉魚分數乘 3；同樣只往上作用。柱身標的 TRIPLE COLLECT 就是這個倍率。", img: "", yt: "" },
-          { text: "SUPER KOI 進的是它落下那一欄的 Koi Stream；同一次 SPIN 中它比其他鯉魚先排進去，位置因此在它們之上，後面綠、金鯉魚的乘倍吃得到。進場後這條流照原規則繼續運作。", img: "", yt: "" },
           { text: "每條 Koi Stream 最多排 3 隻鯉魚：第 4 隻要進來時，最上面那隻先被擠出、分數收進 Koi Stream 上方的收集計量表，接著新進來的鯉魚才對留在流裡的鯉魚做乘倍。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-stream-push-out.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=204" },
-          { text: "場數用完，或盤面所有位置都被分數球填滿即結束；填滿的情況直接派 GRAND（累積彩金），且盤面分數球與 Koi Stream 上的鯉魚分數照樣另外給。", img: "", yt: "" },
+          { text: "紫鯉魚（第 1、5 軸）排進來只帶自己的分數進場，不動同一條流裡其他鯉魚的分數；柱身標的 SINGLE COLLECT 就是不乘倍。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-into-stream.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=514" },
+          { text: "綠鯉魚（第 2、4 軸）排進來時，把同一條流中排在它上方的所有鯉魚分數乘 2；排在它下方的不受影響。柱身標的 DOUBLE COLLECT 就是這個倍率。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-green-x2.webm", yt: "https://youtu.be/ZvQwfwIyNqE?t=32" },
+          { text: "金鯉魚（第 3 軸）排進來時，把同一條流中排在它上方的所有鯉魚分數乘 3；同樣只往上作用。柱身標的 TRIPLE COLLECT 就是這個倍率。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-koi-gold-x3.webm", yt: "https://youtu.be/ZvQwfwIyNqE?t=87" },
+          { text: "SUPER KOI 進的是它落下那一欄的 Koi Stream；同一次 SPIN 中它比其他鯉魚先排進去，位置因此在它們之上，後面綠、金鯉魚的乘倍吃得到。進場後這條流照原規則繼續運作。", img: "", yt: "" },
+          { text: "場次歸 0，或滿盤拉 GRAND（累積彩金），遊戲即結束。", img: "", yt: "" },
           { text: "結束時把盤面所有分數球、各條 Koi Stream 上剩下的鯉魚分數全部加進收集計量表，再一次派發計量表的總額。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-hs-payout.webm", yt: "https://youtu.be/DNo4ktgcyOs?t=284" },
           { text: "分數球上出現 MAJOR，特色結束時即得 MAJOR（累積彩金）。", img: "li-yu-long-men-cash-leap/clips/li-yu-long-men-cash-leap-major-collect.webm", yt: "https://youtu.be/v5a4ipiaoTA?t=1300" }
         ]
