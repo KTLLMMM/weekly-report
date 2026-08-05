@@ -355,7 +355,7 @@ var GAMES = [
         type: "BASE GAME",
         steps: [
           { text: "主盤 5×3、50 線。彩金 GRAND、MAJOR（皆累積彩金）。", img: "crazy-chickens-in-space/screens/cover.jpg", yt: "" },
-          { text: "主盤上方設有 BONUS line；紅／藍／綠雞（星球）累積抵達 BONUS line 即觸發 Crazy Chickens in Space 系列特色。", img: "crazy-chickens-in-space/clips/ccis-base-collect.webm", yt: "https://www.youtube.com/watch?v=_v6zCmhCiUU&t=344s" },
+          { text: "本款意象物為盤面上方的紅／藍／綠三隻雞；紅／藍／綠星球落在主盤時往上打擊對應的雞，Crazy Chickens in Space 系列特色採打擊觸發。", img: "crazy-chickens-in-space/clips/ccis-base-collect.webm", yt: "https://www.youtube.com/watch?v=_v6zCmhCiUU&t=344s" },
           { text: "共 7 種特色組合：Instant Win／Multipliers／Boosters 三種單獨，及其兩兩、三合一組合，依觸發的星球顏色決定。", img: "", yt: "" }
         ]
       },
@@ -363,8 +363,8 @@ var GAMES = [
         type: "FEATURE GAME",
         name: "Crazy Chickens in Space",
         steps: [
-          { text: "初始給 3 次免費 SPIN。依觸發顏色在主盤上方加上加列，由上而下：Boosters（紅）→ Multipliers（藍）→ Instant Win（綠），每種最多 3 列。", img: "crazy-chickens-in-space/clips/ccis-feature-trigger.webm", yt: "https://www.youtube.com/watch?v=_v6zCmhCiUU&t=356s" },
-          { text: "紅／藍／綠星球落在主盤：分別增加對應加列並轉為金幣（held、保留分值）。金幣、GRAND、MAJOR 落在主盤會把剩餘 SPIN 重置回 3。", img: "crazy-chickens-in-space/clips/ccis-planet-add-row.webm", yt: "https://www.youtube.com/watch?v=_v6zCmhCiUU&t=116s" },
+          { text: "初始給 3 次免費 SPIN。依觸發顏色在主盤上方加上加列，由上而下：Boosters（紅）→ Multipliers（藍）→ Instant Win（綠），每種最多 3 列。", img: "crazy-chickens-in-space/clips/ccis-feature-rows.webm", yt: "https://www.youtube.com/watch?v=2EdyMPcfUtw&t=48s" },
+          { text: "紅／藍／綠星球落在主盤：分別增加對應加列並轉為金幣（held、保留分值）。金幣、GRAND、MAJOR 落在主盤會把剩餘 SPIN 重置回 3。", img: "crazy-chickens-in-space/clips/ccis-planet-add-row.webm", yt: "https://www.youtube.com/watch?v=2EdyMPcfUtw&t=23s" },
           { text: "Boosters（紅列）：BOOSTERS 符號揭示隨機獎[[50～1000 credits × bet]]，派給同一直行所有 held 金幣。", img: "crazy-chickens-in-space/clips/ccis-boosters.webm", yt: "https://www.youtube.com/watch?v=_v6zCmhCiUU&t=414s" },
           { text: "Multipliers（藍列）：X2 使同一直行 held 金幣分值 ×2（每列最多 4 次）；X3 ×3（每列最多 1 次）。", img: "crazy-chickens-in-space/clips/ccis-multipliers.webm", yt: "https://www.youtube.com/watch?v=_v6zCmhCiUU&t=45s" },
           { text: "Instant Win（綠列）：INSTANT WIN 收同一直行所有 held 金幣；WIN ALL 收全盤所有 held 金幣（每次 SPIN 限一軸出現）。", img: "crazy-chickens-in-space/clips/ccis-instant-win.webm", yt: "https://www.youtube.com/watch?v=_v6zCmhCiUU&t=895s" },
@@ -575,48 +575,47 @@ var GAMES = [
     year: "2026",
     name: "Triple Flip Empress",
     img: "triple-flip-empress/cover.jpg",
-    tags: ["243 Ways", "H&S", "三色能力", "組合特色", "Dragon Feature", "5支彩金"],
+    tags: ["243 Ways", "H&S", "三色能力", "復合特色", "Dragon Feature", "5支彩金"],
     desc: "Aristocrat 新機（實機拍攝地 Atlantis Reno）：243 ways；藍/紅/綠三色分數球各帶一種能力（加分／開紅包／乘倍），7 種特色共用同一套 H&S 框架，差別只在場上開了哪幾色能力；特色結算時分數球夠多再加開 Game in Game 的 Dragon Feature。規格取自機台 HELP；封面待補（無官方公開素材可查）。",
     symbols: [
-      { name: "WILD（鞭炮）", role: "只出現在第 2、3、4 軸；替代除六色 Coin 外的所有符號。", img: "triple-flip-empress/symbols/wild.png" },
-      { name: "Happy Coin（藍）", role: "藍色分數球，能力＝加分；觸發／參與 HAPPY 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/happy-coin.png" },
-      { name: "Lucky Coin（紅）", role: "紅色分數球，能力＝開紅包；觸發／參與 LUCKY 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/lucky-coin.png" },
-      { name: "Fortune Coin（綠）", role: "綠色分數球，能力＝乘倍；觸發／參與 FORTUNE 系列特色。同色兩款合計最多出現 5 顆。", img: "triple-flip-empress/symbols/fortune-coin.png" },
-      { name: "Dragon Coin（金）", role: "僅出現於 DRAGON FEATURE；落下計入 DRAGON PRIZE 計量表，達 8 個可能轉出 MAJOR（累積彩金）。", img: "" }
+      { name: "WILD（鞭炮）", role: "只出現在第 2、3、4 軸；替代除分數球外的所有標誌。", img: "triple-flip-empress/symbols/wild.png" },
+      { name: "Happy Coin（藍）", role: "藍色分數球，帶的能力是加分；在 BG 出現即打擊觸發 HAPPY 系列特色。球上直接顯示分數或固定彩金。每色各有兩款，能力相同，差別是其中一款外圈帶龍——機台上方 DRAGON COINS 計的就是它，集滿 6 個進 Dragon Feature。一場特色內同色兩款合計最多 5 顆。", img: "triple-flip-empress/symbols/happy-coin.png" },
+      { name: "Lucky Coin（紅）", role: "紅色分數球，帶的能力是開紅包；在 BG 出現即打擊觸發 LUCKY 系列特色。", img: "triple-flip-empress/symbols/lucky-coin.png" },
+      { name: "Fortune Coin（綠）", role: "綠色分數球，帶的能力是乘倍；在 BG 出現即打擊觸發 FORTUNE 系列特色。", img: "triple-flip-empress/symbols/fortune-coin.png" },
+      { name: "龍幣（金）", role: "只出現在 Dragon Feature；落下即鎖定並派發一次 DRAGON PRIZE 計量表的獎額。", img: "" }
     ],
     play: [
       {
         type: "BASE GAME",
         steps: [
           { text: "5 軸、243 ways 玩法；WILD 只出現在第 2、3、4 軸。[[最低投注 88 credits，BET ×1／×2／×3／×6／×10]]", img: "triple-flip-empress/clips/triple-flip-empress-base-game.jpg", yt: "https://youtu.be/yDqWA0d7SfE?t=38" },
-          { text: "轉出分數球即打擊觸發，判定是否觸發該色特色：藍＝HAPPY（加分）、紅＝LUCKY（開紅包）、綠＝FORTUNE（乘倍）；球上顯示分數或固定彩金。[[分數依投注檔 38～888 至 398～10888；MINI＝1088、MINOR＝2888、MAXI＝10880，固定彩金不吃 bet multiplier]]", img: "triple-flip-empress/clips/triple-flip-empress-coin-hit-trigger.webm", yt: "https://youtu.be/yDqWA0d7SfE?t=46" },
-          { text: "共 5 支彩金：GRAND／MAJOR（累積彩金）、MINI／MINOR／MAXI（固定彩金）。", img: "triple-flip-empress/clips/triple-flip-empress-jackpots.jpg", yt: "https://youtu.be/KBojhjCD5Ac?t=8" }
+          { text: "盤面出現分數球即打擊觸發，看是否觸發該色特色，可復合觸發。[[分數依投注檔 38～888 至 398～10888；MINI＝1088、MINOR＝2888、MAXI＝10880，球上的固定彩金不吃 bet multiplier]]", img: "triple-flip-empress/clips/triple-flip-empress-coin-hit-trigger.webm", yt: "https://youtu.be/yDqWA0d7SfE?t=46" },
+          { text: "共 5 支彩金：GRAND／MAJOR（累積彩金，只在特色裡拿得到）、MINI／MINOR／MAXI（固定彩金，直接顯示在分數球上）。", img: "triple-flip-empress/clips/triple-flip-empress-jackpots.jpg", yt: "https://youtu.be/KBojhjCD5Ac?t=8" }
         ]
       },
       {
-        type: "FEATURE GAME",
+        type: "HOLD & SPIN",
         steps: [
-          { text: "Hold & Spin 玩法，倒數 3 場；分數球一定帶有特色顏色。", img: "triple-flip-empress/clips/triple-flip-empress-feature-hold-spin.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1349" },
-          { text: "HAPPY（藍）＝加分：上螢幕有一排加分層，亮著的那層就是這次要加的分數。剛進特色、還沒開始轉之前，觸發畫面上的藍球先結算，把當前這層的分數加上去；這層用完就變暗，下一次從上一層開始。[[層 1～5＝+100／+200／+350／+500／+1000 × bet multiplier；影片為 BETx10，畫面顯示 +1000～+10000]]", img: "triple-flip-empress/clips/triple-flip-empress-happy-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1301" },
-          { text: "特色進行中每轉出一顆藍球，就用掉當前這層、下一次再往上推一層。當前層的分數一定會加到剛轉出的那顆藍球上，場上其他球（含紅、綠）也可能跟著加同一層分數。同一顆藍球最多被加 3 次，紅、綠球各最多 2 次。", img: "triple-flip-empress/clips/triple-flip-empress-happy-boost.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1338" },
-          { text: "LUCKY（紅）＝開紅包：上螢幕中間那排是紅包，由下往上分別裝 1、2、3、4、5 個獎。剛進特色、還沒開始轉之前，觸發畫面上的紅球先開當前這個紅包，裡面有幾個就給幾個獎；開完就變暗，下一次從上一個紅包開始。", img: "triple-flip-empress/clips/triple-flip-empress-lucky-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1696" },
-          { text: "特色進行中每轉出一顆紅球，就開掉當前這個紅包、下一次再往上推一個，越後面開到的紅包裝的獎越多。紅包裡開出的可能是：JACKPOT BOOST（把這回合的 MINI／MINOR／MAXI 墊高，特色結束回復）、JACKPOT COIN（直接給 MINI／MINOR／MAXI × bet multiplier）、DRAGON（指定一格，該格的球轉成同色另一款）、各色分數球（往空格補一顆；補到紅球時會再開掉下一個紅包）、EXTRA SPIN（把「重置場數」加 1，之後每次重置都多一場）；同一個紅包裡可能開出重複的獎。[[JACKPOT BOOST 每次 MINI +100–300、MINOR +400–600、MAXI +1000–2000]]", img: "triple-flip-empress/clips/triple-flip-empress-lucky-envelope.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1765" },
-          { text: "FORTUNE（綠）＝乘倍：上螢幕右邊那排是乘倍層，由下往上是 ×2、×3、×4、×5、×10。剛進特色、還沒開始轉之前，觸發畫面上的綠球先用掉當前這層，在球底下掛一個倍率標記（球上的分數不變，結算時才乘）；這層用完就變暗，下一次從上一層開始。", img: "triple-flip-empress/clips/triple-flip-empress-fortune-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=491" },
-          { text: "特色進行中每轉出一顆綠球，就用掉當前這層、下一次再往上推一層。倍率一定會掛到剛轉出的那顆綠球上，場上其他球（含藍、紅）也可能跟著掛同一層的倍率。同一顆綠球最多疊 3 次，藍、紅球各最多 2 次；同一顆球疊到多個倍率是相加、不是相乘——吃到 ×2 再吃 ×3 等於 ×5。", img: "triple-flip-empress/clips/triple-flip-empress-fortune-multiply.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=575" },
-          { text: "雙色、三色的組合特色只是同一場開了多種能力，玩法與單色特色完全相同；同一次 SPIN 內依序結算：先紅（開紅包）→ 再藍（加分）→ 最後綠（乘倍）。", img: "", yt: "" },
-          { text: "特色中落下尚未參與的顏色即內部觸發、就地升級為對應組合（例：FORTUNE 中落紅球 → 升級 LUCKY FORTUNE）；HAPPY LUCKY FORTUNE 已是最高組合，之後只會再開 Dragon Feature。", img: "", yt: "" },
-          { text: "SPIN 用完或中 GRAND 即結束，結束時一次派發場上所有分數球顯示的獎；特色期間不計連線派彩。特色中累計收集 14 顆分數球後，第 15 格有機會轉出 GRAND（累積彩金，每次特色最多一次）。", img: "", yt: "" },
-          { text: "結束結算時場上分數球達 6 顆以上，即固定觸發 Dragon Feature（見下）。", img: "", yt: "" }
+          { text: "進場時觸發畫面上的分數球留在原位，其餘每一格各自變成一軌獨立轉動。初始 3 次 SPIN，之後每落下一顆新的分數球就鎖住不動、SPIN 重置回 3。", img: "triple-flip-empress/clips/triple-flip-empress-feature-hold-spin.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1349" },
+          { text: "能力怎麼給：上螢幕每色各掛一排 5 層的階梯，由下往上越來越好，亮著的那層就是現在要用的。每落一顆該色球就用掉當前這層、往上推一層，用掉的變暗。剛進特色、還沒開始轉之前，觸發畫面上帶進來的球先用掉最下面那層。", img: "triple-flip-empress/clips/triple-flip-empress-tiers.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1846" },
+          { text: "藍色＝加分。階梯 5 層是一路變大的分數，用到哪層就加多少。[[層 1～5＝+100／+200／+350／+500／+1000 × bet multiplier；影片為 BETx10，畫面顯示 +1000～+10000]]", img: "triple-flip-empress/clips/triple-flip-empress-happy-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1301" },
+          { text: "這層的分數一定加在剛落下的那顆藍球上，場上其他球（含紅、綠）也可能跟著加同一層。同一顆藍球最多被加 3 次，紅、綠球各最多 2 次。", img: "triple-flip-empress/clips/triple-flip-empress-happy-boost.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1338" },
+          { text: "紅色＝開紅包。階梯 5 層是 5 個紅包，由下往上分別裝 1、2、3、4、5 個獎，越後面開到的獎越多；同一個紅包裡可能開出重複的獎。", img: "triple-flip-empress/clips/triple-flip-empress-lucky-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1696" },
+          { text: "紅包裡會開出五種東西：JACKPOT BOOST（把這場的 MINI／MINOR／MAXI 墊高，特色結束就回復）、JACKPOT COIN（直接給 MINI／MINOR／MAXI × bet multiplier）、DRAGON（指定一格，把該格的球換成同色「有龍」的那款，等於替 Dragon Feature 的門檻進一顆）、分數球（往空格補一顆；補到紅球會再開掉下一個紅包）、EXTRA SPIN（把重置的基準從 3 次往上加 1，之後每次重置都多一次 SPIN）。[[JACKPOT BOOST 每次 MINI +100–300、MINOR +400–600、MAXI +1000–2000]]", img: "triple-flip-empress/clips/triple-flip-empress-lucky-envelope.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1765" },
+          { text: "綠色＝乘倍。階梯 5 層是一路變大的倍率，用到哪層就掛哪個倍率；倍率掛在球底下，球上的分數不變，等結算時才乘。[[層 1～5＝×2／×3／×4／×5／×10]]", img: "triple-flip-empress/clips/triple-flip-empress-fortune-start.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=491" },
+          { text: "倍率一定掛在剛落下的那顆綠球上，場上其他球（含藍、紅）也可能跟著掛同一層。同一顆綠球最多疊 3 次，藍、紅球各最多 2 次；同一顆球疊到多個倍率是相加不是相乘——吃到 ×2 再吃 ×3 等於 ×5。", img: "triple-flip-empress/clips/triple-flip-empress-fortune-multiply.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=575" },
+          { text: "復合特色就是同一場同時開了兩、三種能力，玩法不變；同一次 SPIN 內的結算順序固定是紅（開紅包）→ 藍（加分）→ 綠（乘倍）。", img: "", yt: "" },
+          { text: "特色中落下這場還沒開過的顏色，有機會內部觸發、就地升級成對應的復合特色（例：FORTUNE 中落紅球 → 升級 LUCKY FORTUNE）。HAPPY LUCKY FORTUNE 是最高的復合特色，裡面只會再開 Dragon Feature。", img: "triple-flip-empress/clips/triple-flip-empress-internal-trigger.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1723" },
+          { text: "SPIN 用完或中 GRAND 就結束，結束時一次派發場上所有分數球的獎；特色期間不計連線派彩。同一場累計收滿 14 顆分數球後，第 15 格有機會轉出 GRAND（累積彩金，每場特色最多一次）。", img: "triple-flip-empress/clips/triple-flip-empress-feature-payout.webm", yt: "https://youtu.be/KBojhjCD5Ac?t=1911" },
         ]
       },
       {
         type: "GAME IN GAME",
         name: "Dragon Feature",
         steps: [
-          { text: "任一特色結束結算時分數球達 6 顆以上觸發；轉場到獨立 3×3 盤面，原特色場上所有分數球的分值加總灌入 DRAGON PRIZE 計量表，初始 3 次 SPIN。", img: "", yt: "" },
-          { text: "金色 Dragon Coin 落下即鎖定並重置剩餘 SPIN 為 3；每顆 Dragon Coin 各派發一次計量表的獎額——收越多顆，同一筆獎額領越多次。", img: "", yt: "" },
-          { text: "累計 8 顆 Dragon Coin 後，第 9 格有機會轉出 MAJOR（累積彩金，每次 Dragon Feature 最多一次）。", img: "", yt: "" },
-          { text: "SPIN 用完或中 MAJOR 即結束，轉回原本觸發的特色繼續；Dragon Feature 中不會再內部觸發其他特色。", img: "", yt: "" }
+          { text: "任一特色結束結算時有 6 個以上「有龍的分數球」就觸發，轉場到獨立的 3×3 盤面。那幾顆的分值加總，變成 DRAGON PRIZE 計量表的獎額，初始 3 次 SPIN。", img: "triple-flip-empress/clips/triple-flip-empress-dragon-trigger.webm", yt: "https://www.youtube.com/shorts/vyY2U-J9M6Y" },
+          { text: "這裡只收金色龍幣，落下即鎖定、SPIN 重置回 3；盤面 9 格收滿 8 顆龍幣後，最後一格有機會轉出 MAJOR（累積彩金）。[[第 9 格給 MAJOR 為機台畫面標示 9TH AWARDS MAJOR，HELP 未載明]]", img: "triple-flip-empress/clips/triple-flip-empress-dragon-collect.webm", yt: "https://www.youtube.com/shorts/vyY2U-J9M6Y" },
+          { text: "SPIN 用完或中 MAJOR 就結束，收到的每一顆龍幣各派發一次計量表的獎額——收越多顆，同一筆獎額就領越多次，領完轉回原本觸發的特色收尾；Dragon Feature 裡不會再觸發其他特色。", img: "triple-flip-empress/clips/triple-flip-empress-dragon-payout.webm", yt: "https://www.youtube.com/shorts/vyY2U-J9M6Y" }
         ]
       }
     ],

@@ -30,7 +30,8 @@
 ## 08–11 COIN SYMBOLS
 - 六種 Coin：藍×2 款（Happy）、紅×2 款（Lucky）、綠×2 款（Fortune）；同色兩款合計最多出現 5 個，特色中全部 Coin 最多累計 14 個。
 - 上述任一 Coin 都可能帶分數獎（一般 credits，或 **MINI／MINOR／MAXI** 固定彩金）。
-- **HAPPY 系列特色**：Coin 落下時對應「boost tier」（上方 Coin 字串顯示目前 tier），該 Coin 必定被 boost；場上其他 Coin 也可能同步 boost（藍系 Coin 最多各 boost 3 次，紅/綠系最多各 2 次）。
+- **HAPPY 系列特色**：藍 Coin **落下時、或特色開始時已在盤面上**（at the commencement of a feature），一律對應盤面上方 Coin 字串的**當前 boost tier**，且**必定**派發（will be awarded，非機率）；該 tier 派發後，上方對應的 Coin 圖示**變暗（dims）**，下一顆藍 Coin 落下時當前 tier 即推進到下一階（Tier 1→5 遞增，五階全暗後 HELP 未說明）。
+- 觸發該 tier 的藍 Coin **必定被 boost**（always）；場上其他 Coin **可能**同步 boost 同一 tier（may，**HELP 未載明一次會加幾顆**）。每顆藍系 Coin 最多被 boost 3 次，每顆紅/綠系最多 2 次。
 - **FORTUNE 系列特色**：同機制但改為「multiplier tier」乘倍（綠系 Coin 最多各乘 3 次，藍/紅系最多各 2 次；額外倍率為加法疊加 additively）。
 - **LUCKY 系列特色**：紅 Coin 落下對應「紅包 tier」，開出對應紅包；紅包上的數字＝內含獎項數。
 
@@ -43,9 +44,9 @@
 ## 16–19 LUCKY FEATURE（紅包特色，範本，其餘特色機制相同只換觸發色）
 - 觸發畫面上的藍/紅/綠 Coin 原地鎖定，其餘位置轉為獨立轉輪；初始 3 次免費 SPIN。
 - 場上再出現任一色 Coin（六款皆算）：一併鎖定、剩餘 SPIN 重置為「3 ＋ 已派發的 EXTRA SPIN 數」。
-- 紅 Coin 落下開對應「紅包 tier」；紅包 Tier 1～5 對應派 1～5 個獎項；獎項可能是：**JACKPOT BOOST**（本回合內 MINI/MINOR/MAXI 額度提升：MINI +100–300、MINOR +400–600、MAXI +1000–2000 credits）、**JACKPOT COIN**（派 MINI/MINOR/MAXI 且乘上 bet multiplier）、**DRAGON**（見下）、或各色 Coin／EXTRA SPIN（各自加派 Coin 或加 SPIN，同色紅包再開一次可重複派發同類獎項）。
-- **DRAGON 獎**：指派到空格上會留一個記號，之後落在該格的藍/紅/綠 Coin 會轉為同色另一款 Coin；指派到既有 Coin 上則直接轉為同色另一款（兩款差異 HELP 未說明）。
-- 特色結束條件：SPIN 用完，或中 GRAND JACKPOT。結束時若場上藍/紅/綠 Coin 達 6 個以上 → 觸發 **DRAGON FEATURE**（見下）。
+- 紅 Coin 落下開對應「紅包 tier」；紅包 Tier 1～5 對應派 1～5 個獎項；獎項可能是：**JACKPOT BOOST**（本回合內 MINI/MINOR/MAXI 額度提升：MINI +100–300、MINOR +400–600、MAXI +1000–2000 credits）、**JACKPOT COIN**（派 MINI/MINOR/MAXI 且乘上 bet multiplier）、**DRAGON**（見下）、或各色 Coin（往盤面隨機空格補一顆；**補紅 Coin 者會再開一次對應的紅包 tier**）／**EXTRA SPIN**（"Increments the FREE SPINS reset by 1."＝把重置基準 +1，之後每次重置為「3＋累計 EXTRA SPIN 數」，不是當下多轉一場）。同一個紅包內同類獎項可重複派發。
+- **DRAGON 獎**：指派到空格上會留一個記號，之後落在該格的藍/紅/綠 Coin 會轉為同色另一款 Coin；指派到既有 Coin 上則直接轉為同色另一款。**兩款差異＝是否計入 DRAGON FEATURE 門檻**：p02／p19／p39 等 DRAGON 相關條文的 Coin 圖示一律是「外圈帶龍」的那一款（機台上方計數器即 DRAGON COINS COLLECTED），另一款不計。故 DRAGON 獎的作用等於替門檻進一顆。
+- 特色結束條件：SPIN 用完，或中 GRAND JACKPOT。結束時若場上「帶龍款」Coin 達 6 個以上 → 觸發 **DRAGON FEATURE**（見下）。
 - 結束時派發場上所有 Coin 顯示的獎；派彩表（paytable）連線不計分；投注倍率沿用觸發時的倍率；特色中盤面仍是特色專用轉輪。
 - 特色進行中可再內部觸發其他組合特色（見上）。
 
@@ -54,7 +55,7 @@
 - 乘倍套用：觸發的綠 Coin 必乘該 tier；其他 Coin 依同 tier 可疊加乘（綠系最多疊乘 3 次，藍/紅系各最多疊乘 2 次），倍率為加法疊加（additively）。
 - 結束條件、DRAGON 觸發、派彩規則同 LUCKY FEATURE。
 
-## 23–25 HAPPY FEATURE（加值特色）
+## 23–25 HAPPY FEATURE（加分特色）
 - 機制同上，改為藍 Coin 觸發「boost tier」：Tier 1～5 對應 +100／+200／+350／+500／+1000（× bet multiplier）。
 - Boost 套用範圍與疊加上限同 COIN SYMBOLS 所述（藍系最多各 3 次、紅/綠系最多各 2 次）。
 
@@ -62,23 +63,23 @@
 - 觸發、鎖定、3 SPIN 機制同上；同一次 SPIN 內**先**由紅 Coin 照 LUCKY FEATURE 開紅包，**再**由綠 Coin 照 FORTUNE FEATURE 乘倍。
 - 結束/DRAGON/派彩規則同前；本特色中途只能再觸發 HAPPY LUCKY FORTUNE FEATURE（見下）。
 
-## 29–31 HAPPY LUCKY FEATURE（雙特色合體：紅開紅包＋藍加值）
-- 同一次 SPIN 內先由紅 Coin 照 LUCKY FEATURE 開紅包，再由藍 Coin 照 HAPPY FEATURE 加值；紅包 tier 與 boost tier 分別沿用 LUCKY／HAPPY FEATURE。
+## 29–31 HAPPY LUCKY FEATURE（雙特色合體：紅開紅包＋藍加分）
+- 同一次 SPIN 內先由紅 Coin 照 LUCKY FEATURE 開紅包，再由藍 Coin 照 HAPPY FEATURE 加分；紅包 tier 與 boost tier 分別沿用 LUCKY／HAPPY FEATURE。
 - 結束/DRAGON/派彩規則同前；本特色中途只能再觸發 HAPPY LUCKY FORTUNE FEATURE。
 
-## 32–34 HAPPY FORTUNE FEATURE（雙特色合體：藍加值＋綠乘倍）
-- 同一次 SPIN 內先由藍 Coin 照 HAPPY FEATURE 加值，再由綠 Coin 照 FORTUNE FEATURE 乘倍；boost tier 與 multiplier tier 分別沿用 HAPPY／FORTUNE FEATURE。
+## 32–34 HAPPY FORTUNE FEATURE（雙特色合體：藍加分＋綠乘倍）
+- 同一次 SPIN 內先由藍 Coin 照 HAPPY FEATURE 加分，再由綠 Coin 照 FORTUNE FEATURE 乘倍；boost tier 與 multiplier tier 分別沿用 HAPPY／FORTUNE FEATURE。
 - `34` 頁只寫到「SPIN 用完或中 GRAND JACKPOT 即結束」。**結尾頁缺圖**（DRAGON 門檻／派彩／可再觸發 HAPPY LUCKY FORTUNE），內容比照同構的 25／28／31／38 頁。
 
-## 35–38 HAPPY LUCKY FORTUNE FEATURE（三特色合體：紅開紅包→藍加值→綠乘倍）
-- 三色 Coin 依序各自照本身特色規則結算（紅開紅包 → 藍加值 → 綠乘倍）；初始 3 SPIN，鎖定與重置規則同上。
+## 35–38 HAPPY LUCKY FORTUNE FEATURE（三特色合體：紅開紅包→藍加分→綠乘倍）
+- 三色 Coin 依序各自照本身特色規則結算（紅開紅包 → 藍加分 → 綠乘倍）；初始 3 SPIN，鎖定與重置規則同上。
 - `36` 與 `37` 之間**缺一頁**（During 藍/綠 Coin 與各 tier 沿用說明），內容比照同構的 27／30／33 頁。
 - **特色中途只能再觸發 DRAGON FEATURE**，不會再疊加觸發其他組合（已是最高組合）。
 - 結束/派彩規則同前。
 
 ## 39–40 DRAGON FEATURE
-- 3×3 獨立盤面；由 HAPPY／LUCKY／FORTUNE／HAPPY LUCKY／HAPPY FORTUNE／LUCKY FORTUNE／HAPPY LUCKY FORTUNE 任一特色結束時，場上藍/紅/綠 Coin 達 6 個以上觸發。
-- 觸發時，該特色場上所有 Coin 分數加總計入 **DRAGON PRIZE 計量表**；轉場後初始 3 次 SPIN。
+- 3×3 獨立盤面；由 HAPPY／LUCKY／FORTUNE／HAPPY LUCKY／HAPPY FORTUNE／LUCKY FORTUNE／HAPPY LUCKY FORTUNE 任一特色結束時，場上**帶龍款**藍/紅/綠 Coin 達 6 個以上觸發（p39 圖示為帶龍款；實機上方顯示 DRAGON COINS COLLECTED N）。
+- 觸發時，該特色場上**帶龍款** Coin 的分數加總計入 **DRAGON PRIZE 計量表**（p39 "Each value on all [帶龍款] is tallied up"）；轉場後初始 3 次 SPIN。
 - 落下金色 Dragon Coin：鎖定、剩餘 SPIN 重置為 3；計量表上方計數器依落下數累加。
 - 結束條件：SPIN 用完，或中 MAJOR JACKPOT。結束後畫面轉回原本觸發特色繼續。
 - 派彩表不計分；投注倍率沿用觸發特色的倍率；特色中不會再觸發其他特色。
@@ -93,6 +94,7 @@
 - 於 **DRAGON FEATURE** 中，累計 8 個金色 Dragon Coin，MAJOR 可能在第 9 格轉出；轉出即中 MAJOR。
 - MAJOR 為累積彩金，隨幣值變動；重置基準值 50,000 credits；每次 DRAGON FEATURE 最多中一次；不受 bet multiplier 加成，投注額越高機率等比例提升。
 - 佐證程度：`39` 頁確有「中 MAJOR JACKPOT 則 DRAGON FEATURE 結束」與「計量表上方計數器」兩項，與上述 8→9 格機制相容；且結構與 `41` GRAND 頁的 14→15 格完全同構。
+- 另一項旁證（實機觀察，非 HELP）：影片 KBojhjCD5Ac t=8s 的機台上方屏顯示 MAJOR $524.16（1¢ 幣值＝52,416 credits），高於上述 50,000 credits 重置基準值一點點，與「基準 50,000 起跳累積」相符；同屏 MAXI $108.80／MINOR $28.88／MINI $10.88 換算 10880／2888／1088 credits，與 `12–15` 頁固定彩金數值完全吻合。
 
 ## 42–43 PAYTABLE
 - WILD（紫金鞭炮）：替代除六色 Coin 外的所有符號；**只出現在第 2、3、4 軸**。
