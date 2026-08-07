@@ -1094,5 +1094,109 @@ var GAMES = [
       "bomberman-boom/HELP/bomberman-boom-help-10.jpg",
       "bomberman-boom/HELP/bomberman-boom-help-11.jpg"
     ]
+  },
+  {
+    id: "ultimate-quick-hit-fire-link",
+    hidden: true,
+    vendor: "Light & Wonder",
+    year: "2026",
+    name: "Ultimate Quick Hit Fire Link",
+    img: "ultimate-quick-hit-fire-link/cover.png",
+    tags: ["5×3", "H&S", "收集", "多重彩金", "打擊觸發", "Cash on Reel"],
+    desc: "Light & Wonder 2026 新機，把 Quick Hit 與 Ultimate Fire Link 兩個系列合成一款：兩邊共用同一個 Quick Hit 標誌當觸發來源——盤面的 Quick Hit 數量決定 Quick Hit 彩金段位，同一批 Quick Hit 也可能觸發 Ultimate Fire Link 特色。招牌新機制是 Quick Hit Cascade，中獎時一次拿走該段位以下的所有彩金段。Fire Link 特色改在 8 排 × 5 軸盤面進行，上方排一開始鎖定、收集火球逐排解鎖，越上面的排分數量級越大。有 China（亞洲主題）與 Las Vegas 兩個版本，官方標明數學模型相同、僅美術不同。規格取自機台 HELP（本次收錄 5 頁：PAYS、QUICK HIT FEATURE、QUICK HIT CASCADE ×2、ULTIMATE FIRE LINK FEATURE）。",
+    symbols: [
+      { name: "Quick Hit（帶分數）", role: "SC，不連線。命中即得所顯示的分數，同時計入 Quick Hit 收集數。", img: "ultimate-quick-hit-fire-link/symbols/quick-hit-value.png" },
+      { name: "Quick Hit（藍）", role: "SC，不連線。計入 Quick Hit 收集數。", img: "ultimate-quick-hit-fire-link/symbols/quick-hit-blue.png" },
+      { name: "Quick Hit（紅）", role: "SC，不連線。計入 Quick Hit 收集數；單次 SPIN 最多落 5 個位置。", img: "ultimate-quick-hit-fire-link/symbols/quick-hit-red.png" },
+      { name: "Quick Hit CASCADE", role: "SC，金色。與 2 個以上 Quick Hit 同時出現時改走 Quick Hit Cascade，一次拿走該段位以下所有彩金段。單次 SPIN 最多落 1 個位置，本身也計入收集數。", img: "ultimate-quick-hit-fire-link/symbols/quick-hit-cascade.png" },
+      { name: "WILD", role: "取代 Quick Hit 系列以外的所有標誌（777、77、7、B5R、BAR、撲克牌、骰子）。", img: "ultimate-quick-hit-fire-link/symbols/wild.png" },
+      { name: "火球", role: "只在 Ultimate Fire Link 特色出現，帶分數；分數量級依所在排數遞增。", img: "" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        name: "QUICK HIT FEATURE",
+        steps: [
+          { text: "5 軸 3 列。每次 SPIN 依盤面 Quick Hit 的總數給獎，帶分數的 Quick Hit 另外加給其面額。", img: "", yt: "" },
+          { text: "3 個給[[50x bet multiplier]]、4 個給[[100x bet multiplier]]；5 個以上改拿對應段位的 Quick Hit 彩金，12 個以上拿最高段。", img: "", yt: "" },
+          { text: "Quick Hit 彩金共 8 段（5、6、7、8、9、10、11、12+），畫面上方以鎖頭階梯呈現，各段標示還需幾個 Quick Hit 解鎖。彩金屬累積或固定待確認——HELP 未載明，實機觀察為 5～9 段隨投注等比縮放、10 段以上不等比。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "BASE GAME",
+        name: "QUICK HIT CASCADE",
+        steps: [
+          { text: "盤面出現 Quick Hit CASCADE 且 Quick Hit 總數達 3 個以上時改走這套，差別是一次拿多段彩金：中了某段位，就把該段位以下的所有段位一起拿走。", img: "", yt: "" },
+          { text: "例：總數 8 個時同時拿 5、6、7、8 四段；12 個以上則全部段位一次拿完。總數只有 3～4 個時仍回到[[50x／100x bet multiplier]]。", img: "", yt: "" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "ULTIMATE FIRE LINK FEATURE",
+        steps: [
+          { text: "BASE GAME 盤面 1～3 個 Quick Hit 為打擊觸發、4～5 個為固定觸發，兩者都給 3 次 SPIN。", img: "", yt: "" },
+          { text: "盤面換成 8 排 × 5 軸，下方 5 排可用、上方 3 排鎖定。以 1～4 個 Quick Hit 觸發時，開場會在可用排上隨機先放 4 個火球或 Quick Hit。", img: "", yt: "" },
+          { text: "每個鎖定排標示還需幾個火球或 Quick Hit 才解鎖，收集足量即往上開放（實機觀察，HELP 對應頁未拍到）。", img: "", yt: "" },
+          { text: "火球分數依所在排數分級，越上面的排量級越大：第 1～4 排[[25–500x bet multiplier]]、第 5 排[[25–1000x]]、第 6 排[[150–2000x]]、第 7 排[[150–5000x]]、第 8 排[[400–5000x]]。", img: "", yt: "" }
+        ]
+      }
+    ],
+    help: [
+      "ultimate-quick-hit-fire-link/HELP/ultimate-quick-hit-fire-link-help-01.jpg",
+      "ultimate-quick-hit-fire-link/HELP/ultimate-quick-hit-fire-link-help-02.jpg",
+      "ultimate-quick-hit-fire-link/HELP/ultimate-quick-hit-fire-link-help-03.jpg",
+      "ultimate-quick-hit-fire-link/HELP/ultimate-quick-hit-fire-link-help-04.jpg",
+      "ultimate-quick-hit-fire-link/HELP/ultimate-quick-hit-fire-link-help-05.jpg"
+    ]
+  },
+  {
+    id: "train-storm",
+    hidden: true,
+    vendor: "AGS",
+    year: "2026",
+    name: "Train Storm",
+    img: "train-storm/keyart.jpg",
+    tags: ["3×5", "H&S", "FreeGame", "收集", "獎項升階", "打擊觸發", "累積彩金"],
+    desc: "AGS 直立機台的中國風主題（主題名 Dynasty Fortunes）。兩大特色：3 個以上 SCATTER 觸發免費遊戲；BALL 6 顆固定觸發、1～5 顆打擊觸發 TRAIN STORM BONUS。彩金共 4 支：GRAND、MAJOR（累積彩金）與 MINOR、MINI（固定彩金，金額隨面額變動），可在 TRAIN STORM BONUS 以格內獎項直接開出。四支來源影片均未翻到機台 HELP，玩法敘述取自機台內建規則畫面與實機觀察；線數、彩金取得條件、各階獎項倍率待確認。",
+    symbols: [
+      { name: "SCATTER", role: "3 個以上觸發免費遊戲。", img: "train-storm/symbols/scatter.png" },
+      { name: "MYSTERY", role: "免費遊戲中出現，揭露後成為 M獎、BALL 或 WILD；出現兩個時另外獲得 2 次免費遊戲。", img: "train-storm/symbols/mystery.png" },
+      { name: "WILD", role: "百搭符號，可整軸堆疊出現。替代範圍待確認。", img: "train-storm/symbols/wild.png" },
+      { name: "BALL", role: "TRAIN STORM BONUS 的觸發符號，6 顆固定觸發、1～5 顆打擊觸發；進入特色後為帶分數的獎項球，分藍、綠、紫、黃四階。", img: "train-storm/symbols/ball.png" },
+      { name: "TRAIN BALL", role: "TRAIN STORM BONUS 的觸發符號之一；在特色中出現時，畫面上所有 BALL 與狀態框各升一階、空白位置新增狀態框。揭露時必定為彩金 BALL 或乘倍彩金 BALL。", img: "train-storm/symbols/train-ball.png" }
+    ],
+    play: [
+      {
+        type: "BASE GAME",
+        steps: [
+          { text: "3×5 盤面。", img: "train-storm/screens/machine-base-game.jpg", yt: "https://youtu.be/rgptx7n7J5A?t=40" },
+          { text: "彩金 GRAND、MAJOR（累積彩金）與 MINOR、MINI（固定彩金）共 4 支，固定彩金金額隨面額變動；GRAND、MAJOR 的取得條件待確認。", img: "train-storm/screens/machine-jackpots.jpg", yt: "https://youtu.be/rgptx7n7J5A?t=8" }
+        ]
+      },
+      {
+        type: "FREE GAME",
+        steps: [
+          { text: "3 個以上 SCATTER 觸發免費遊戲。", img: "train-storm/clips/train-storm-fg-trigger.webm", yt: "https://youtu.be/rgptx7n7J5A?t=57" },
+          { text: "出現兩個 MYSTERY 獲得 2 次免費遊戲。", img: "train-storm/clips/train-storm-fg-mystery-extra-spins.webm", yt: "https://youtu.be/PyXfpkvGL1Q?t=107" },
+          { text: "MYSTERY 揭露後可能成為 M獎、BALL 或 WILD。", img: "train-storm/clips/train-storm-fg-mystery-reveal.webm", yt: "https://youtu.be/PyXfpkvGL1Q?t=102" },
+          { text: "免費遊戲中可內部觸發 TRAIN STORM BONUS。", img: "train-storm/clips/train-storm-fg-ts-internal.webm", yt: "https://youtu.be/8xLyS1vtR-Q?t=872" }
+        ]
+      },
+      {
+        type: "HOLD & SPIN",
+        name: "TRAIN STORM BONUS",
+        steps: [
+          { text: "6 顆 BALL 固定觸發。", img: "train-storm/clips/train-storm-ts-trigger-fixed.webm", yt: "https://youtu.be/PyXfpkvGL1Q?t=695" },
+          { text: "1～5 顆 BALL 打擊觸發。", img: "train-storm/clips/train-storm-ts-trigger-hit.webm", yt: "https://youtu.be/rgptx7n7J5A?t=106" },
+          { text: "BALL 有 4 種升階狀態：藍、綠、紫、黃。", img: "train-storm/symbols/ball-tiers.png", yt: "" },
+          { text: "狀態框有 3 種升階狀態：綠、紫、黃。", img: "train-storm/symbols/frame-tiers.png", yt: "" },
+          { text: "出 BALL 時灑狀態框到畫面中，落在同一個位置或 BALL 上會升階，可能連升兩階。", img: "train-storm/clips/train-storm-ts-frame-drop.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=46" },
+          { text: "落在狀態框中的 BALL 會依狀態框的階層升級。", img: "train-storm/clips/train-storm-ts-ball-upgrade.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=41" },
+          { text: "出現 TRAIN BALL 時，畫面中所有 BALL 與狀態框各升一階，空白位置新增狀態框。", img: "train-storm/clips/train-storm-ts-train-ball.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=14" },
+          { text: "BALL 揭露時，黃色球分數最大，其次紫、綠、藍。", img: "train-storm/clips/train-storm-ts-reveal.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=133" },
+          { text: "TRAIN BALL 揭露時必定為彩金 BALL（可能為累積彩金）或乘倍彩金 BALL。", img: "train-storm/clips/train-storm-ts-jackpot-ball.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=143" }
+        ]
+      }
+    ]
   }
 ];
