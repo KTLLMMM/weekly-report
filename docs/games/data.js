@@ -1157,11 +1157,11 @@ var GAMES = [
     name: "Train Storm",
     img: "train-storm/keyart.jpg",
     tags: ["3×5", "H&S", "FreeGame", "收集", "獎項升階", "打擊觸發", "累積彩金"],
-    desc: "AGS 直立機台的中國風主題（主題名 Dynasty Fortunes）。兩大特色：3 個以上 SCATTER 觸發免費遊戲；BALL 6 顆固定觸發、1～5 顆打擊觸發 TRAIN STORM BONUS。彩金共 4 支：GRAND、MAJOR（累積彩金）與 MINOR、MINI（固定彩金，金額隨面額變動），可在 TRAIN STORM BONUS 以格內獎項直接開出。四支來源影片均未翻到機台 HELP，玩法敘述取自機台內建規則畫面與實機觀察；線數、彩金取得條件、各階獎項倍率待確認。",
+    desc: "AGS 直立機台的中國風主題（主題名 Dynasty Fortunes）。兩大特色：3 個以上 SCATTER 觸發免費遊戲；BALL 6 顆固定觸發、1～5 顆打擊觸發 TRAIN STORM BONUS。彩金共 4 支：GRAND、MAJOR（累積彩金）與 MINOR、MINI（固定彩金，金額隨面額變動），可在 TRAIN STORM BONUS 以格內獎項直接開出。四支來源影片均未翻到機台 HELP，玩法敘述取自機台內建規則畫面與實機觀察；線數、MAJOR 取得條件、各階獎項倍率待確認。",
     symbols: [
       { name: "SCATTER", role: "3 個以上觸發免費遊戲。", img: "train-storm/symbols/scatter.png" },
       { name: "MYSTERY", role: "免費遊戲中出現，揭露後成為 M獎、BALL 或 WILD；出現兩個時另外獲得 2 次免費遊戲。", img: "train-storm/symbols/mystery.png" },
-      { name: "WILD", role: "百搭符號，可整軸堆疊出現。替代範圍待確認。", img: "train-storm/symbols/wild.png" },
+      { name: "WILD", role: "百搭符號，可整軸堆疊出現。替代 SCATTER、BALL、TRAIN BALL 以外的所有標誌。", img: "train-storm/symbols/wild.png" },
       { name: "BALL", role: "TRAIN STORM BONUS 的觸發符號，6 顆固定觸發、1～5 顆打擊觸發；進入特色後為帶分數的獎項球，分藍、綠、紫、黃四階。", img: "train-storm/symbols/ball.png" },
       { name: "TRAIN BALL", role: "TRAIN STORM BONUS 的觸發符號之一；在特色中出現時，畫面上所有 BALL 與狀態框各升一階、空白位置新增狀態框。揭露時必定為彩金 BALL 或乘倍彩金 BALL。", img: "train-storm/symbols/train-ball.png" }
     ],
@@ -1169,8 +1169,8 @@ var GAMES = [
       {
         type: "BASE GAME",
         steps: [
-          { text: "3×5 盤面。", img: "train-storm/screens/machine-base-game.jpg", yt: "https://youtu.be/rgptx7n7J5A?t=40" },
-          { text: "彩金 GRAND、MAJOR（累積彩金）與 MINOR、MINI（固定彩金）共 4 支，固定彩金金額隨面額變動；GRAND、MAJOR 的取得條件待確認。", img: "train-storm/screens/machine-jackpots.jpg", yt: "https://youtu.be/rgptx7n7J5A?t=8" }
+          { text: "3×5 盤面的連線玩法，線數待確認。", img: "train-storm/screens/machine-base-game.jpg", yt: "https://youtu.be/rgptx7n7J5A?t=40" },
+          { text: "彩金 GRAND、MAJOR（累積彩金）與 MINOR、MINI（固定彩金）共 4 支，固定彩金金額隨面額變動；GRAND 為 TRAIN STORM BONUS 集滿全盤 BALL 取得，MAJOR 的取得條件待確認。", img: "train-storm/screens/machine-jackpots.jpg", yt: "https://youtu.be/rgptx7n7J5A?t=8" }
         ]
       },
       {
@@ -1190,7 +1190,7 @@ var GAMES = [
           { text: "1～5 顆 BALL 打擊觸發。", img: "train-storm/clips/train-storm-ts-trigger-hit.webm", yt: "https://youtu.be/rgptx7n7J5A?t=106" },
           { text: "BALL 有 4 種升階狀態：藍、綠、紫、黃。", img: "train-storm/symbols/ball-tiers.png", yt: "" },
           { text: "狀態框有 3 種升階狀態：綠、紫、黃。", img: "train-storm/symbols/frame-tiers.png", yt: "" },
-          { text: "出 BALL 時灑狀態框到畫面中，落在同一個位置或 BALL 上會升階，可能連升兩階。", img: "train-storm/clips/train-storm-ts-frame-drop.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=46" },
+          { text: "出 BALL 時灑狀態框到畫面中，落在同一個位置或 BALL 上會升階，可能連升兩階；轉出 BALL 為可能升階，轉出 TRAIN BALL 則必定升階。", img: "train-storm/clips/train-storm-ts-frame-drop.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=46" },
           { text: "落在狀態框中的 BALL 會依狀態框的階層升級。", img: "train-storm/clips/train-storm-ts-ball-upgrade.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=41" },
           { text: "出現 TRAIN BALL 時，畫面中所有 BALL 與狀態框各升一階，空白位置新增狀態框。", img: "train-storm/clips/train-storm-ts-train-ball.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=14" },
           { text: "BALL 揭露時，黃色球分數最大，其次紫、綠、藍。", img: "train-storm/clips/train-storm-ts-reveal.webm", yt: "https://www.youtube.com/shorts/5WmBT_qpqyw?t=133" },
